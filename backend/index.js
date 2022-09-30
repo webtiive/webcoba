@@ -1,15 +1,22 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const client = require('./db');
 const app = express();
 const PORT = 3000;
 
-app.use(bodyParser.json());
+/**
+ * Middle Ware
+ */
 
-// app.listen(PORT, () => {
-//   console.log(`server is running on http://localhost:${PORT}`);
-// });
+app.use(bodyParser.json());
+app.use(cors()); // Handles cross orign request errors
+app.use(express.urlencoded({ extended: true })); // Understand fetch requests
+
+/**
+ * Routes
+ */
 
 console.log(client);
 
