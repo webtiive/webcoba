@@ -1,1 +1,7 @@
+warna kak Nommy
 coklat, kuning, putih, abu-abu
+
+warna perusahaan
+#f7b716,
+#a04d19;
+
