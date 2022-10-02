@@ -1,0 +1,11 @@
+membuat humberger menu  (finish)
+sidebar menu 
+respovive
+dark - light mode (half finish, 1 bug after refresh)
+footer (half finish)
+
+search & darkmode taruh di sidebar
+
+konsultasi page
+
+
