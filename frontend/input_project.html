@@ -8,7 +8,20 @@
     <title>Document</title>
   </head>
   <body>
+    <form action="http://localhost:3000/project" method="post">
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="title">Title</label>
+        <input type="text" class="form-control titleForCard" id="exampleFormControlInput1" />
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="desc">Example textarea</label>
+        <textarea class="form-control descForCard" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+      <input type="submit" class="btn btn-primary" value="Submit" />
+    </form>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

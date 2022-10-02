@@ -17,9 +17,6 @@ app.use(express.urlencoded({ extended: true })); // Understand fetch requests
 /**
  * Routes
  */
-
-console.log(client);
-
 app.get('/', (req, res) => {
   res.send('Hello World!');
 });
@@ -37,7 +34,7 @@ app.get('/project', async (req, res) => {
 app.post('/project', async (req, res) => {
   try {
     const { title, desc, image } = req.body;
-    const newProject = await client.query(`INSERT INTO project (judul_project, gambar_project, desc_project) VALUES (${title}, ${image}, ${desc})`);
+    const newProject = await client.query(`INSERT INTO project (judul_project,gambar_project ,desc_project) VALUES ('${title}','${image}' ,'${desc}')`);
     res.json(newProject);
   } catch (e) {
     console.error(e.message);
