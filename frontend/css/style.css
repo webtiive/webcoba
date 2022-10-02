@@ -157,6 +157,58 @@ header nav .navbar .links li .arrow {
 }
 
 
+/* Hamburger Menu */
+
+.navbar .hamburger-menu {
+    height: 4rem;
+    width: 3rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.navbar .bar {
+    width: 1.8rem;
+    height: 2.4px;
+    border-radius: 2px;
+    background-color: var(--font-colors);
+    transition: 0.5s;
+    position: relative;
+}
+
+.bar:before,
+.bar:after {
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color: var(--font-color3);
+    transition: 0.5s;
+}
+
+.bar:before {
+    transform: translateY(-9px);
+}
+
+.bar:after {
+    transform: translateY(9px);
+}
+
+.navbar.active .bar {
+    transform: rotate(-360deg);
+    background-color: transparent;
+}
+
+.navbar.active .bar:before {
+    transform: translateY(0) rotate(45deg);
+}
+
+.navbar.active .bar:after {
+    transform: translateY(0) rotate(-45deg);
+}
+
+
 /* Dark Mode */
 
 .navbar .dark-mode {
@@ -197,4 +249,144 @@ header nav .navbar .links li .arrow {
 }
 
 
+/* Sidebar Menu */
+
+
+/* Media Queries */
+
+@media (max-width:700px) {}
+
+
 /* Footer */
+
+.footer {
+    position: relative;
+    background-color: var(--nav-color);
+    margin-top: 50%;
+    /* margin-top: 50px; */
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+.footer::before {
+    content: '';
+    position: relative;
+    left: 0;
+    top: 100%;
+    width: 100%;
+}
+
+.footer .content {
+    max-width: 1250px;
+    margin: auto;
+    padding: 30px 40px 40px 40px;
+}
+
+.footer .content .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0;
+}
+
+.footer .content .top .logo-details img {
+    width: 410px;
+    height: 145px;
+    /* margin-top: 5px;
+    margin-left: -145px; */
+    display: flex;
+    justify-content: center;
+}
+
+.content .top .media-icons {
+    display: flex;
+}
+
+.content .top .media-icons a {
+    height: 40px;
+    width: 40px;
+    margin: 0 8px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    font-size: 17px;
+    text-decoration: none;
+    transition: all .3s ease;
+}
+
+.content .top .media-icons a:hover {
+    transform: translateY(-10px);
+}
+
+.top .media-icons a:nth-child(1) {
+    /* background: #fff; */
+    background: #4267B2;
+}
+
+.top .media-icons a:nth-child(1):hover {
+    color: #4267B2;
+    background: #fff;
+}
+
+.top .media-icons a:nth-child(2) {
+    background: #1DA1F2;
+}
+
+.top .media-icons a:nth-child(2):hover {
+    color: #1DA1F2;
+    background: #fff;
+}
+
+.top .media-icons a:nth-child(3) {
+    /* background: #E1306C; */
+    background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+}
+
+.top .media-icons a:nth-child(3):hover {
+    background: #fff;
+    color: #E1306C;
+}
+
+.top .media-icons a:nth-child(4) {
+    background: #FF0000;
+}
+
+.top .media-icons a:nth-child(4):hover {
+    color: #FF0000;
+    background: #fff;
+}
+
+.footer .bottom-details {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: var(--nav-color);
+}
+
+.footer .bottom-details .bottom_text {
+    text-align: center;
+    max-width: 1250px;
+    margin: auto;
+    padding: 20px 40px;
+    display: flex;
+}
+
+.bottom-details .bottom_text span,
+.bottom-details .bottom_text a {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--font-color3);
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+.bottom-details .bottom-text a:hover {
+    opacity: 1;
+    /* text-decoration: underline; */
+}
+
+.bottom-details .bottom-text a {
+    margin-right: 10px;
+}

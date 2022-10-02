@@ -19,14 +19,6 @@
 
     <!-- ===== AOS ===== -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <script>
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark')
-        } else {
-            document.documentElement.classList.remove('dark')
-        }
-    </script>
 </head>
 
 <body>
@@ -35,7 +27,7 @@
         <header>
             <nav>
                 <div class="navbar">
-                    <img src="img/logo anucara2.png" alt="logo anucara">
+                    <img class="image" src="img/logo anucara2.png" alt="logo anucara">
                     <div class="nav-links active">
                         <ul class="links">
                             <li>
@@ -75,30 +67,41 @@
                     </div>
                     <div class="dark-mode">
                         <div class="dark-mode">
-                            <i class='bx bx-moon moon'></i>
-                            <i class='bx bx-sun sun'></i>
+                            <i class='bx bx-moon moon font'></i>
+                            <i class='bx bx-sun sun font'></i>
                         </div>
                     </div>
-                    <div class="fa fa-bars"></div>
+                    <div class="hamburger-menu">
+                        <div class="bar"></div>
+                    </div>
                 </div>
             </nav>
         </header>
         <!-- End Header -->
+
+        <!-- Footer -->
         <section class="footer">
             <div class="content">
                 <div class="top">
-
-                </div>
-                <div class="bottom-details">
-                    <div class="bottom-text">
-                        <span class="copyright_text">Copyright &copy; <script>document.write(new Date().getFullYear())</script> Anucara</span>
+                    <div class="logo-details">
+                        <img id="CONTACT" src="img/logo anucara2.png" class="fab fa-slack">
+                    </div>
+                    <div class="media-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class=" fab fa-youtube "></i></a>
                     </div>
                 </div>
             </div>
+            <div class="bottom-details">
+                <div class="bottom_text">
+                    <span class="copyright_text ">Copyright &copy; <script>document.write(new Date().getFullYear())</script> <a>Anucara</a></span>
+                </div>
         </section>
     </section>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.js "></script>
 
 </body>
 
