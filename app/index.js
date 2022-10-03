@@ -1,6 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
+const flash = require('connect-flash');
 
 const client = require('./db');
 const app = express();
@@ -15,6 +18,20 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.json());
 app.use(cors()); // Handles cross orign request errors
 app.use(express.urlencoded({ extended: true })); // Understand fetch requests
+
+/**
+ * flash config
+ */
+
+app.use(cookieParser('secret'));
+app.use(
+  session({
+    cookie: { maxAge: 6000 },
+    secret: 'secret',
+    saveUninitialized: true,
+  })
+);
+app.use(flash());
 
 /**
  * Routes
@@ -38,7 +55,7 @@ app.post('/project', async (req, res) => {
     const { title, desc, image } = req.body;
     console.log(req.body);
     const newProject = await client.query(`INSERT INTO project (judul_project,gambar_project, desc_project) VALUES ($1,$2 , $3) RETURNING *`, [title, image, desc]);
-    res.json(newProject);
+    res.redirect('/project');
   } catch (e) {
     console.error(e.message);
   }
