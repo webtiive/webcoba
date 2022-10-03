@@ -33,15 +33,20 @@ app.get('/project', async (req, res) => {
   }
 });
 
-// app.post('/project', async (req, res) => {
-//   try {
-//     const { title, desc, image } = req.body;
-//     const newProject = await client.query(`INSERT INTO project (judul_project,gambar_project ,desc_project) VALUES ('${title}','${image}' ,'${desc}')`);
-//     res.json(newProject);
-//   } catch (e) {
-//     console.error(e.message);
-//   }
-// });
+app.post('/project', async (req, res) => {
+  try {
+    const { title, desc, image } = req.body;
+    console.log(req.body);
+    const newProject = await client.query(`INSERT INTO project (judul_project,gambar_project, desc_project) VALUES ($1,$2 , $3) RETURNING *`, [title, image, desc]);
+    res.json(newProject);
+  } catch (e) {
+    console.error(e.message);
+  }
+});
+
+app.get('/input_project', (req, res) => {
+  res.render('input_project');
+});
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
