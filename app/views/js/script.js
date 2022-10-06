@@ -8,45 +8,28 @@ htmlcssArrow.onclick = function() {
     navLinks.classList.toggle("show1");
 }
 
-// dark mode
+// Dark mode
 const body = document.querySelector("body"),
-    nav = document.querySelector("nav"),
-    modeToggle = document.querySelector(".dark-mode");
+    toggle = document.querySelector(".toggle");
 
 let getMode = localStorage.getItem("mode");
-if (getMode && getMode == "dark-mode") {
+if (getMode && getMode === "dark") {
     body.classList.add("dark");
+    toggle.classList.add("active");
 }
 
-let getFont = localStorage.getItem("font");
-// set dark mode font
-if (getMode && getMode == "dark-mode") {
-    font.classList.toggle("bx-sun");
-}
-
-// js code to toggle dark and light mode
-modeToggle.addEventListener("click", () => {
-    modeToggle.classList.toggle("active");
+toggle.addEventListener("click", () => {
     body.classList.toggle("dark");
-    font.classList.toggle("bx-sun")
-    if (font.classList == "bx-moon") {
-        font.classList.toggle("bx-sun")
-    }
 
-    // js code to keep user selected mode even page refresh or file reopen
     if (!body.classList.contains("dark")) {
-        localStorage.setItem("mode", "light-mode");
-    } else {
-        localStorage.setItem("mode", "dark-mode");
+        return localStorage.setItem("mode", "light");
     }
-    //js code to keep font 
-    if (!body.classList.contains("dark")) {
-        localStorage.setItem("font", "moon");
-    } else {
-        localStorage.setItem("font", "sun");
-    }
+    localStorage.setItem("mode", "dark");
 });
 
+toggle.addEventListener("click", () => toggle.classList.toggle("active"));
+
+// hamburger Menu
 const hamburger_menu = document.querySelector(".hamburger-menu");
 const container = document.querySelector(".navbar");
 
