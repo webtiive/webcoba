@@ -1,4 +1,3 @@
-// sidebar submenu open close js code
 const darkToggle = document.querySelector(".dark-mode");
 const font = document.querySelector('.font')
 
