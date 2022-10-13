@@ -27,7 +27,11 @@
               <input type="hidden" name="id" value="" />
               <button type="submit" class="btn btn-danger" onclick="return confirm('yakin?')">Hapus</button>
             </form> -->
-            <a href="/delete/<%= p.id_project %>" class="btn btn-danger" onclick="return confirm('yakin?')">delete</a>
+            <form action="/delete/<%= p.id_project %>" method="post" class="d-inline">
+              <input type="hidden" name="image" value="<%= p.gambar_project %>" />
+              <button type="submit" class="btn btn-danger" onclick="return confirm('yakin?')">Hapus</button>
+            </form>
+            <!-- <a href="/delete/<%= p.id_project %>" class="btn btn-danger" onclick="return confirm('yakin?')">delete</a> -->
           </div>
         </div>
       </div>

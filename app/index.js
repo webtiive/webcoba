@@ -6,9 +6,9 @@ const cookieParser = require('cookie-parser');
 const flash = require('connect-flash');
 const multer = require('multer');
 const path = require('path');
+const fs = require('fs');
 
 const client = require('./db');
-const { Pool } = require('pg');
 const app = express();
 const PORT = 3000;
 
@@ -56,6 +56,15 @@ app.use(
 app.use(flash());
 
 /**
+ * Function
+ */
+
+const removeImage = (filePath) => {
+  filePath = path.join(__dirname, filePath);
+  fs.unlink(filePath, (err) => console.log(err));
+};
+
+/**
  * Routes
  */
 app.get('/', (req, res) => {
@@ -98,17 +107,28 @@ app.post('/project', async (req, res) => {
   }
 });
 
+// update method
 app.post('/project/edit', async (req, res) => {
   // res.send(req.body);
-  const { id, title, desc } = req.body;
-  const image = req.file.path;
-  const editProject = await client.query('update project set judul_project=$2, gambar_project=$3, desc_project=$4 where id_project=$1', [id, title, image, desc]);
+  const { id, title, imageDefault, desc } = req.body;
+  if (req.file === undefined) {
+    const editProject = await client.query('update project set judul_project=$2, desc_project=$3 where id_project=$1', [id, title, desc]);
+    // res.send(req.body);
+  } else {
+    const image = req.file.path;
+    const editProject = await client.query('update project set judul_project=$2,gambar_project=$3, desc_project=$4 where id_project=$1', [id, title, image, desc]);
+    // res.send(image);
+  }
   res.redirect('/project');
+  req.flash('msg', 'Project berhasil diubah');
 });
 
 // delete method
-app.get('/delete/:id', async (req, res) => {
+app.post('/delete/:id', async (req, res) => {
+  const { image } = req.body;
+  removeImage(image);
   const deleteProject = await client.query('DELETE FROM project WHERE id_project=$1', [req.params.id]);
+
   req.flash('msg', 'Project berhasil dihapus');
   res.redirect('/project');
 });
