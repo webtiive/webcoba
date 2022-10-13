@@ -17,6 +17,7 @@
 
       <div class="card" style="width: 18rem">
         <div class="card-body">
+          <img src="<%= p.gambar_project %> " class="card-img-top" alt="..." />
           <h5 class="card-title"><%= p.judul_project %></h5>
           <p class="card-text" style="width: 50%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis"><%= p.desc_project %></p>
           <div class="tombol">
@@ -26,7 +27,11 @@
               <input type="hidden" name="id" value="" />
               <button type="submit" class="btn btn-danger" onclick="return confirm('yakin?')">Hapus</button>
             </form> -->
-            <a href="/delete/<%= p.id_project %>" class="btn btn-danger" onclick="return confirm('yakin?')">delete</a>
+            <form action="/delete/<%= p.id_project %>" method="post" class="d-inline">
+              <input type="hidden" name="image" value="<%= p.gambar_project %>" />
+              <button type="submit" class="btn btn-danger" onclick="return confirm('yakin?')">Hapus</button>
+            </form>
+            <!-- <a href="/delete/<%= p.id_project %>" class="btn btn-danger" onclick="return confirm('yakin?')">delete</a> -->
           </div>
         </div>
       </div>

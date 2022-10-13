@@ -5,9 +5,10 @@ const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const flash = require('connect-flash');
 const multer = require('multer');
+const path = require('path');
+const fs = require('fs');
 
 const client = require('./db');
-const { Pool } = require('pg');
 const app = express();
 const PORT = 3000;
 
@@ -30,14 +31,15 @@ const fileFilter = (req, file, cb) => {
   if (file.mimetype === 'image/png' || file.mimetype === 'image/jpg' || file.mimetype === 'image/jpeg') {
     cb(null, true);
   } else {
-    cb(null, true);
+    cb(null, false);
   }
 };
 
 app.use(bodyParser.json());
-app.use(multer({ storage: fileStorage, fileFilter: fileFilter }).single('image'));
 app.use(cors()); // Handles cross orign request errors
 app.use(express.urlencoded({ extended: true })); // Understand fetch requests
+app.use('/images', express.static(path.join(__dirname, 'images')));
+app.use(multer({ storage: fileStorage, fileFilter: fileFilter }).single('image'));
 
 /**
  * flash config
@@ -52,6 +54,15 @@ app.use(
   })
 );
 app.use(flash());
+
+/**
+ * Function
+ */
+
+const removeImage = (filePath) => {
+  filePath = path.join(__dirname, filePath);
+  fs.unlink(filePath, (err) => console.log(err));
+};
 
 /**
  * Routes
@@ -74,6 +85,7 @@ app.get('/project/:id', async (req, res) => {
   const { id } = req.params;
   try {
     const project = await client.query('SELECT * FROM project WHERE id_project=$1', [id]);
+    // res.send(project.rows);
     res.render('detailProject', { project: project.rows });
   } catch (e) {
     console.error(e.message);
@@ -83,26 +95,40 @@ app.get('/project/:id', async (req, res) => {
 app.post('/project', async (req, res) => {
   try {
     const { title, desc } = req.body;
-    const image = req.file;
-    res.send(req.file);
-    // const newProject = await client.query(`INSERT INTO project (judul_project,gambar_project, desc_project) VALUES ($1,$2 , $3) RETURNING *`, [title, image, desc]);
-    // req.flash('msg', 'Project berhasil ditambahkan');
-    // res.redirect('/project');
+    const image = req.file.path;
+    // const image = req.file;
+    // res.send(image);
+    // console.log(image);
+    const newProject = await client.query(`INSERT INTO project (judul_project,gambar_project, desc_project) VALUES ($1,$2 , $3) RETURNING *`, [title, image, desc]);
+    req.flash('msg', 'Project berhasil ditambahkan');
+    res.redirect('/project');
   } catch (e) {
     console.error(e.message);
   }
 });
 
+// update method
 app.post('/project/edit', async (req, res) => {
   // res.send(req.body);
-  const { id, title, desc, image } = req.body;
-  const editProject = await client.query('update project set judul_project=$2, gambar_project=$3, desc_project=$4 where id_project=$1', [id, title, image, desc]);
+  const { id, title, imageDefault, desc } = req.body;
+  if (req.file === undefined) {
+    const editProject = await client.query('update project set judul_project=$2, desc_project=$3 where id_project=$1', [id, title, desc]);
+    // res.send(req.body);
+  } else {
+    const image = req.file.path;
+    const editProject = await client.query('update project set judul_project=$2,gambar_project=$3, desc_project=$4 where id_project=$1', [id, title, image, desc]);
+    // res.send(image);
+  }
   res.redirect('/project');
+  req.flash('msg', 'Project berhasil diubah');
 });
 
 // delete method
-app.get('/delete/:id', async (req, res) => {
+app.post('/delete/:id', async (req, res) => {
+  const { image } = req.body;
+  removeImage(image);
   const deleteProject = await client.query('DELETE FROM project WHERE id_project=$1', [req.params.id]);
+
   req.flash('msg', 'Project berhasil dihapus');
   res.redirect('/project');
 });
