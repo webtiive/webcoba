@@ -66,10 +66,13 @@
                         </ul>
                     </div>
                     <div class="toggle"></div>
-                    <div class="hamburger-menu">
-                        <!-- <span class="logo-name">Menu</span> -->
-                        <div class="bar"></div>
-                    </div>
+                    <label for="menu-toggle">
+                        <div class="hamburger-menu" onclick="myfunc()">
+                            <!-- <span class="logo-name">Menu</span> -->
+                            <div class="bar"></div>
+                        </div>
+                    </label>
+                    <input type="checkbox" name="menu-toggle" id="menu-toggle" style="display: none;">
                 </div>
             </nav>
         </header>
@@ -145,6 +148,19 @@
     <!-- End Footer -->
 
     <script src="js/script.js "></script>
+    <script>
+        function myfunc() {
+            const menuToggle = document.querySelector('#menu-toggle').checked;
+            const navLink = document.querySelector('.nav-links')
+            if (menuToggle) {
+                navLink.style.display = 'none'
+            }else{
+                navLink.style.display = 'flex'
+
+            }
+        }
+        
+    </script>
 
 </body>
 
