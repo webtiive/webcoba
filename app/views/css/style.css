@@ -286,6 +286,10 @@ header nav .navbar .links li .arrow {
   nav .navbar .nav-links {
     display: none;
   }
+  .footer .content .link-boxes .box {
+    width: calc(100% / 5 - 10px);
+    word-break: break-all;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -551,6 +555,7 @@ header nav .navbar .links li .arrow {
   }
   .footer .content .link-boxes .box {
     width: calc(100% / 2 - 10px);
+    word-break: break-all;
   }
   .footer .content .link-boxes .input-box {
     width: 100%;
