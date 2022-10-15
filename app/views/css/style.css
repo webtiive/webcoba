@@ -423,7 +423,6 @@ header nav .navbar .links li .arrow {
 
 .footer .content .link-boxes .box {
   width: calc(100% / 5 - 10px);
-  word-break: break-all;
 }
 
 .content .link-boxes .box .link_name {
@@ -529,6 +528,7 @@ header nav .navbar .links li .arrow {
   }
   .footer .content .link-boxes .box {
     width: calc(100% / 3 - 10px);
+    word-break: break-all;
   }
   .footer .content .link-boxes .input-box {
     width: 60%;
