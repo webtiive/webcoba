@@ -26,12 +26,20 @@
     --font-colors: #f7b716;
     --text-color: #000;
     --submenu-color: hsl(0, 0%, 100%, 0.925);
+    --border: .2rem solid var(--font-color3);
+    --text-shadow: .4rem .4rem 0 rgba(0, 0, 0, .2);
+    --black: #444;
+    --light-color: #777;
 }
 
 body {
     max-height: 100vh;
     background-color: var(--body-color);
     overflow-y: scroll;
+}
+
+a {
+    text-decoration: none;
 }
 
 
@@ -47,6 +55,11 @@ body.dark {
     --font-color3: #f7b716;
     --text-color: #fff;
     --submenu-color: hsl(210, 3%, 15%);
+    --border: .2rem solid var(--font-color3);
+    /* --text-shadow: .4rem .4rem 0 rgb(255, 255, 255); */
+    --text-shadow: .4rem .4rem 0 #954717;
+    --black: #e0e0e0;
+    --light-color: #777;
 }
 
 header nav {
@@ -248,13 +261,102 @@ header nav .navbar .links li .arrow {
 
 /* Home Content */
 
-.home .contentbody img {
+.home {
     position: relative;
-    display: block;
+    display: flex;
     margin-left: auto;
     margin-right: auto;
+    /* justify-content: center; */
     width: 100%;
     filter: brightness(76%);
+    background: url(../img/img1.png);
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+.home .contentbody .boxtext {
+    position: relative;
+    margin-top: 180px;
+    max-width: 800px;
+    padding: 100px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    color: #000;
+    margin-left: 10px;
+    border-radius: 15px;
+}
+
+.home .contentbody .boxtext:before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background: url(../img/img1.png);
+    background-attachment: fixed;
+    filter: blur(4px);
+}
+
+.home .contentbody h1 {
+    position: relative;
+    font-size: 50px;
+    color: #fff;
+    z-index: 2;
+}
+
+.home .contentbody p {
+    position: relative;
+    font-size: 18px;
+    font-weight: 200px;
+    color: #fff;
+    z-index: 2;
+}
+
+.home .contentbody #text {
+    color: #f7b716;
+    font-family: 'poppins', sans-serif;
+    font-weight: 500px;
+    font-size: 60px;
+    z-index: 2;
+}
+
+
+/* Section Icons */
+
+.icons-container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    padding: 4rem;
+}
+
+.icons-container .icons-con {
+    border: var(--border);
+    box-shadow: var(--text-shadow);
+    border-radius: .5rem;
+    text-align: center;
+    padding: 2.5rem;
+}
+
+.icons-container .icons-con i {
+    font-size: 4.5rem;
+    color: var(--font-color3);
+    padding-bottom: .7rem;
+}
+
+.icons-container .icons-con h3 {
+    font-size: 3.5rem;
+    color: var(--font-color3);
+    padding: .5rem 0;
+    text-shadow: var(--text-shadow);
+}
+
+.icons-container .icons-con p {
+    font-size: 1.7rem;
+    /* color: var(--light-color); */
+    color: var(--text-color);
+    font-weight: 500;
 }
 
 
@@ -265,53 +367,213 @@ header nav .navbar .links li .arrow {
 }
 
 
+/* consult popup */
+
+.consult .consult-popup {
+    visibility: hidden;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: rgb(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 100;
+    bottom: 90px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    width: 300px;
+    transition: none;
+}
+
+.consult .consult-popup.pop {
+    visibility: visible;
+}
+
+.consult .consult-popup h3 {
+    background: linear-gradient(45deg, rgba(215, 191, 127, 1) 0%, rgba(152, 122, 82, 1) 46%, rgba(152, 122, 82, 1) 100%);
+    color: #fff;
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    transition: none;
+}
+
+.consult .consult-popup p {
+    text-align: center;
+    font-size: 12px;
+    transition: none;
+}
+
+.consult .consult-popup .admin-list {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: none;
+}
+
+.consult .consult-popup .admin-list .admin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: none;
+}
+
+.consult .consult-popup .admin-list .admin span {
+    transition: none;
+}
+
+.consult .consult-popup .admin-list .admin img {
+    background-color: rgb(152, 160, 160);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid var(--black);
+    transition: none;
+}
+
+.consult .consult-popup a {
+    align-self: flex-start;
+    color: #fff;
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: none;
+}
+
+.consult .consult-popup a:hover {
+    opacity: .9;
+    transition: none;
+}
+
+.consult .consult-popup a i {
+    transition: none;
+}
+
+.consult .consult-popup #wa {
+    background-color: #018a01;
+}
+
+.consult .consult-popup #now {
+    background: linear-gradient(-45deg, #7C0E00, #562B00, #5200A5, #004C8E, #003F99, #4E008E, #A36C00, #8E4500, #871200);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite, shake 0.82s cubic-bezier(.36, .07, .19, .97) both infinite;
+}
+
+.consult .consult-popup .qr-code {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: none;
+}
+
+.consult .consult-popup .qr-code img {
+    background-color: #777;
+    width: 120px;
+    height: 120px;
+    transition: none;
+}
+
+.consult .consult-popup #close {
+    cursor: pointer;
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    background: transparent;
+    font-size: 24px;
+    border: none;
+    transition: none;
+}
+
+.consult .consult-popup #close i {
+    transition: none;
+}
+
+.consult .consult-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: linear-gradient(45deg, rgba(215, 191, 127, 1) 0%, rgba(152, 122, 82, 1) 46%, rgba(152, 122, 82, 1) 100%);
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.consult .consult-btn:hover {
+    background-color: #40bba2;
+}
+
+.consult .consult-btn::before {
+    content: '1';
+    position: absolute;
+    top: -5px;
+    right: -2px;
+    width: 18px;
+    height: 18px;
+    background: red;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.consult .consult-btn i {
+    color: #fff;
+    font-size: 30px;
+}
+
+.consult .consult-btn p {
+    color: #fff;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1rem;
+    letter-spacing: 0.3em;
+}
+
+.consult .fa-whatsapp, 
+.consult .fa-envelope {
+    color: #fff;
+}
+
+
 /* Media Queries Navbar */
+
+.logo-name {
+    display: none;
+}
 
 .hamburger-menu .bar {
     display: none;
 }
 
+
+/* .toggle {
+    display: none;
+} */
+
 @media screen and (min-width: 320px) {
-    .hamburger-menu {
-        display: block;
+    nav .navbar .nav-links {
+        max-width: 100%;
     }
 }
 
-@media screen and (max-width: 480px) {
-    nav .navbar .image {
-        width: 200px;
-        margin-left: 0px;
-    }
-}
+@media screen and (max-width: 480px) {}
 
 @media screen and (min-width: 480px) {}
 
-@media screen and (max-width: 768px) {
-    nav .navbar .image {
-        width: 300px;
-        margin-left: 0px;
-    }
-    .hamburger-menu .bar {
-        display: flex;
-    }
-    header nav .navbar ul {
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        top: 80px;
-        left: 0;
-        background-color: black;
-        flex-direction: column;
-        justify-content: space-around;
-    }
-    .nav-links {
-        display: none;
-    }
-    .footer .content .link-boxes .box {
-        width: calc(100% / 5 - 10px);
-        word-break: break-all;
-    }
-}
+@media screen and (max-width: 768px) {}
 
 @media screen and (min-width: 768px) {}
 
@@ -462,7 +724,8 @@ header nav .navbar .links li .arrow {
     bottom: -2px;
     height: 2px;
     width: 35px;
-    background: var(--text-color);
+    /* background: var(--text-color); */
+    background: #fff;
 }
 
 .content .link-boxes .box li {
@@ -480,11 +743,13 @@ header nav .navbar .links li .arrow {
 }
 
 .fa-envelope {
-    color: var(--text-color);
+    /* color: var(--text-color); */
+    color: #fff;
 }
 
 .fa-whatsapp {
-    color: var(--text-color);
+    /* color: var(--text-color); */
+    color: #fff;
 }
 
 .content .link-boxes .box li a:hover {

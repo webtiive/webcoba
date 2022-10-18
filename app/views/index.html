@@ -19,6 +19,8 @@
 
     <!-- ===== AOS ===== -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
 </head>
 
 <body>
@@ -68,7 +70,7 @@
                     <div class="toggle"></div>
                     <label for="menu-toggle">
                         <div class="hamburger-menu" onclick="myfunc()">
-                            <!-- <span class="logo-name">Menu</span> -->
+                            <span class="logo-name">Menu</span>
                             <div class="bar"></div>
                         </div>
                     </label>
@@ -80,76 +82,127 @@
 
         <section class="home" id="home">
             <div class="contentbody">
-                <img src="img/img1.png" />
+                <!-- <img src="img/img1.png" /> -->
+                <div class="boxtext">
+                    <h1>NEED A CONSTRUCTION</h1>
+                    <h1 id="text">FOR YOUR BUILDING</h1>
+                    <p>We are the specialist and professionals who will handle it well</p>
+                </div>
             </div>
 
         </section>
 
         <section class="aboutus" id="aboutus">
-            <h1>ABOUT OUR COMPANY</h1>
+            <div class="about">
+                <h1>ABOUT OUR COMPANY</h1>
+                <p>this house established since 2022 with big dream from many ways a who united to seattle for many task in the future, we came from different timeline, Education and experience colaborated to be your best friend Architect, Civil Engineer, and
+                Design Interior.
+                </p>
+            </div>
+        </section>
+
+        <section class="icons-container">
+            <div class="icons-con">
+                <i class="fas fa-file-contract"></i>
+                <h3>002+</h3>
+                <p>ON GOING PROJECT</p>
+            </div>
+
+            <div class="icons-con">
+                <i class="fas fa-file-contract"></i>
+                <h3>008+</h3>
+                <p>FINISHED PROJECT</p>
+            </div>
         </section>
 
         <section class="portofolio">
             <div class="project"></div>
         </section>
 
-        <div class="popupform">
-
+        <div class="consult">
+            <div id="consultPopup" class="consult-popup">
+                <h3>Consult & Order</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <div class="admin-list">
+                    <div class="admin">
+                        <img src="">
+                        <span>Jordan</span>
+                    </div>
+                    <div class="admin">
+                        <img src="">
+                        <span>Jordan</span>
+                    </div>
+                </div>
+                <a id="wa" href="https://wa.me/6282126815627"><i class="fab fa-whatsapp"></i> Chat Via WhatsApp</a>
+                <a id="now" href=""><i class="far fa-envelope"></i> Order Now</a>
+                <div class="qr-code">
+                    <p>WhatsApp QR Code:</p>
+                    <img src="">
+                </div>
+                <button id="close"><i class="fas fa-times"></i></button>
+            </div>
+            <div id="consultBtn" class="consult-btn">
+                <i class="fab fa-whatsapp"></i>
+                <p>CONSULT</p>
+            </div>
         </div>
 
         <!-- Footer -->
-        <section class="footer">
-            <div class="content">
-                <div class="top">
-                    <div class="logo-details">
+        <section class="footer ">
+            <div class="content ">
+                <div class="top ">
+                    <div class="logo-details ">
                     </div>
-                    <div class="media-icons">
-                        <a href="https://www.facebook.com/profile.php?id=100086564315471"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/anucara.designandbuild/?igshid=YmMyMTA2M2Y%3D"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="https://www.tiktok.com/@anucara.desain.and.build"><i class="fab fa-tiktok"></i></a>
+                    <div class="media-icons ">
+                        <a href="https://www.facebook.com/profile.php?id=100086564315471 "><i class="fab fa-facebook-f "></i></a>
+                        <a href="# "><i class="fab fa-twitter "></i></a>
+                        <a href="https://www.instagram.com/anucara.designandbuild/?igshid=YmMyMTA2M2Y%3D "><i class="fab fa-instagram "></i></a>
+                        <a href="# "><i class="fab fa-linkedin-in "></i></a>
+                        <a href="# "><i class="fab fa-youtube "></i></a>
+                        <a href="https://www.tiktok.com/@anucara.design.and.build"><i class="fab fa-tiktok "></i></a>
                     </div>
                 </div>
-                <div class="link-boxes">
-                    <ul class="box">
-                        <li class="link_name">Anucara</li>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Our Service</a></li>
-                        <li><a href="#">Portofoli</a></li>
-                        <li><a href="#">Contact</a></li>
+                <div class="link-boxes ">
+                    <ul class="box ">
+                        <li class="link_name ">Anucara</li>
+                        <li><a href="index.html ">Home</a></li>
+                        <li><a href="# ">About us</a></li>
+                        <li><a href="# ">Our Service</a></li>
+                        <li><a href="# ">Portofoli</a></li>
+                        <li><a href="# ">Contact</a></li>
                     </ul>
-                    <ul class="box">
-                        <li class="link_name">About Us</li>
-                        <li><a href="menu/teamprofile.html">Team Profile</a></li>
+                    <ul class="box ">
+                        <li class="link_name ">About Us</li>
+                        <li><a href="menu/teamprofile.html ">Team Profile</a></li>
                     </ul>
-                    <ul class="box">
-                        <li class="link_name">Our Service</li>
-                        <li><a href="menu/consult.html">Consult</a></li>
-                        <li><a href="menu/mepcivil.html">MEP Civil</a></li>
-                        <li><a href="menu/steelconstruction.html">Steel Construction</a></li>
+                    <ul class="box ">
+                        <li class="link_name ">Our Service</li>
+                        <li><a href="menu/consult.html ">Consult</a></li>
+                        <li><a href="menu/mepcivil.html ">MEP Civil</a></li>
+                        <li><a href="menu/steelconstruction.html ">Steel Construction</a></li>
                     </ul>
-                    <ul class="box">
-                        <li class="link_name">Contact</li>
-                        <li class="fas fa-envelope"><a href="mailto:anucaradesignandbuild@gmail.com">anucaradesignandbuild@gmail.com</a></li>
-                        <li class="fab fa-whatsapp"><a href="https://wa.me/6282126815627">+62 821-2681-5627</a></li>
+                    <ul class="box ">
+                        <li class="link_name ">Contact</li>
+                        <li class="fas fa-envelope "><a href="mailto:anucaradesignandbuild@gmail.com "> anucaradesignandbuild@gmail.com</a></li>
+                        <li class="fab fa-whatsapp "><a href="https://wa.me/6282126815627"> +62 821-2681-5627</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="bottom-details">
-                <div class="bottom_text">
-                    <span class="copyright_text">Copyright &copy; <script>document.write(new Date().getFullYear())</script><span> Anucara</span></span>
-                    <span class="policy_terms">
-                        <a href="#">Privacy policy</a>
-                        <a href="#">Terms & condition</a>
+            <div class="bottom-details ">
+                <div class="bottom_text ">
+                    <span class="copyright_text ">Copyright &copy; <script>document.write(new Date().getFullYear())</script><span> Anucara</span></span>
+                    <span class="policy_terms ">
+                        <a href="# ">Privacy policy</a>
+                        <a href="# ">Terms & condition</a>
                     </span>
                 </div>
             </div>
         </section>
     </section>
     <!-- End Footer -->
+
+    <!-- popup consult -->
+
 
     <script src="js/script.js "></script>
     <script>
@@ -158,12 +211,11 @@
             const navLink = document.querySelector('.nav-links')
             if (menuToggle) {
                 navLink.style.display = 'none'
-            }else{
+            } else {
                 navLink.style.display = 'flex'
 
             }
         }
-        
     </script>
 
 </body>
