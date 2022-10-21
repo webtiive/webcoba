@@ -24,200 +24,250 @@
 </head>
 
 <body>
-    <section class="pembatas">
-        <!-- Header -->
-        <header>
-            <nav>
-                <div class="navbar">
-                    <img class="image" src="img/logo anucara2.png" alt="logo anucara">
-                    <div class="nav-links active">
-                        <ul class="links">
-                            <li>
-                                <a href="#home" class="is-active">Home</a>
-                            </li>
-                            <li>
-                                <a href="#aboutus" class="boxa">About Us</a>
-                                <i class='bx bx-chevron-down arrow htmlcss-arrow'></i>
-                                <ul class="htmlCss-sub-menu sub-menu">
-                                    <li>
-                                        <a href="menu/teamprofile.html">Team Profile</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#ourservice" class="boxa">Our Service</a>
-                                <i class='bx bx-chevron-down arrow htmlcss-arrow'></i>
-                                <ul class="htmlCss-sub-menu sub-menu">
-                                    <li>
-                                        <a href="menu/consult.html">Consult</a>
-                                    </li>
-                                    <li>
-                                        <a href="menu/mepcivil.html">Mep Civil</a>
-                                    </li>
-                                    <li>
-                                        <a href="menu/steelconstruction">Steel Construction</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#portofolio" class="boxa">Portofolio</a>
-                            </li>
-                            <li>
-                                <a href="#contact" class="boxa">Contact</a>
-                            </li>
-                        </ul>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="navbar">
+                <img class="image" src="img/logo anucarapt.png" alt="logo anucara">
+                <div class="nav-links active">
+                    <ul class="links">
+                        <li>
+                            <a href="#home" class="is-active">Home</a>
+                        </li>
+                        <li>
+                            <a href="#aboutus" class="boxa">About Us</a>
+                            <i class='bx bx-chevron-down arrow htmlcss-arrow'></i>
+                            <ul class="htmlCss-sub-menu sub-menu">
+                                <li>
+                                    <a href="menu/teamprofile.html">Team Profile</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#ourservice" class="boxa">Our Service</a>
+                            <i class='bx bx-chevron-down arrow htmlcss-arrow'></i>
+                            <ul class="htmlCss-sub-menu sub-menu boxaa">
+                                <li>
+                                    <a href="menu/mepcivil.html">Mep Civil</a>
+                                </li>
+                                <li>
+                                    <a href="menu/steelconstruction.html">Steel Construction</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="boxa">Portofolio</a>
+                            <i class='bx bx-chevron-down arrow htmlcss-arrow'></i>
+                            <ul class="htmlCss-sub-menu sub-menu menu3">
+                                <li>
+                                    <a href="menu/allportofolio.html">All Portofolio</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#contact" class="boxa">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <label for="menu-toggle">
+                    <div class="hamburger-menu" onclick="myfunc()">
+                        <span class="logo-name">Menu</span>
+                        <div class="bar"></div>
                     </div>
-                    <div class="toggle"></div>
-                    <label for="menu-toggle">
-                        <div class="hamburger-menu" onclick="myfunc()">
-                            <span class="logo-name">Menu</span>
-                            <div class="bar"></div>
-                        </div>
-                    </label>
-                    <input type="checkbox" name="menu-toggle" id="menu-toggle" style="display: none;">
-                </div>
-            </nav>
-        </header>
-        <!-- End Header -->
-
-        <section class="home" id="home">
-            <div class="contentbody">
-                <!-- <img src="img/img1.png" /> -->
-                <div class="boxtext">
-                    <h1>NEED A CONSTRUCTION</h1>
-                    <h1 id="text">FOR YOUR BUILDING</h1>
-                    <p>We are the specialist and professionals who will handle it well</p>
-                </div>
+                </label>
+                <input type="checkbox" name="menu-toggle" id="menu-toggle" style="display: none;">
             </div>
+        </nav>
+    </header>
+    <!-- End Header -->
 
-        </section>
-
-        <section class="aboutus" id="aboutus">
-            <div class="about">
-                <h1>ABOUT OUR COMPANY</h1>
-                <p>this house established since 2022 with big dream from many ways a who united to seattle for many task in the future, we came from different timeline, Education and experience colaborated to be your best friend Architect, Civil Engineer, and
-                Design Interior.
-                </p>
-            </div>
-        </section>
-
-        <section class="icons-container">
-            <div class="icons-con">
-                <i class="fas fa-file-contract"></i>
-                <h3>002+</h3>
-                <p>ON GOING PROJECT</p>
-            </div>
-
-            <div class="icons-con">
-                <i class="fas fa-file-contract"></i>
-                <h3>008+</h3>
-                <p>FINISHED PROJECT</p>
-            </div>
-        </section>
-
-        <section class="portofolio">
-            <div class="project"></div>
-        </section>
-
-        <div class="consult">
-            <div id="consultPopup" class="consult-popup">
-                <h3>Consult & Order</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <div class="admin-list">
-                    <div class="admin">
-                        <img src="">
-                        <span>Jordan</span>
-                    </div>
-                    <div class="admin">
-                        <img src="">
-                        <span>Jordan</span>
-                    </div>
-                </div>
-                <a id="wa" href="https://wa.me/6282126815627"><i class="fab fa-whatsapp"></i> Chat Via WhatsApp</a>
-                <a id="now" href=""><i class="far fa-envelope"></i> Order Now</a>
-                <div class="qr-code">
-                    <p>WhatsApp QR Code:</p>
-                    <img src="">
-                </div>
-                <button id="close"><i class="fas fa-times"></i></button>
-            </div>
-            <div id="consultBtn" class="consult-btn">
-                <i class="fab fa-whatsapp"></i>
-                <p>CONSULT</p>
+    <section id="home" class="home">
+        <div class="contentbody">
+            <!-- <img src="img/img1.png" /> -->
+            <div class="boxtext">
+                <h1>NEED A CONSTRUCTION</h1>
+                <h1 id="text">FOR YOUR BUILDING</h1>
+                <p>We are the specialist and professionals who will handle it well</p>
             </div>
         </div>
+    </section>
 
-        <!-- Footer -->
-        <section class="footer ">
-            <div class="content ">
-                <div class="top ">
-                    <div class="logo-details ">
-                    </div>
-                    <div class="media-icons ">
-                        <a href="https://www.facebook.com/profile.php?id=100086564315471 "><i class="fab fa-facebook-f "></i></a>
-                        <a href="# "><i class="fab fa-twitter "></i></a>
-                        <a href="https://www.instagram.com/anucara.designandbuild/?igshid=YmMyMTA2M2Y%3D "><i class="fab fa-instagram "></i></a>
-                        <a href="# "><i class="fab fa-linkedin-in "></i></a>
-                        <a href="# "><i class="fab fa-youtube "></i></a>
-                        <a href="https://www.tiktok.com/@anucara.design.and.build"><i class="fab fa-tiktok "></i></a>
+    <section id="aboutus" class="aboutus">
+        <div class="about">
+            <h1>About Our Company</h1>
+            <p>this house established since 2022 with big dream from many ways a who united to seattle for many task in the future, we came from different timeline, Education and experience colaborated to be your best friend Architect, Civil Engineer, and
+            Design Interior.
+            </p>
+            <div class="container">
+                <div class="card">
+                    <div class="box-card">
+                        <div class="content-card">
+                            <h3>OVERVIEW</h3>
+                            <P class="text-3">
+                                CV. ANUCARA RANCANG BANGUN is a home for
+                                multidisciplinary professionals. Our philosophy is
+                                to start something with an end goal. Think
+                                broadly to provide solutions with effective results
+                                as a friend in designing and building
+                            </P>
+                        </div>
                     </div>
                 </div>
-                <div class="link-boxes ">
-                    <ul class="box ">
-                        <li class="link_name ">Anucara</li>
-                        <li><a href="index.html ">Home</a></li>
-                        <li><a href="# ">About us</a></li>
-                        <li><a href="# ">Our Service</a></li>
-                        <li><a href="# ">Portofoli</a></li>
-                        <li><a href="# ">Contact</a></li>
-                    </ul>
-                    <ul class="box ">
-                        <li class="link_name ">About Us</li>
-                        <li><a href="menu/teamprofile.html ">Team Profile</a></li>
-                    </ul>
-                    <ul class="box ">
-                        <li class="link_name ">Our Service</li>
-                        <li><a href="menu/consult.html ">Consult</a></li>
-                        <li><a href="menu/mepcivil.html ">MEP Civil</a></li>
-                        <li><a href="menu/steelconstruction.html ">Steel Construction</a></li>
-                    </ul>
-                    <ul class="box ">
-                        <li class="link_name ">Contact</li>
-                        <li class="fas fa-envelope "><a href="mailto:anucaradesignandbuild@gmail.com "> anucaradesignandbuild@gmail.com</a></li>
-                        <li class="fab fa-whatsapp "><a href="https://wa.me/6282126815627"> +62 821-2681-5627</a></li>
-                    </ul>
+
+                <div class="card">
+                    <div class="box-card">
+                        <div class="content-card">
+                            <h3 class="text-card">DRIVING FACTOR</h3>
+                            <h4>COMMITMENT</h4>
+                            <p>
+                                First and foremost we are committed
+                                to delivering the highest level of
+                                service, quality and value. We look
+                                beyond the moment and see the
+                                bigger picture. This means we know
+                                satisfied clients pave the way for our
+                                continued success
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="box-card">
+                        <div class="content-card">
+                            <h3>TRANSPARENCY</h3>
+                            <p class="text-3">
+                                We take the time to
+                                explain contracts,
+                                plans, schedules
+                                and strategies to
+                                ensure a complete
+                                understanding and
+                                agreement is
+                                realized by all
+                                parties
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="bottom-details ">
-                <div class="bottom_text ">
-                    <span class="copyright_text ">Copyright &copy; <script>document.write(new Date().getFullYear())</script><span> Anucara</span></span>
-                    <span class="policy_terms ">
-                        <a href="# ">Privacy policy</a>
-                        <a href="# ">Terms & condition</a>
-                    </span>
+        </div>
+    </section>
+
+    <section class="icons-container">
+        <div class="icons-con" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="500">
+            <i class="fas fa-file-contract"></i>
+            <h3>002+</h3>
+            <p>ON GOING PROJECT</p>
+        </div>
+
+        <div class="icons-con" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="500">
+            <i class="fas fa-file-contract"></i>
+            <h3>008+</h3>
+            <p>FINISHED PROJECT</p>
+        </div>
+    </section>
+
+    <section class="portofolio">
+        <div class="project"></div>
+    </section>
+
+    <div class="consult">
+        <div id="consultPopup" class="consult-popup">
+            <h3>Consult & Order</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div class="admin-list">
+                <div class="admin">
+                    <img src="">
+                    <span>Jordan</span>
+                </div>
+                <div class="admin">
+                    <img src="">
+                    <span>Jordan</span>
                 </div>
             </div>
-        </section>
+            <a id="wa" href="https://wa.me/6282126815627"><i class="fab fa-whatsapp"></i> Chat Via WhatsApp</a>
+            <a id="now" href=""><i class="far fa-envelope"></i> Order Now</a>
+            <div class="qr-code">
+                <p>WhatsApp QR Code:</p>
+                <img src="">
+            </div>
+            <button id="close"><i class="fas fa-times"></i></button>
+        </div>
+        <div id="consultBtn" class="consult-btn">
+            <i class="fab fa-whatsapp"></i>
+            <p>CONSULT</p>
+        </div>
+    </div>
+
+    <section class="location">
+        <div class="locate-us">
+            <h2>Locate Us</h2>
+            <p>Jl. Tukad Citarum No. 42X - Panjer</p>
+            <p>Denpasar Selatan - Bali</p>
+            <div class="locate-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1016.8371224672418!2d115.2334829292001!3d-8.682467599610094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd24124ad073ec1%3A0x864721d609d3fcfd!2sANUCARA%20DESIGN%20AND%20BUILD!5e1!3m2!1sid!2sid!4v1666180557325!5m2!1sid!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer ">
+        <div class="content ">
+            <div class="top ">
+                <div class="logo-details ">
+                </div>
+                <div class="media-icons ">
+                    <a href="https://www.facebook.com/profile.php?id=100086564315471 "><i class="fab fa-facebook-f "></i></a>
+                    <a href="# "><i class="fab fa-twitter "></i></a>
+                    <a href="https://www.instagram.com/anucara.designandbuild/?igshid=YmMyMTA2M2Y%3D "><i class="fab fa-instagram "></i></a>
+                    <a href="# "><i class="fab fa-linkedin-in "></i></a>
+                    <a href="# "><i class="fab fa-youtube "></i></a>
+                    <a href="https://www.tiktok.com/@anucara.design.and.build"><i class="fab fa-tiktok "></i></a>
+                </div>
+            </div>
+            <div class="link-boxes ">
+                <ul class="box ">
+                    <li class="link_name ">Anucara</li>
+                    <li><a href="index.html ">Home</a></li>
+                    <li><a href="# ">About us</a></li>
+                    <li><a href="# ">Our Service</a></li>
+                    <li><a href="# ">Portofoli</a></li>
+                    <li><a href="# ">Contact</a></li>
+                </ul>
+                <ul class="box ">
+                    <li class="link_name ">About Us</li>
+                    <li><a href="menu/teamprofile.html ">Team Profile</a></li>
+                </ul>
+                <ul class="box ">
+                    <li class="link_name ">Our Service</li>
+                    <li><a href="menu/mepcivil.html ">MEP Civil</a></li>
+                    <li><a href="menu/steelconstruction.html ">Steel Construction</a></li>
+                </ul>
+                <ul class="box ">
+                    <li class="link_name ">Contact</li>
+                    <li class="fas fa-envelope "><a href="mailto:anucaradesignandbuild@gmail.com "> anucaradesignandbuild@gmail.com</a></li>
+                    <li class="fab fa-whatsapp "><a href="https://wa.me/6282126815627"> +62 821-2681-5627</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-details ">
+            <div class="bottom_text ">
+                <span class="copyright_text ">Copyright &copy; <script>document.write(new Date().getFullYear())</script><span> Anucara</span></span>
+                <span class="policy_terms ">
+                    <a href="# ">Privacy policy</a>
+                    <a href="# ">Terms & condition</a>
+                </span>
+            </div>
+        </div>
     </section>
     <!-- End Footer -->
 
-    <!-- popup consult -->
-
-
-    <script src="js/script.js "></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        function myfunc() {
-            const menuToggle = document.querySelector('#menu-toggle').checked;
-            const navLink = document.querySelector('.nav-links')
-            if (menuToggle) {
-                navLink.style.display = 'none'
-            } else {
-                navLink.style.display = 'flex'
-
-            }
-        }
+        AOS.init();
     </script>
-
+    <script src="js/script.js "></script>
 </body>
 
 </html>

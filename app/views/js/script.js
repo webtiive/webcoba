@@ -1,32 +1,7 @@
-const darkToggle = document.querySelector(".dark-mode");
-const font = document.querySelector('.font')
-
-
 let htmlcssArrow = document.querySelector(".htmlcss-arrow");
 htmlcssArrow.onclick = function() {
     navLinks.classList.toggle("show1");
 }
-
-// Dark mode
-const body = document.querySelector("body"),
-    toggle = document.querySelector(".toggle");
-
-let getMode = localStorage.getItem("mode");
-if (getMode && getMode === "dark") {
-    body.classList.add("dark");
-    toggle.classList.add("active");
-}
-
-toggle.addEventListener("click", () => {
-    body.classList.toggle("dark");
-
-    if (!body.classList.contains("dark")) {
-        return localStorage.setItem("mode", "light");
-    }
-    localStorage.setItem("mode", "dark");
-});
-
-toggle.addEventListener("click", () => toggle.classList.toggle("active"));
 
 // hamburger Menu
 const hamburger_menu = document.querySelector(".hamburger-menu");
@@ -48,3 +23,24 @@ consultBtn.addEventListener('click', () => {
 closeBtn.addEventListener('click', () => {
     consultPopup.classList.remove('pop')
 })
+
+// Scroll Animation
+const nav = document.querySelector('nav');
+const sub_menu = document.querySelector('.sub-menu');
+const boxaa = document.querySelector('.boxaa');
+const menu3 = document.querySelector('.menu3');
+
+window.addEventListener('scroll', () => {
+    if(document.body.scrollTop > 10 || document.documentElement.scrollTop > 10){
+        nav.classList.add('scrolled');
+        sub_menu.classList.add('scrolled');
+        boxaa.classList.add('scrolled');
+        menu3.classList.add('scrolled');
+    } else{
+        nav.classList.remove('scrolled');
+        sub_menu.classList.remove('scrolled');
+        boxaa.classList.remove('scrolled');
+        menu3.classList.remove('scrolled');
+    }
+});
+
