@@ -222,28 +222,15 @@ header nav .navbar .links li .arrow {
 /* Home Content */
 
 .home {
-<<<<<<< HEAD
-    position: relative;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    filter: brightness(76%);
-    background: url(../img/img1.png);
-    height: 100vh;
-    background-attachment: fixed;
-=======
   position: relative;
   display: flex;
   margin-left: auto;
   margin-right: auto;
-  /* justify-content: center; */
   width: 100%;
   filter: brightness(76%);
   background: url(../img/img1.png);
   height: 100vh;
   background-attachment: fixed;
->>>>>>> ce6c0926c36db924359dc7c28c9275401bceb3d3
 }
 
 .home .contentbody .boxtext {
@@ -256,6 +243,7 @@ header nav .navbar .links li .arrow {
   color: #000;
   margin-left: 10px;
   border-radius: 15px;
+  /* backdrop-filter: blur(5px); */
 }
 
 .home .contentbody .boxtext:before {
@@ -293,42 +281,12 @@ header nav .navbar .links li .arrow {
   z-index: 2;
 }
 
-/* Section Icons */
-
-.icons-container {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 0.426fr));
-  padding: 3rem;
-  justify-content: center;
+.jarak {
+  position: relative;
+  padding: 40px;
+  background: #101010;
 }
 
-.icons-container .icons-con {
-  border: var(--border);
-  box-shadow: var(--text-shadow);
-  border-radius: 0.5rem;
-  text-align: center;
-  padding: 1.5rem;
-}
-
-.icons-container .icons-con i {
-  font-size: 4.5rem;
-  color: var(--font-color3);
-  padding-bottom: 0.7rem;
-}
-
-.icons-container .icons-con h3 {
-  font-size: 3.5rem;
-  color: var(--font-color3);
-  padding: 0.5rem 0;
-  text-shadow: var(--text-shadow);
-}
-
-.icons-container .icons-con p {
-  font-size: 1.7rem;
-  color: var(--text-color);
-  font-weight: 500;
-}
 
 /* About Company */
 
@@ -344,7 +302,11 @@ header nav .navbar .links li .arrow {
   background: #363636;
   box-shadow: 0px 0px 10px 0px #666;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 20px;
+}
+
+.about {
+  margin-top: 60px;
 }
 
 .aboutus .about {
@@ -360,6 +322,7 @@ header nav .navbar .links li .arrow {
 .aboutus .about p {
   margin-top: 15px;
   font-weight: 400;
+  color: #d7d7d7;
 }
 
 .container {
@@ -453,6 +416,43 @@ header nav .navbar .links li .arrow {
 
 .container .card .content-card .text-3 {
   margin-top: 50px;
+}
+
+/* Section Icons */
+
+.icons-container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 0.426fr));
+  padding: 3rem;
+  justify-content: center;
+}
+
+.icons-container .icons-con {
+  border: var(--border);
+  box-shadow: var(--text-shadow);
+  border-radius: 0.5rem;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.icons-container .icons-con i {
+  font-size: 4.5rem;
+  color: var(--font-color3);
+  padding-bottom: 0.7rem;
+}
+
+.icons-container .icons-con h3 {
+  font-size: 3.5rem;
+  color: var(--font-color3);
+  padding: 0.5rem 0;
+  text-shadow: var(--text-shadow);
+}
+
+.icons-container .icons-con p {
+  font-size: 1.7rem;
+  color: var(--text-color);
+  font-weight: 500;
 }
 
 /* consult popup */
@@ -651,24 +651,15 @@ header nav .navbar .links li .arrow {
   margin-bottom: 50px;
 }
 
-.locate-map {
-  width: 100%;
-  height: auto;
-  flex: 50%;
-  margin-bottom: 70px;
-  margin-top: 30px;
-  position: relative;
-  padding: 40px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-  overflow: hidden;
-  color: #000;
-  border-radius: 15px;
-}
-
 .locate-map iframe {
+  position: relative;
   width: 800px;
   border: 0;
   height: 500px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .location .locate-us {
@@ -685,9 +676,16 @@ header nav .navbar .links li .arrow {
 .locate-us p {
   font-weight: 400;
   margin-top: 10px;
+  color: #d7d7d7;
 }
 
-<<<<<<< HEAD
+/* Jarak */
+.jarak-cons {
+  position: relative;
+  padding: 40px;
+  background-image: linear-gradient(135deg, rgba(7, 1, 2, 1) 0%, rgba(28, 27, 25, 1) 21%, rgba(45, 45, 41, 1) 50%, rgb(68, 36, 12) 78%, rgba(10, 5, 5, 1) 100%);
+}
+
 /* all portofolio page */
 
 .container-porto {
@@ -703,8 +701,7 @@ header nav .navbar .links li .arrow {
 
 /* end all portofolio page */
 
-=======
->>>>>>> ce6c0926c36db924359dc7c28c9275401bceb3d3
+
 /* Media Queries Navbar */
 
 .logo-name {
@@ -743,7 +740,6 @@ header nav .navbar .links li .arrow {
 
 .footer {
   position: relative;
-  /* background: var(--nav-color); */
   background-image: linear-gradient(135deg, rgba(7, 1, 2, 1) 0%, rgba(28, 27, 25, 1) 21%, rgba(45, 45, 41, 1) 50%, rgb(68, 36, 12) 78%, rgba(10, 5, 5, 1) 100%);
   bottom: 0;
   left: 0;
