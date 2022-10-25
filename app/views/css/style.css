@@ -228,7 +228,6 @@ header nav .navbar .links li .arrow {
     display: flex;
     margin-left: auto;
     margin-right: auto;
-    /* justify-content: center; */
     width: 100%;
     filter: brightness(76%);
     background: url(../img/img1.png);
@@ -682,6 +681,20 @@ header nav .navbar .links li .arrow {
     margin-top: 10px;
 }
 
+/* all portofolio page */
+
+.container-porto {
+    position: relative;
+}
+
+.img-change {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+/* end all portofolio page */
 
 /* Media Queries Navbar */
 
