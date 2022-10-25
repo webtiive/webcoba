@@ -1,0 +1,109 @@
+h1.judul {
+  margin-top: 120px;
+  text-align: center;
+  color: white;
+}
+main {
+  margin: 50px 1.2rem 1.2rem 1.2rem;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+}
+
+.contact {
+  width: 100%;
+  max-width: 1000px;
+  border: 2px solid #f7b716;
+  border-radius: 5px;
+  min-height: 60vh;
+}
+
+ul.contact-icon {
+  display: grid;
+  margin: 10px;
+  justify-content: space-around;
+  grid-template-columns: auto auto auto;
+}
+
+ul.contact-icon li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+ul.contact-icon li a {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #f7b716;
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 2em;
+  box-shadow: 0 5px 45px #f7b71652;
+  background-color: black;
+  overflow: hidden;
+}
+
+ul.contact-icon li a:hover {
+  transform: translateY(-20px);
+  transition: all 0.1s;
+}
+
+ul.contact-icon li a::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  background-color: #f7b716;
+  transform: skewX(150deg) translateX(150px);
+  transition: 1s;
+  bottom: 0;
+}
+
+ul.contact-icon li a:hover::after {
+  transform: skewX(150deg) translatex(-150px);
+  background-color: rgba(247, 183, 22, 0.4);
+  /* background-color: rgba(255, 255, 255, 0.4); */
+  bottom: 0;
+  width: 50px;
+}
+
+.email-container {
+  margin-top: 50px;
+  text-align: center;
+  color: white;
+}
+
+.email-container .section-email {
+  margin-top: 10px;
+}
+
+.email-container .section-email h5 {
+  color: #f7b716;
+}
+
+@media screen and (min-width: 769px) {
+  main {
+    flex-direction: row;
+  }
+  .contact {
+    width: 130vw;
+  }
+  ul.contact-icon {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  ul.contact-icon {
+    grid-template-columns: auto auto auto auto;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  ul.contact-icon {
+    grid-template-columns: auto auto auto auto auto;
+  }
+}
