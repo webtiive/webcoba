@@ -8,7 +8,7 @@
     <title>Detail</title>
   </head>
   <body>
-    <form action="/project/edit" method="post" enctype="multipart/form-data">
+    <form action="/project/edit" method="post" enctype="multipart/form-data" style="margin: 1.2rem">
       <% project.forEach(p => { %>
       <input type="hidden" name="id" value="<%= p.id_project %> " />
       <div class="mb-3">
@@ -23,7 +23,7 @@
         <input type="file" class="form-control" id="Gambar" name="image" />
       </div>
       <div class="mb-3">
-        <label for="Deskripsi" class="form-label">Example textarea</label>
+        <label for="Deskripsi" class="form-label">Description</label>
         <textarea class="form-control" id="Deskripsi" name="desc" rows="3"><%= p.desc_project %></textarea>
       </div>
       <!-- <input type="submit" class="btn btn-primary" value="Ubah" /> -->

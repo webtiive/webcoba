@@ -72,22 +72,23 @@ header nav .navbar {
   max-width: 1290px;
   display: flex;
   margin: 0 auto;
-  padding: 0 30px;
   justify-content: space-between;
   align-items: center;
 }
 
 header nav .navbar img {
-  width: 386px;
+  width: 30vw;
   height: 78px;
   margin-top: 5px;
-  margin-left: -100px;
+  margin-left: 0px;
   display: flex;
   justify-content: center;
 }
 
 header nav .navbar .nav-links {
+  display: block;
   font-weight: 500;
+  margin: 0 0 0 50px;
   font-size: 17px;
 }
 
@@ -117,6 +118,7 @@ header nav .navbar .links li a {
 header nav .navbar .links li a.is-active,
 header nav .navbar .links li a.boxa:hover {
   background: var(--text-color);
+  height: max-content;
 }
 
 header nav .navbar .links li .arrow {
@@ -236,7 +238,7 @@ header nav .navbar .links li .arrow {
 .home .contentbody .boxtext {
   position: relative;
   margin-top: 180px;
-  max-width: 800px;
+  width: 800px;
   padding: 100px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   overflow: hidden;
@@ -260,7 +262,7 @@ header nav .navbar .links li .arrow {
 
 .home .contentbody h1 {
   position: relative;
-  font-size: 50px;
+  font-size: 1.2rem;
   color: #fff;
   z-index: 2;
 }
@@ -277,7 +279,7 @@ header nav .navbar .links li .arrow {
   color: #f7b716;
   font-family: 'poppins', sans-serif;
   font-weight: 500px;
-  font-size: 60px;
+  font-size: 4.2rem;
   z-index: 2;
 }
 
@@ -287,13 +289,12 @@ header nav .navbar .links li .arrow {
   background: #101010;
 }
 
-
 /* About Company */
 
 .aboutus {
   position: relative;
   width: 80%;
-  height: 800px;
+  height: max-content;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -316,11 +317,12 @@ header nav .navbar .links li .arrow {
 .aboutus .about h1 {
   letter-spacing: 3px;
   color: #f7b716c4;
-  font-size: 30px;
+  font-size: 2rem;
 }
 
 .aboutus .about p {
   margin-top: 15px;
+  font-size: 1rem;
   font-weight: 400;
   color: #d7d7d7;
 }
@@ -426,6 +428,7 @@ header nav .navbar .links li .arrow {
   grid-template-columns: repeat(auto-fit, minmax(20rem, 0.426fr));
   padding: 3rem;
   justify-content: center;
+  overflow: hidden;
 }
 
 .icons-container .icons-con {
@@ -653,7 +656,7 @@ header nav .navbar .links li .arrow {
 
 .locate-map iframe {
   position: relative;
-  width: 800px;
+  width: 60vw;
   border: 0;
   height: 500px;
   border-radius: 10px;
@@ -689,7 +692,7 @@ header nav .navbar .links li .arrow {
 /* all portofolio page */
 
 .container-porto {
-    position: relative;
+  position: relative;
 }
 
 .img-change {
@@ -702,7 +705,6 @@ header nav .navbar .links li .arrow {
 
 /* end all portofolio page */
 
-
 /* Media Queries Navbar */
 
 .logo-name {
@@ -714,9 +716,6 @@ header nav .navbar .links li .arrow {
 }
 
 @media screen and (min-width: 320px) {
-  nav .navbar .nav-links {
-    max-width: 100%;
-  }
 }
 
 @media screen and (max-width: 480px) {
@@ -956,7 +955,51 @@ header nav .navbar .links li .arrow {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
+  .hamburger-menu .bar {
+    display: block;
+    margin-right: 20px;
+  }
+
+  .logo-name {
+    position: absolute;
+    left: 0;
+    margin-left: 10px;
+    color: white;
+    z-index: 2;
+  }
+
+  header nav .navbar .nav-links {
+    display: none;
+    position: absolute;
+    margin: 0;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: black;
+  }
+
+  .navbar .nav-links .links {
+    display: flex;
+    margin-right: 50px;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+  }
+
+  .navbar .links .sub-menu {
+    left: 50px;
+  }
+
+  header nav .navbar img {
+    width: 50vw;
+    margin-left: 10px;
+  }
+
+  .home .contentbody .boxtext {
+    width: 90vw;
+  }
+
   .footer {
     position: relative;
   }
@@ -982,6 +1025,10 @@ header nav .navbar .links li .arrow {
 }
 
 @media (max-width: 520px) {
+  .home .contentbody #text {
+    font-size: 2.2rem;
+  }
+
   .footer::before {
     top: 145px;
   }
