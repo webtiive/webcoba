@@ -1,4 +1,5 @@
 .consult-footer {
+  padding-top: 50px;
   width: 100%;
   height: auto;
   margin: auto;
@@ -15,34 +16,41 @@ main {
   display: flex;
   height: 100%;
   justify-content: center;
+  margin: 0 1.2rem 0 1.2rem;
+  align-items: center;
 }
 
-.contact {
+.consult-footer .contact {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   width: 100%;
   max-width: 1000px;
   border: 2px solid #f7b716;
   border-radius: 5px;
-  min-height: 60vh;
+  min-height: 50vh;
   margin-bottom: 30px;
   margin-top: 30px;
 }
 
 ul.contact-icon {
-  display: grid;
+  display: flex;
   margin: 10px;
-  justify-content: space-around;
-  grid-template-columns: auto auto auto;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 ul.contact-icon li {
   list-style: none;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 }
 
 ul.contact-icon li a {
   position: relative;
-  width: 80px;
-  height: 80px;
+  width: 50vw;
+  height: 50px;
   display: flex;
   border-radius: 10px;
   justify-content: center;
@@ -51,9 +59,15 @@ ul.contact-icon li a {
   text-decoration: none;
   color: whitesmoke;
   font-size: 2em;
-  box-shadow: 0 5px 45px #f7b71652;
+  box-shadow: 0 5px 15px #f7b71652;
   background-color: black;
   overflow: hidden;
+}
+
+ul.contact-icon li a i,
+ul.contact-icon li span {
+  font-size: 2.5vw;
+  font-weight: lighter;
 }
 
 ul.contact-icon li a:hover {
@@ -66,13 +80,13 @@ ul.contact-icon li a::after {
   position: absolute;
   height: 100%;
   background-color: #f7b716;
-  transform: skewX(150deg) translateX(150px);
+  transform: skewX(150deg) translateX(300px);
   transition: 1s;
   bottom: 0;
 }
 
 ul.contact-icon li a:hover::after {
-  transform: skewX(150deg) translatex(-150px);
+  transform: skewX(150deg) translatex(-300px);
   background-color: rgba(247, 183, 22, 0.4);
   /* background-color: rgba(255, 255, 255, 0.4); */
   bottom: 0;
@@ -80,7 +94,6 @@ ul.contact-icon li a:hover::after {
 }
 
 .email-container {
-  margin-top: 50px;
   text-align: center;
   color: white;
 }
@@ -100,8 +113,15 @@ ul.contact-icon li a:hover::after {
   .contact {
     width: 130vw;
   }
+
   ul.contact-icon {
     grid-template-columns: auto auto auto;
+  }
+
+  ul.contact-icon li a i,
+  ul.contact-icon li span {
+    font-size: 1.3vw;
+    font-weight: lighter;
   }
 }
 
@@ -114,5 +134,15 @@ ul.contact-icon li a:hover::after {
 @media screen and (min-width: 1025px) {
   ul.contact-icon {
     grid-template-columns: auto auto auto auto auto;
+  }
+
+  ul.contact-icon li a i,
+  ul.contact-icon li span {
+    font-size: 1vw;
+    font-weight: lighter;
+  }
+
+  ul.contact-icon li a {
+    width: 30vw;
   }
 }

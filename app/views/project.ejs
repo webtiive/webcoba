@@ -9,24 +9,20 @@
   </head>
   <body>
     <a href="/input_project">Tambah produk</a>
+
     <% if (msg.length !== 0) { %>
     <div class="alert alert-success" role="alert"><%= msg %></div>
     <% } %>
-    <div class="project">
+    <div class="project row" style="margin: 1.5rem">
       Project :<% AllProject.forEach(p => { %>
 
-      <div class="card" style="width: 18rem">
+      <div class="card col-md-4" style="width: 18rem; margin: 10px">
         <div class="card-body">
-          <img src="<%= p.gambar_project %> " class="card-img-top" alt="..." />
+          <img src="<%= p.gambar_project %> " class="card-img-top" />
           <h5 class="card-title"><%= p.judul_project %></h5>
           <p class="card-text" style="width: 50%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis"><%= p.desc_project %></p>
           <div class="tombol">
             <a href="/project/<%= p.id_project %>" class="btn btn-primary">Ubah</a>
-
-            <!-- <form action="/project?_method=DELETE" method="post" class="d-inline">
-              <input type="hidden" name="id" value="" />
-              <button type="submit" class="btn btn-danger" onclick="return confirm('yakin?')">Hapus</button>
-            </form> -->
             <form action="/delete/<%= p.id_project %>" method="post" class="d-inline">
               <input type="hidden" name="image" value="<%= p.gambar_project %>" />
               <button type="submit" class="btn btn-danger" onclick="return confirm('yakin?')">Hapus</button>

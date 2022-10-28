@@ -115,3 +115,9 @@ anucaradesignandbuild@gmail.com
         transform: rotate(180deg);
     }
 }
+
+
+
+buat logo {
+    width: 30vw; margin-left: 5px
+}

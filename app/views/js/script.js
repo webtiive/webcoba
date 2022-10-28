@@ -1,28 +1,28 @@
-let htmlcssArrow = document.querySelector(".htmlcss-arrow");
-htmlcssArrow.onclick = function() {
-    navLinks.classList.toggle("show1");
-}
+let htmlcssArrow = document.querySelector('.htmlcss-arrow');
+htmlcssArrow.onclick = function () {
+  navLinks.classList.toggle('show1');
+};
 
 // hamburger Menu
-const hamburger_menu = document.querySelector(".hamburger-menu");
-const container = document.querySelector(".navbar");
+const hamburger_menu = document.querySelector('.hamburger-menu');
+const container = document.querySelector('.navbar');
 
-hamburger_menu.addEventListener("click", () => {
-    container.classList.toggle("active");
+hamburger_menu.addEventListener('click', () => {
+  container.classList.toggle('active');
 });
 
 // Consult Toggle
-const consultBtn = document.getElementById('consultBtn')
-const consultPopup = document.getElementById('consultPopup')
-const closeBtn = document.getElementById('close')
+const consultBtn = document.getElementById('consultBtn');
+const consultPopup = document.getElementById('consultPopup');
+const closeBtn = document.getElementById('close');
 
 consultBtn.addEventListener('click', () => {
-    consultPopup.classList.toggle('pop')
-})
+  consultPopup.classList.toggle('pop');
+});
 
 closeBtn.addEventListener('click', () => {
-    consultPopup.classList.remove('pop')
-})
+  consultPopup.classList.remove('pop');
+});
 
 // Scroll Animation
 const nav = document.querySelector('nav');
@@ -31,17 +31,17 @@ const boxaa = document.querySelector('.boxaa');
 const menu3 = document.querySelector('.menu3');
 
 window.addEventListener('scroll', () => {
-    if(document.body.scrollTop > 10 || document.documentElement.scrollTop > 10){
-        nav.classList.add('scrolled');
-        sub_menu.classList.add('scrolled');
-        boxaa.classList.add('scrolled');
-        menu3.classList.add('scrolled');
-    } else{
-        nav.classList.remove('scrolled');
-        sub_menu.classList.remove('scrolled');
-        boxaa.classList.remove('scrolled');
-        menu3.classList.remove('scrolled');
-    }
+  if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+    nav.classList.add('scrolled');
+    sub_menu.classList.add('scrolled');
+    boxaa.classList.add('scrolled');
+    menu3.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+    sub_menu.classList.remove('scrolled');
+    boxaa.classList.remove('scrolled');
+    menu3.classList.remove('scrolled');
+  }
 });
 
 let imgreload = [];
@@ -52,12 +52,24 @@ imgreload[2] = '../img/img3.png';
 imgreload[3] = '../img/img4.png';
 imgreload[4] = '../img/img5.png';
 
-window.onload = function() {
+window.onload = function () {
+  const random = Math.floor(Math.random() * imgreload.length);
+  console.log(random);
 
-    const random = Math.floor(Math.random()* imgreload.length);
-    console.log(random);
+  const test = (document.querySelector('.img-change').style.backgroundImage = `url(${imgreload[random]})`);
+  console.log(test);
+};
+const myfunc = () => {
+  const hamburgerMenu = document.querySelector('.hamburger-menu');
+  const navLink = document.querySelector('.nav-links');
+  const menuToggle = document.querySelector('#menu-toggle');
+  const logoName = document.querySelector('.logo-name');
 
-    const test = document.querySelector('.img-change').style.backgroundImage = `url(${imgreload[random]})`;
-    console.log(test);
-
-}
+  if (!menuToggle.checked) {
+    navLink.style.display = 'block';
+    logoName.style.display = 'block';
+  } else {
+    navLink.style.display = 'none';
+    logoName.style.display = 'none';
+  }
+};

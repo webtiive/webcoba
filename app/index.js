@@ -65,11 +65,37 @@ const removeImage = (filePath) => {
 };
 
 /**
- * Routes
+ * Client Routes
  */
 app.get('/', (req, res) => {
   res.send('Hello World!');
 });
+
+// app.get('/projects', async (req, res) => {
+//   try {
+//     const AllProject = await client.query('SELECT * FROM project');
+//     // res.json(AllProject.rows);
+//     res.render('project', { AllProject: AllProject.rows, msg: req.flash('msg'), AllProjectCount: AllProject.rowCount });
+//   } catch (e) {
+//     console.error(e.message);
+//   }
+// });
+
+// app.get('/projects/:id', async (req, res) => {
+//   const { id } = req.params;
+//   try {
+//     const project = await client.query('SELECT * FROM project WHERE id_project=$1', [id]);
+//     // res.send(project.rows);
+//     res.render('detailProject', { project: project.rows });
+//   } catch (e) {
+//     console.error(e.message);
+//   }
+// });
+
+/*
+  Admin Routes
+
+*/
 
 app.get('/project', async (req, res) => {
   try {
@@ -119,8 +145,8 @@ app.post('/project/edit', async (req, res) => {
     const editProject = await client.query('update project set judul_project=$2,gambar_project=$3, desc_project=$4 where id_project=$1', [id, title, image, desc]);
     // res.send(image);
   }
-  res.redirect('/project');
   req.flash('msg', 'Project berhasil diubah');
+  res.redirect('/project');
 });
 
 // delete method
