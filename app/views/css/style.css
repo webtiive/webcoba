@@ -631,7 +631,7 @@ header nav .navbar .links li .arrow {
   font-weight: 500;
   font-style: normal;
   font-size: 1rem;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.2em;
 }
 
 .consult .fa-whatsapp,
@@ -697,10 +697,11 @@ header nav .navbar .links li .arrow {
 }
 
 .img-change {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
 }
 
 /* end all portofolio page */
