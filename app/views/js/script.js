@@ -54,10 +54,8 @@ imgreload[4] = '../img/img5.png';
 
 window.onload = function () {
   const random = Math.floor(Math.random() * imgreload.length);
-  console.log(random);
 
   const test = (document.querySelector('.img-change').style.backgroundImage = `url(${imgreload[random]})`);
-  console.log(test);
 };
 const myfunc = () => {
   const hamburgerMenu = document.querySelector('.hamburger-menu');
@@ -73,3 +71,30 @@ const myfunc = () => {
     logoName.style.display = 'none';
   }
 };
+
+var swiper = new Swiper('.mySwiper', {
+  effect: 'coverflow',
+  grabCursor: true,
+  loop: true,
+  centeredSlides: true,
+  slidesPerView: 2,
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  // breakpoints: {
+  //   900: {
+  //     slidesPerView: 3,
+  //     spaceBetween: 40,
+  //   },
+  // },
+});
+
+const prevSlide = document.querySelector('.swiper-slide-prev');

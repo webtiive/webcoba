@@ -71,15 +71,15 @@ app.get('/', (req, res) => {
   res.send('Hello World!');
 });
 
-// app.get('/projects', async (req, res) => {
-//   try {
-//     const AllProject = await client.query('SELECT * FROM project');
-//     // res.json(AllProject.rows);
-//     res.render('project', { AllProject: AllProject.rows, msg: req.flash('msg'), AllProjectCount: AllProject.rowCount });
-//   } catch (e) {
-//     console.error(e.message);
-//   }
-// });
+app.get('/projects', async (req, res) => {
+  try {
+    const AllProject = await client.query('SELECT * FROM project');
+    // res.json(AllProject.rows);
+    res.send(AllProject.rows);
+  } catch (e) {
+    console.error(e.message);
+  }
+});
 
 // app.get('/projects/:id', async (req, res) => {
 //   const { id } = req.params;

@@ -1,41 +1,25 @@
 /**
  * Global variable
  */
-const title = $('.titleForCard');
-const desc = $('.descForCard');
 
 $.ajax({
   type: 'GET',
-  url: 'http://localhost:3000/project',
+  url: 'http://localhost:3000/projects',
   data: {},
   success: function (result) {
     result.forEach((e) => {
-      // $('.card-title').text(e.judul_project);
-      // $('.card-text').html(e.desc_project);
-      // $('.card').prepend(`<img class="card-img-top" src="img/${e.gambar_project}" />`);
+      const ada = $('.swiper-wrapper').append(`
+      <div class="card swiper-slide">
+            <input type="hidden" name="trigger loop" value="${e}" />
+            <img src="../../${e.gambar_project}"  />
+            <div class="card-body">
+              <h5 class="title-card">${e.judul_project}</h5>
+              <hr />
+              <p class="text-card">${e.desc_project}</p>
+            </div>
+          </div>
+      `);
     });
     // const ada = $('.card-title').html(result[0]['judul_project']);
   },
-});
-
-//post data
-$('form').on('submit', function (e) {
-  e.preventDefault();
-  $.ajax({
-    type: 'POST',
-    url: 'http://localhost:3000/project',
-    data: {
-      judul_project: title.val(),
-      desc_project: desc.val(),
-    },
-    success: (req) => {
-      req.forEach((e) => {
-        $('.card-title').html(e.judul_project);
-        $('.card-text').html(e.desc_project);
-      });
-    },
-    error: () => {
-      alert('error');
-    },
-  });
 });
