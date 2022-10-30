@@ -20,6 +20,5 @@ $.ajax({
           </div>
       `);
     });
-    // const ada = $('.card-title').html(result[0]['judul_project']);
   },
 });

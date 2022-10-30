@@ -210,6 +210,7 @@ header nav .navbar .links li .arrow {
 
 .navbar.active .bar {
   transform: rotate(-360deg);
+  left: 0;
   background-color: transparent;
 }
 
@@ -697,11 +698,11 @@ header nav .navbar .links li .arrow {
 }
 
 .img-change {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  background-attachment: fixed;
 }
 
 /* end all portofolio page */
@@ -862,7 +863,6 @@ header nav .navbar .links li .arrow {
 
 .footer .content .link-boxes .box {
   width: calc(100% / 5 - 10px);
-  word-break: break-all;
 }
 
 .content .link-boxes .box .link_name {
@@ -971,13 +971,13 @@ header nav .navbar .links li .arrow {
   }
 
   header nav .navbar .nav-links {
-    display: none;
     position: absolute;
     margin: 0;
     top: 0;
-    left: 0;
+    left: -1000px;
     height: 100vh;
     background-color: black;
+    transition: all 0.5s;
   }
 
   .navbar .nav-links .links {
@@ -1015,6 +1015,7 @@ header nav .navbar .links li .arrow {
   }
   .footer .content .link-boxes .box {
     width: calc(100% / 3 - 10px);
+    word-break: break-all;
   }
   .footer .content .link-boxes .input-box {
     width: 60%;

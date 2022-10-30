@@ -64,10 +64,10 @@ const myfunc = () => {
   const logoName = document.querySelector('.logo-name');
 
   if (!menuToggle.checked) {
-    navLink.style.display = 'block';
+    navLink.style.left = '0px';
     logoName.style.display = 'block';
   } else {
-    navLink.style.display = 'none';
+    navLink.style.left = '-1000px';
     logoName.style.display = 'none';
   }
 };
