@@ -1,3 +1,8 @@
+main h1 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
 .swiper {
   width: 90vw;
   padding-top: 50px;

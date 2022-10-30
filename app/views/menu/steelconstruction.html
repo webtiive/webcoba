@@ -1,171 +1,172 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anucara</title>
-    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
 
     <!-- ===== Style CSS ===== -->
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css" />
 
     <!-- ===== Fontawesome ===== -->
     <script src="https://kit.fontawesome.com/6b15f87bf3.js" crossorigin="anonymous"></script>
 
     <!-- ===== Boxicons CSS===== -->
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
 
     <!-- ===== AOS ===== -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
 
-
-</head>
-
-<body>
+  <body>
     <!-- Header -->
     <header>
-        <nav>
-            <div class="navbar">
-                <img class="image" src="../img/logo anucarapt.png" alt="logo anucara">
-                <div class="nav-links active">
-                    <ul class="links">
-                        <li>
-                            <a href="../index.html" class="boxa">Home</a>
-                        </li>
-                        <li>
-                            <a href="#aboutus" class="boxa">About Us</a>
-                            <i class='bx bx-chevron-down arrow htmlcss-arrow'></i>
-                            <ul class="htmlCss-sub-menu sub-menu">
-                                <li>
-                                    <a href="teamprofile.html">Team Profile</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#ourservice" class="boxa">Our Service</a>
-                            <i class='bx bx-chevron-down arrow htmlcss-arrow'></i>
-                            <ul class="htmlCss-sub-menu sub-menu boxaa">
-                                <li>
-                                    <a href="mepcivil.html">Mep Civil</a>
-                                </li>
-                                <li>
-                                    <a href="steelconstruction.html">Steel Construction</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#portofolio" class="boxa">Portofolio</a>
-                            <i class='bx bx-chevron-down arrow htmlcss-arrow'></i>
-                            <ul class="htmlCss-sub-menu sub-menu">
-                                <li>
-                                    <a href="allportofolio.html">All Portofolio</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="contact.html" class="boxa">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-                <label for="menu-toggle">
-                    <div class="hamburger-menu" onclick="myfunc()">
-                        <span class="logo-name">Menu</span>
-                        <div class="bar"></div>
-                    </div>
-                </label>
-                <input type="checkbox" name="menu-toggle" id="menu-toggle" style="display: none;">
+      <nav>
+        <div class="navbar">
+          <img class="image" src="../img/logo anucarapt.png" alt="logo anucara" />
+          <div class="nav-links active">
+            <ul class="links">
+              <li>
+                <a href="../index.html" class="boxa">Home</a>
+              </li>
+              <li>
+                <a href="#aboutus" class="boxa">About Us</a>
+                <i class="bx bx-chevron-down arrow htmlcss-arrow"></i>
+                <ul class="htmlCss-sub-menu sub-menu">
+                  <li>
+                    <a href="teamprofile.html">Team Profile</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#ourservice" class="boxa">Our Service</a>
+                <i class="bx bx-chevron-down arrow htmlcss-arrow"></i>
+                <ul class="htmlCss-sub-menu sub-menu boxaa">
+                  <li>
+                    <a href="mepcivil.html">Mep Civil</a>
+                  </li>
+                  <li>
+                    <a href="steelconstruction.html">Steel Construction</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#portofolio" class="boxa">Portofolio</a>
+                <i class="bx bx-chevron-down arrow htmlcss-arrow"></i>
+                <ul class="htmlCss-sub-menu sub-menu">
+                  <li>
+                    <a href="allportofolio.html">All Portofolio</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="contact.html" class="boxa">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <label for="menu-toggle">
+            <div class="hamburger-menu" onclick="myfunc()">
+              <span class="logo-name">Menu</span>
+              <div class="bar"></div>
             </div>
-        </nav>
+          </label>
+          <input type="checkbox" name="menu-toggle" id="menu-toggle" style="display: none" />
+        </div>
+      </nav>
     </header>
     <!-- End Header -->
 
     <div class="consult">
-        <div id="consultPopup" class="consult-popup">
-            <h3>Consult & Order</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <div class="admin-list">
-                <div class="admin">
-                    <img src="">
-                    <span>Jordan</span>
-                </div>
-                <div class="admin">
-                    <img src="">
-                    <span>Jordan</span>
-                </div>
-            </div>
-            <a id="wa" href="https://wa.me/6282126815627"><i class="fab fa-whatsapp"></i> Chat Via WhatsApp</a>
-            <a id="now" href=""><i class="far fa-envelope"></i> Order Now</a>
-            <div class="qr-code">
-                <p>WhatsApp QR Code:</p>
-                <img src="">
-            </div>
-            <button id="close"><i class="fas fa-times"></i></button>
+      <div id="consultPopup" class="consult-popup">
+        <h3>Consult & Order</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="admin-list">
+          <div class="admin">
+            <img src="" />
+            <span>Jordan</span>
+          </div>
+          <div class="admin">
+            <img src="" />
+            <span>Jordan</span>
+          </div>
         </div>
-        <div id="consultBtn" class="consult-btn">
-            <i class="fab fa-whatsapp"></i>
-            <p>ASK ME !</p>
+        <a id="wa" href="https://wa.me/6282126815627"><i class="fab fa-whatsapp"></i> Chat Via WhatsApp</a>
+        <a id="now" href=""><i class="far fa-envelope"></i> Order Now</a>
+        <div class="qr-code">
+          <p>WhatsApp QR Code:</p>
+          <img src="" />
         </div>
+        <button id="close"><i class="fas fa-times"></i></button>
+      </div>
+      <div id="consultBtn" class="consult-btn">
+        <i class="fab fa-whatsapp"></i>
+        <p>ASK ME !</p>
+      </div>
     </div>
 
     <!-- Footer -->
-    <section class="footer ">
-        <div class="content ">
-            <div class="top ">
-                <div class="logo-details ">
-                </div>
-                <div class="media-icons ">
-                    <a href="https://www.facebook.com/profile.php?id=100086564315471 "><i class="fab fa-facebook-f "></i></a>
-                    <a href="# "><i class="fab fa-twitter "></i></a>
-                    <a href="https://www.instagram.com/anucara.designandbuild/?igshid=YmMyMTA2M2Y%3D "><i class="fab fa-instagram "></i></a>
-                    <a href="# "><i class="fab fa-linkedin-in "></i></a>
-                    <a href="# "><i class="fab fa-youtube "></i></a>
-                    <a href="https://www.tiktok.com/@anucara.design.and.build"><i class="fab fa-tiktok "></i></a>
-                </div>
-            </div>
-            <div class="link-boxes ">
-                <ul class="box ">
-                    <li class="link_name ">Anucara</li>
-                    <li><a href="../index.html ">Home</a></li>
-                    <li><a href="../index.html#aboutus">About us</a></li>
-                    <li><a href="# ">Our Service</a></li>
-                    <li><a href="# ">Portofolio</a></li>
-                    <li><a href="# ">Contact</a></li>
-                </ul>
-                <ul class="box ">
-                    <li class="link_name ">About Us</li>
-                    <li><a href="menu/teamprofile.html ">Team Profile</a></li>
-                </ul>
-                <ul class="box ">
-                    <li class="link_name ">Our Service</li>
-                    <li><a href="menu/mepcivil.html ">MEP Civil</a></li>
-                    <li><a href="menu/steelconstruction.html ">Steel Construction</a></li>
-                </ul>
-                <ul class="box">
-                    <li class="link_name">Portofolio</li>
-                    <li><a href="allportofolio.html">All Portofolio</a></li>
-                </ul>
-                <ul class="box ">
-                    <li class="link_name ">Contact</li>
-                    <li class="fas fa-envelope "><a href="mailto:anucaradesignandbuild@gmail.com "> anucaradesignandbuild@gmail.com</a></li>
-                    <li class="fab fa-whatsapp "><a href="https://wa.me/6282126815627"> +62 821-2681-5627</a></li>
-                </ul>
-            </div>
+    <section class="footer">
+      <div class="content">
+        <div class="top">
+          <div class="logo-details"></div>
+          <div class="media-icons">
+            <a href="https://www.facebook.com/profile.php?id=100086564315471 "><i class="fab fa-facebook-f"></i></a>
+            <a href="# "><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/anucara.designandbuild/?igshid=YmMyMTA2M2Y%3D "><i class="fab fa-instagram"></i></a>
+            <a href="# "><i class="fab fa-linkedin-in"></i></a>
+            <a href="# "><i class="fab fa-youtube"></i></a>
+            <a href="https://www.tiktok.com/@anucara.design.and.build"><i class="fab fa-tiktok"></i></a>
+          </div>
         </div>
-        <div class="bottom-details ">
-            <div class="bottom_text ">
-                <span class="copyright_text ">Copyright &copy; <script>document.write(new Date().getFullYear())</script><span> Anucara</span></span>
-                <span class="policy_terms ">
-                    <a href="# ">Privacy policy</a>
-                    <a href="# ">Terms & condition</a>
-                </span>
-            </div>
+        <div class="link-boxes">
+          <ul class="box">
+            <li class="link_name">Anucara</li>
+            <li><a href="../index.html ">Home</a></li>
+            <li><a href="../index.html#aboutus">About us</a></li>
+            <li><a href="# ">Our Service</a></li>
+            <li><a href="# ">Portofolio</a></li>
+            <li><a href="# ">Contact</a></li>
+          </ul>
+          <ul class="box">
+            <li class="link_name">About Us</li>
+            <li><a href="menu/teamprofile.html ">Team Profile</a></li>
+          </ul>
+          <ul class="box">
+            <li class="link_name">Our Service</li>
+            <li><a href="menu/mepcivil.html ">MEP Civil</a></li>
+            <li><a href="menu/steelconstruction.html ">Steel Construction</a></li>
+          </ul>
+          <ul class="box">
+            <li class="link_name">Portofolio</li>
+            <li><a href="allportofolio.html">All Portofolio</a></li>
+          </ul>
+          <ul class="box">
+            <li class="link_name">Contact</li>
+            <li class="fas fa-envelope"><a href="mailto:anucaradesignandbuild@gmail.com "> anucaradesignandbuild@gmail.com</a></li>
+            <li class="fab fa-whatsapp"><a href="https://wa.me/6282126815627"> +62 821-2681-5627</a></li>
+          </ul>
         </div>
+      </div>
+      <div class="bottom-details">
+        <div class="bottom_text">
+          <span class="copyright_text"
+            >Copyright &copy;
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            <span> Anucara</span></span
+          >
+          <span class="policy_terms">
+            <a href="# ">Privacy policy</a>
+            <a href="# ">Terms & condition</a>
+          </span>
+        </div>
+      </div>
     </section>
     <!-- End Footer -->
 
     <script src="../js/script.js "></script>
-</body>
-
+  </body>
 </html>

@@ -966,8 +966,11 @@ header nav .navbar .links li .arrow {
     position: absolute;
     left: 0;
     margin-left: 10px;
-    color: white;
+    color: var(--font-color3);
     z-index: 2;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 1.5rem;
   }
 
   header nav .navbar .nav-links {
