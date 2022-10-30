@@ -265,14 +265,24 @@ header nav .navbar .links li .arrow {
   font-size: 1.2rem;
   color: #fff;
   z-index: 2;
+  text-shadow: 2px 2px #ff0000;
+}
+
+.home .contentbody h2 {
+  position: relative;
+  font-size: 1.8rem;
+  color: #fff;
+  z-index: 2;
+  text-shadow: 2px 2px #383838;
 }
 
 .home .contentbody p {
   position: relative;
-  font-size: 18px;
+  font-size: 1.21rem;
   font-weight: 200px;
   color: #fff;
   z-index: 2;
+  text-shadow: 2px 2px #383838;
 }
 
 .home .contentbody #text {
@@ -696,11 +706,11 @@ header nav .navbar .links li .arrow {
 }
 
 .img-change {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  background-attachment: fixed;
 }
 
 /* end all portofolio page */
