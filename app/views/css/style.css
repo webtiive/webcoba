@@ -244,6 +244,7 @@ header nav .navbar .links li .arrow {
 
 .navbar.active .bar {
   transform: rotate(-360deg);
+  left: 0;
   background-color: transparent;
 }
 
@@ -1095,18 +1096,21 @@ header nav .navbar .links li .arrow {
     position: absolute;
     left: 0;
     margin-left: 10px;
-    color: white;
+    color: var(--font-color3);
     z-index: 2;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 1.5rem;
   }
 
   header nav .navbar .nav-links {
-    display: none;
     position: absolute;
     margin: 0;
     top: 0;
-    left: 0;
+    left: -1000px;
     height: 100vh;
     background-color: black;
+    transition: all 0.5s;
   }
 
   .navbar .nav-links .links {

@@ -121,3 +121,14 @@ anucaradesignandbuild@gmail.com
 buat logo {
     width: 30vw; margin-left: 5px
 }
+
+/ ==== tugas ===== /
+1. Project management Plan => Gambar 2D layout
+                           => Gambar 3D rendering interior & exterior
+                           => Gambar kerja :
+                                            *Struktur
+                                            *Arsitektur
+                                            *MEP
+                           => budgeding Plan
+
+2.Build Construction => Bep ,Mep
