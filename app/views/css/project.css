@@ -1,0 +1,81 @@
+.swiper {
+  width: 90vw;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  height: max-content;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: max-content;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 40vh;
+}
+
+main {
+  margin-top: 50px;
+  padding: 20px;
+  height: 80vh;
+}
+
+main h1 {
+  color: white;
+}
+
+.card-body {
+  margin-top: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 105%;
+  height: 50vh;
+  margin-top: 150px;
+  color: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.37), rgba(0, 0, 0, 0.244));
+}
+
+.card-body h5 {
+  text-align: right;
+  font-size: 2.3rem;
+}
+
+hr {
+  width: 50%;
+  float: right;
+}
+
+.card-body p {
+  margin-top: 20px;
+  margin-left: -20px;
+}
+
+main .swiper-button-next,
+main .swiper-button-prev {
+  display: none;
+}
+
+@media only screen and (min-width: 992px) {
+  .card-body h5 {
+    font-size: 3.2rem;
+  }
+  main .swiper-button-next,
+  main .swiper-button-prev {
+    color: white;
+    display: block;
+  }
+
+  .card-body {
+    transform: translateZ(20px) scaleY(0);
+    transition: all 0.5s;
+    width: 110%;
+  }
+  .card:hover .card-body {
+    transform: translateZ(20px) scaleY(1);
+  }
+}
