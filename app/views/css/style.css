@@ -132,8 +132,7 @@ header nav .navbar .links li .arrow {
   transition: ease-in-out 300ms;
 }
 
-.navbar .links li:hover .htmlcss-arrow, 
-.navbar .links li:hover .js-arrow {
+.navbar .links li:hover .htmlcss-arrow {
   transform: rotate(180deg);
 }
 
@@ -153,7 +152,7 @@ header nav .navbar .links li .arrow {
 }
 
 .navbar .links .sub-menu li:hover {
-  border-bottom: 1.5px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   cursor: pointer;
 }
@@ -164,46 +163,14 @@ header nav .navbar .links li .arrow {
   font: 500;
 }
 
-.navbar .links .sub-menu li .more-arrow {
-  line-height: 40px;
-}
-
-
-.navbar .links li:hover .htmlCss-sub-menu, 
-.navbar .links li:hover .js-sub-menu {
-  display: block;
-}
-
-.navbar .links .more .more-sub-menu {
-  position: absolute;
-  top: 0;
-  left: 100%;
-  border: 4px 12px 12px 12px;
-  display: none;
-  margin-left: 8px;
-  background-color: var(--font-color3);
-}
-
-.navbar .links .more:hover .more-sub-menu {
-  display: block;
-}
-
-.navbar .links .more .more-sub-menu::before {
-  content: '';
-  position: absolute;
-  /* top: -14px; */
-  margin-top: 13px;
-  left: -6px;
-  height: 12px;
-  width: 12px;
-  background: var();
-  transform: rotate(45deg);
-  z-index: -1;
-}
-
 .navbar .links .sub-menu li a:hover {
   transform: scale(1.1);
 }
+
+.navbar .links li:hover .htmlCss-sub-menu {
+  display: block;
+}
+
 /* Hamburger Menu */
 
 .navbar .hamburger-menu {
@@ -244,7 +211,6 @@ header nav .navbar .links li .arrow {
 
 .navbar.active .bar {
   transform: rotate(-360deg);
-  left: 0;
   background-color: transparent;
 }
 
@@ -1096,21 +1062,18 @@ header nav .navbar .links li .arrow {
     position: absolute;
     left: 0;
     margin-left: 10px;
-    color: var(--font-color3);
+    color: white;
     z-index: 2;
-    letter-spacing: 2px;
-    font-weight: bold;
-    font-size: 1.5rem;
   }
 
   header nav .navbar .nav-links {
+    display: none;
     position: absolute;
     margin: 0;
     top: 0;
-    left: -1000px;
+    left: 0;
     height: 100vh;
     background-color: black;
-    transition: all 0.5s;
   }
 
   .navbar .nav-links .links {

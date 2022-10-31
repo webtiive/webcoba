@@ -10,7 +10,7 @@ moreArrow.onclick = function() {
 let jsArrow = document.querySelector(".js-arrow");
 jsArrow.onclick = function() {
     navLinks.classList.toggle("show3");
-}
+};
 
 // hamburger Menu
 const hamburger_menu = document.querySelector('.hamburger-menu');
@@ -73,10 +73,10 @@ const myfunc = () => {
   const logoName = document.querySelector('.logo-name');
 
   if (!menuToggle.checked) {
-    navLink.style.left = '0px';
+    navLink.style.display = 'block';
     logoName.style.display = 'block';
   } else {
-    navLink.style.left = '-1000px';
+    navLink.style.display = 'none';
     logoName.style.display = 'none';
   }
 };
