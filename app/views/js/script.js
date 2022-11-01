@@ -1,11 +1,11 @@
 let htmlcssArrow = document.querySelector('.htmlcss-arrow');
 htmlcssArrow.onclick = function () {
   navLinks.classList.toggle('show1');
-}
+};
 let moreArrow = document.querySelector(".more-arrow");
 moreArrow.onclick = function() {
     navLinks.classList.toggle("show2");
-}
+};
 let jsArrow = document.querySelector(".js-arrow");
 jsArrow.onclick = function() {
     navLinks.classList.toggle("show3");
@@ -52,19 +52,7 @@ window.addEventListener('scroll', () => {
   }
 });
 
-let imgreload = [];
-
-imgreload[0] = '../img/img1.png';
-imgreload[1] = '../img/img2.png';
-imgreload[2] = '../img/img3.png';
-imgreload[3] = '../img/img4.png';
-imgreload[4] = '../img/img5.png';
-
-window.onload = function () {
-  const random = Math.floor(Math.random() * imgreload.length);
-
-  const test = (document.querySelector('.img-change').style.backgroundImage = `url(${imgreload[random]})`);
-};
+// Hamburger menu
 const myfunc = () => {
   const hamburgerMenu = document.querySelector('.hamburger-menu');
   const navLink = document.querySelector('.nav-links');
@@ -79,30 +67,3 @@ const myfunc = () => {
     logoName.style.display = 'none';
   }
 };
-
-var swiper = new Swiper('.mySwiper', {
-  effect: 'coverflow',
-  grabCursor: true,
-  loop: true,
-  centeredSlides: true,
-  slidesPerView: 2,
-  coverflowEffect: {
-    rotate: 50,
-    stretch: 0,
-    depth: 100,
-    modifier: 1,
-    slideShadows: true,
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  // breakpoints: {
-  //   900: {
-  //     slidesPerView: 3,
-  //     spaceBetween: 40,
-  //   },
-  // },
-});
-
-const prevSlide = document.querySelector('.swiper-slide-prev');
