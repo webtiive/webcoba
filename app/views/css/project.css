@@ -1,58 +1,33 @@
-.blur {
+/* all portofolio page */
+
+.container-porto {
   position: relative;
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
+}
+
+.img-change {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
+  background-attachment: fixed;
 }
 
-.blur .contentbody .boxtext {
-  position: relative;
-  margin-top: 180px;
-  width: 800px;
-  padding: 100px;
-  /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); */
-  overflow: hidden;
-  color: #000;
-  margin-left: 10px;
-  border-radius: 15px;
-  backdrop-filter: blur(1.2px);
+.img-anucara img{
+  z-index: 1000;
+  display: flex;
+  float: right;
+  margin-top: 32%;
+  margin-right: 9%;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
 }
 
-.blur .contentbody .boxtext:before {
-  content: '';
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  right: 20px;
-  bottom: 20px;
+.porto-anucara-img {
+  height: 12%;
+  width: 24%;
 }
 
-.blur .contentbody h1 {
-  position: relative;
-  font-size: 1.5rem;
-  color: #fff;
-  z-index: 2;
-  text-shadow: 2px 2px #ff0000;
-}
-
-.blur .contentbody p {
-  position: relative;
-  font-size: 1.5rem;
-  font-weight: 200px;
-  color: #fff;
-  z-index: 2;
-  text-shadow: 2px 2px #383838;
-}
-
-.blur .contentbody #text {
-  color: #f7b716;
-  font-family: 'poppins', sans-serif;
-  font-weight: 500px;
-  font-size: 4.2rem;
-  z-index: 2;
-}
+/* end all portofolio page */
 
 .swiper {
   width: 90vw;
@@ -74,14 +49,18 @@
   height: 40vh;
 }
 
-main {
+.container-swiper {
   margin-top: 50px;
   padding: 20px;
   height: 80vh;
 }
 
-main h1 {
-  color: white;
+.container-swiper h1 {
+  letter-spacing: 3px;
+  color: #f7b716c4;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 8px;
 }
 
 .card-body {

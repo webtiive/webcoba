@@ -1,3 +1,7 @@
+.footer::before {
+  background: none;
+}
+
 h1.judul {
   text-align: center;
   letter-spacing: 3px;
@@ -81,7 +85,6 @@ ul.contact-icon li a::after {
 ul.contact-icon li a:hover::after {
   transform: skewX(150deg) translatex(-300px);
   background-color: rgba(247, 183, 22, 0.4);
-  /* background-color: rgba(255, 255, 255, 0.4); */
   bottom: 0;
   width: 50px;
 }
@@ -95,7 +98,7 @@ ul.contact-icon li a:hover::after {
   margin-top: 10px;
 }
 
-.email-container .section-email h5 {
+.email-container .section-email h4 {
   color: #f7b716;
 }
 
