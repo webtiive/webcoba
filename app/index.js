@@ -10,7 +10,7 @@ const fs = require('fs');
 
 const client = require('./db');
 const app = express();
-const PORT = 3000;
+const PORT = 8080;
 
 //using ejs
 app.set('view engine', 'ejs');
