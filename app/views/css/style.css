@@ -540,7 +540,7 @@ header nav .navbar .links li .arrow {
   display: grid;
   grid-template-columns: 300px;
   grid-template-rows: 210px 250px 20px;
-  grid-template-areas: "image""text";
+  grid-template-areas: 'image' 'text';
   border-radius: 18px;
   background: rgba(208, 208, 208, 0.923);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
@@ -553,7 +553,7 @@ header nav .navbar .links li .arrow {
 
 .card-image {
   grid-area: image;
-  background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%), url("../img/img1.png");
+  background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%), url('../img/img1.png');
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   background-size: cover;
@@ -586,7 +586,7 @@ header nav .navbar .links li .arrow {
 }
 
 .card-image.card2 {
-  background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%), url("../img/steelimg.png");
+  background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%), url('../img/steelimg.png');
   background-size: cover;
 }
 
@@ -1117,6 +1117,7 @@ header nav .navbar .links li .arrow {
     width: 100vw;
     height: 100vh;
     flex-direction: column;
+    align-items: flex-start;
   }
 
   .navbar .links .sub-menu {
