@@ -1,0 +1,78 @@
+[
+  {
+    "page": "Home",
+    "link": ""
+  },
+  {
+    "page": "About Us",
+    "link": "",
+    "idButton": "AboutButton",
+    "idMenu": "AboutMenu",
+    "childMenu": [
+      {
+        "page": "Team Profile",
+        "link": ""
+      },
+      {
+        "page": "Activity",
+        "link": ""
+      },
+      {
+        "page": "Testimony",
+        "link": ""
+      }
+    ]
+  },
+  {
+    "page": "Our Service",
+    "link": "",
+    "idButton": "ServiceButton",
+    "idMenu": "ServiceMenu",
+    "childMenu": [
+      {
+        "page": "Project Management Plan",
+        "link": "",
+        "idButton": "ManagementButton",
+        "idMenu": "ManagementMenu",
+        "childMenu": [
+          {
+            "page": "2D Layout",
+            "link": ""
+          },
+          {
+            "page": "3D Layout",
+            "link": ""
+          },
+          {
+            "page": "Industrial Gallery",
+            "link": ""
+          },
+          {
+            "page": "Budgeting Plan",
+            "link": ""
+          }
+        ]
+      },
+      {
+        "page": "Building Construction",
+        "link": ""
+      }
+    ]
+  },
+  {
+    "page": "Portfolio",
+    "link": "",
+    "idButton": "PortfolioButton",
+    "idMenu": "PortfolioMenu",
+    "childMenu": [
+      {
+        "page": "All Portfolio",
+        "link": ""
+      }
+    ]
+  },
+  {
+    "page": "Contact",
+    "link": ""
+  }
+]
