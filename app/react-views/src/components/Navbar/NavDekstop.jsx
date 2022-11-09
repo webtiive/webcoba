@@ -1,11 +1,13 @@
 import styled from '@emotion/styled';
-import { Grid, Link, Menu, MenuItem, Typography } from '@mui/material';
-import { alpha, ThemeProvider } from '@mui/material/styles';
+import { Box, Grid, Link, Menu, MenuItem } from '@mui/material';
+import { ThemeProvider } from '@mui/material/styles';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { NestedMenuItem } from 'mui-nested-menu';
 
 // file import
 import Theme from '../../style/NavbarStyle';
-import React from 'react';
+import React, { Children } from 'react';
+import navItem from './navBarData.json';
 
 const CustomizedLink = styled(Link)(
   ({ theme }) => `
@@ -23,16 +25,37 @@ const CustomizedLink = styled(Link)(
 );
 
 export default function NavDekstop() {
+  // first child menu
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const [openElem, setOpenElem] = React.useState(null);
   const open = Boolean(anchorEl);
 
-  const handleClick = (event) => {
-    console.log(setAnchorEl(event.currentTarget));
+  const handleClick = (item) => (event) => {
+    setAnchorEl(event.currentTarget);
+    setOpenElem(item);
   };
 
   const handleClose = () => {
     setAnchorEl(null);
+    setOpenElem(null);
   };
+
+  // second child menu
+  const [anchorMenu, setAnchorMenu] = React.useState(null);
+  const [openMenu, setOpenMenu] = React.useState(null);
+  const openChild = Boolean(anchorMenu);
+
+  const handleClickChild = (childItem) => (event) => {
+    setAnchorMenu(event.currentTarget);
+    setOpenMenu(childItem);
+  };
+
+  const handleCloseChild = () => {
+    anchorMenu(null);
+    openMenu(null);
+  };
+
+  // styling
 
   const StyledMenu = styled((props) => (
     <Menu
@@ -56,12 +79,77 @@ export default function NavDekstop() {
   return (
     <Grid container columnSpacing={3} style={{ marginTop: '1.3rem', fontSize: '1.2rem' }}>
       <ThemeProvider theme={Theme}>
-        <Grid item>
-          <CustomizedLink href="#" underline="none">
-            Home
-          </CustomizedLink>
-        </Grid>
-        <Grid item>
+        {navItem.map((item, index) => (
+          <Grid item key={index}>
+            <Grid container>
+              <Grid item>
+                <CustomizedLink href="#" underline="none">
+                  {item.page}
+                </CustomizedLink>
+              </Grid>
+              {item.childMenu ? (
+                <Box>
+                  <Grid item id={item.idButton} aria-controls={open ? item.idMenu : undefined} aria-haspopup="true" aria-expanded={open ? 'true' : undefined} onClick={handleClick(item)} style={{ cursor: 'pointer' }}>
+                    <ExpandMoreIcon style={{ marginTop: '5px' }} sx={{ color: '#f7b716' }} />
+                  </Grid>
+                  <StyledMenu
+                    id={item.idMenu}
+                    anchorEl={anchorEl}
+                    open={openElem === item}
+                    onClose={handleClose}
+                    MenuListProps={{
+                      'aria-labelledby': item.idButton,
+                    }}
+                  >
+                    {/* menu child */}
+
+                    {item.childMenu.map((childItem, index) =>
+                      childItem.childMenu ? (
+                        <Box>
+                          <Grid
+                            item
+                            id={childItem.idButton}
+                            aria-controls={openChild ? childItem.idMenu : undefined}
+                            aria-haspopup="true"
+                            aria-expanded={openChild ? 'true' : undefined}
+                            onClick={handleClickChild(childItem)}
+                            style={{ cursor: 'pointer' }}
+                          >
+                            {childItem.page} <ExpandMoreIcon style={{ marginTop: '5px' }} sx={{ color: '#f7b716' }} />
+                          </Grid>
+
+                          {/* menu */}
+                          <StyledMenu
+                            id={childItem.idMenu}
+                            anchorMenu={anchorMenu}
+                            openChild={openMenu === childItem}
+                            onClose={handleCloseChild}
+                            MenuListProps={{
+                              'aria-labelledby': childItem.idButton,
+                            }}
+                          >
+                            <MenuItem>test</MenuItem>
+                          </StyledMenu>
+                        </Box>
+                      ) : (
+                        /*
+                            
+                            Menu CHild
+                            
+                            */
+                        <MenuItem key={index}>{childItem.page}</MenuItem>
+                      )
+                    )}
+                  </StyledMenu>
+                </Box>
+              ) : (
+                <></>
+              )}
+            </Grid>
+          </Grid>
+        ))}
+
+        {/* <Grid item>
           <Grid container>
             <Grid item>
               <CustomizedLink href="#" underline="none">
@@ -85,37 +173,7 @@ export default function NavDekstop() {
               <MenuItem onClick={handleClose}>Tetimony</MenuItem>
             </StyledMenu>
           </Grid>
-        </Grid>
-        {/* our service */}
-        <Grid item>
-          <Grid container>
-            <Grid item>
-              <CustomizedLink href="#" underline="none">
-                Our Service
-              </CustomizedLink>
-            </Grid>
-            <Grid item id="service" aria-controls={open ? 'service-menu' : undefined} aria-haspopup="true" aria-expanded={open ? 'true' : undefined} onClick={handleClick} style={{ cursor: 'pointer' }}>
-              <ExpandMoreIcon style={{ marginTop: '5px' }} sx={{ color: '#f7b716' }} />
-            </Grid>
-            <StyledMenu
-              id="service-menu"
-              anchorEl={anchorEl}
-              open={open}
-              onClose={handleClose}
-              MenuListProps={{
-                'aria-labelledby': 'service',
-              }}
-            >
-              <MenuItem onClick={handleClose}>Project Managament Plan</MenuItem>
-              <MenuItem onClick={handleClose}>Building Construction</MenuItem>
-            </StyledMenu>
-          </Grid>
-        </Grid>
-        <Grid item>
-          <CustomizedLink href="#" underline="none">
-            Contact
-          </CustomizedLink>
-        </Grid>
+        </Grid> */}
       </ThemeProvider>
     </Grid>
   );
