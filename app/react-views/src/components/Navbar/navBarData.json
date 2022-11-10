@@ -1,11 +1,11 @@
 [
   {
     "page": "Home",
-    "link": ""
+    "link": "/"
   },
   {
     "page": "About Us",
-    "link": "",
+    "link": "/#About",
     "idButton": "AboutButton",
     "idMenu": "AboutMenu",
     "childMenu": [

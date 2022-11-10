@@ -89,7 +89,7 @@ export default function NavDekstop() {
           <Grid item key={index}>
             <Grid container>
               <Grid item>
-                <CustomizedLink href="#" underline="none">
+                <CustomizedLink href={item.link} underline="none">
                   {item.page}
                 </CustomizedLink>
               </Grid>
@@ -110,7 +110,7 @@ export default function NavDekstop() {
                     {/* menu child */}
 
                     {item.childMenu.map((childItem, index) =>
-                            /*
+                      /*
                             
                             Menu CHild
                             
