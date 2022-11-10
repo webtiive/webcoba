@@ -106,7 +106,9 @@ export default function NavDekstop() {
                     {item.childMenu.map((childItem, index) =>
                       childItem.childMenu ? (
                         <Box>
-                          <Grid
+                        <MenuItem key={index}>{childItem.page}</MenuItem>
+
+                          {/* <Grid
                             item
                             id={childItem.idButton}
                             aria-controls={openChild ? childItem.idMenu : undefined}
@@ -116,10 +118,10 @@ export default function NavDekstop() {
                             style={{ cursor: 'pointer' }}
                           >
                             {childItem.page} <ExpandMoreIcon style={{ marginTop: '5px' }} sx={{ color: '#f7b716' }} />
-                          </Grid>
+                          </Grid> */}
 
                           {/* menu */}
-                          <StyledMenu
+                          {/* <StyledMenu
                             id={childItem.idMenu}
                             anchorMenu={anchorMenu}
                             openChild={openMenu === childItem}
@@ -129,7 +131,7 @@ export default function NavDekstop() {
                             }}
                           >
                             <MenuItem>test</MenuItem>
-                          </StyledMenu>
+                          </StyledMenu> */}
                         </Box>
                       ) : (
                         /*

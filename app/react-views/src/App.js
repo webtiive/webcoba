@@ -4,7 +4,6 @@ import Home from './components/page/Home';
 function App() {
   return (
     <>
-      <Navbar />
       <Home />
     </>
   );
