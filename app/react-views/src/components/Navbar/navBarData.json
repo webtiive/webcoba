@@ -34,7 +34,7 @@
         "link": "",
         "idButton": "ManagementButton",
         "idMenu": "ManagementMenu",
-        "childMenu": [
+        "childNested": [
           {
             "page": "2D Layout",
             "link": ""
