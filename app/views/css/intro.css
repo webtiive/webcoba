@@ -1,37 +1,27 @@
-.intro {
+#splash {
     position: fixed;
-    z-index: 1000;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100vh;
-    background-color: #000;
-    transition: 3s;
-}
-
-.intro-header {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    background: rgb(6, 6, 6);
+    z-index: 200;
     color: #fff;
+    text-align: center;
+    line-height: 90vh;
+    transition: all 3s;
 }
 
-.intro-logo {
-    position: relative;
-    display: inline-block;
-    bottom: -20px;
+@keyframes fadeIn {
+    to{
+        opacity: 1;
+    }
+}
+
+#fade {
     opacity: 0;
-}
-
-.intro-logo.actived {
-    bottom: 0;
-    opacity: 1;
-    transition: ease-in-out 0.5s;
-}
-
-.intro-logo.fade {
-    bottom: 150px;
-    opacity: 0;
-    transition: ease-in-out 0.5s;
+    animation: fadeIn 1.2s ease-in forwards;
+    font-size: 32px;
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

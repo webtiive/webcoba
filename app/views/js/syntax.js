@@ -1,29 +1,11 @@
-let intro = document.querySelector('.intro');
-let inthead = document.querySelector('.intro-header');
-let logospan = document.querySelectorAll('.intro-logo');
+const splash = document.querySelector('.splash');
 
-window.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', (e)=>{
+    setTimeout(()=>{
+        document.getElementById("splash").style.opacity = 0;
+    }, 5000);
 
-    setTimeout(() => {
-
-        logospan.forEach((span, idx) => {
-            setTimeout(() => {
-                span.classList.add('actived');
-            }, (idx + 1) * 400)
-        });
-
-        setTimeout(() => {
-            logospan.forEach((span, idx) => {
-
-                setTimeout(() => {
-                    span.classList.remove('actived');
-                    span.classList.add('.fade');
-                }, (idx + 1) * 50)
-            })
-        }, 2000);
-
-        setTimeout(() => {
-            intro.style.top = '100vh';
-        }, 2300)
-    })
+    setTimeout(()=>{
+        document.getElementById("fade").style.opacity = 0;
+    }, 1000);
 })
