@@ -84,3 +84,4 @@ var swiper = new Swiper('.mySwiper', {
 });
 
 const prevSlide = document.querySelector('.swiper-slide-prev');
+

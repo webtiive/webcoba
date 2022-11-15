@@ -67,3 +67,4 @@ const myfunc = () => {
     logoName.style.display = 'none';
   }
 };
+
