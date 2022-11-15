@@ -1,12 +1,11 @@
 import styled from '@emotion/styled';
-import { Box, Collapse, Grid, Link, List, ListItem, ListItemText, Menu, MenuItem } from '@mui/material';
+import { Box, Grid, Link, Menu, MenuItem } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import { NestedMenuItem } from 'mui-nested-menu';
-
-// file import
 import Theme from '../../style/NavbarStyle';
-import React, { Children } from 'react';
+import React from 'react';
 import navItem from './navBarData.json';
 import { useState } from 'react';
 
@@ -29,7 +28,6 @@ export default function NavDekstop() {
   // first child menu
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [openElem, setOpenElem] = React.useState(null);
-  const [menuPosition, setMenuPosition] = useState(null);
 
   const open = Boolean(anchorEl);
 
@@ -73,12 +71,14 @@ export default function NavDekstop() {
       {...props}
     />
   ))(({ theme }) => ({
-    '& .MuiPaper-paper': {
-      borderRadius: 6,
-      marginTop: theme.spacing(1),
-      minWidth: 180,
-      backgroundColor: '#171717',
-      color: theme.pallete.primary.gold,
+    ':hover': {
+      backgroundColor: '#fff',
+    },
+  }));
+
+  const StyledMenuItem = styled((props) => <MenuItem {...props} />)(({ theme }) => ({
+    ':hover': {
+      backgroundColor: theme.pallete.secondary.main,
     },
   }));
 
@@ -116,15 +116,21 @@ export default function NavDekstop() {
                             
                             */
                       childItem.childNested ? (
-                        <NestedMenuItem label={childItem.page} parentMenuOpen={open}>
+                        <StyledNestedMenu label={childItem.page} parentMenuOpen={open}>
                           {childItem.childNested.map((item, index) => (
                             <MenuItem key={index} sx={{ marginTop: '-8px', marginBottom: '-8px', backgroundColor: '#171717', color: '#f7b716' }}>
-                              {item.page}
+                              <Link underline="none" color={'#f7b716'} href={item.link}>
+                                {item.page}
+                              </Link>
                             </MenuItem>
                           ))}
-                        </NestedMenuItem>
+                        </StyledNestedMenu>
                       ) : (
-                        <MenuItem key={index}>{childItem.page}</MenuItem>
+                        <StyledMenuItem key={index}>
+                          <Link underline="none" color={'#f7b716'} href={childItem.link}>
+                            {childItem.page}
+                          </Link>
+                        </StyledMenuItem>
                       )
                     )}
                   </StyledMenu>

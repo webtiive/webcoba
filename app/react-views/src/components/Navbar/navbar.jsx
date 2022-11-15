@@ -25,7 +25,7 @@ export default function Navbar() {
           <Grid item xs={{ md: 6, lg: 4 }}>
             {smartPhone ? <img src={logoName} alt="logo anucara" style={{ width: '200px', marginTop: '10px' }} /> : <img src={logoName} alt="logo anucara" style={{ maxWidth: '300px', marginLeft: '1.5rem' }} />}
           </Grid>
-          <Grid item xs={{ md: 6, lg: 6 }}>
+          <Grid item xs={{ md: 3, lg: 6 }}>
             {responsive ? <NavMobile /> : <NavDekstop />}
           </Grid>
         </Grid>
