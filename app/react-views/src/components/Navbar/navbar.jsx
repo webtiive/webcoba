@@ -14,10 +14,9 @@ export default function Navbar() {
   return (
     <ThemeProvider theme={theme}>
       <AppBar
-        position="static"
         maxWidth="xl"
         sx={{
-          background: '#171717',
+          background: 'rgba(0, 0, 0, 0.4)',
           color: '#fff',
         }}
       >

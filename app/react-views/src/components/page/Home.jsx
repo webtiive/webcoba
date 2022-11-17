@@ -1,12 +1,11 @@
-import '../../style/home.css'
+import { Box } from '@mui/material';
+import '../../style/home.css';
 
 const Home = () => {
   return (
-    <div className="home" id="home">
-      <div className="contentbody">
-        <h1>halo</h1>
-      </div>
-    </div>
+    <Box height={'10000px'}>
+      <h1> s</h1>
+    </Box>
   );
 };
 

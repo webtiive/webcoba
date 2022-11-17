@@ -3,6 +3,7 @@ import navItem from './navBarData.json';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import React from 'react';
 import { styled } from '@mui/material/styles';
 import Theme from '../../style/NavbarStyle';
@@ -38,7 +39,7 @@ export default function NavMobile() {
 
   // open child items
   const [openChild, setOpenChild] = React.useState(null);
-  const [openElem, setOpenElem] = React.useState(null);
+  const [openElem, setOpenElem] = React.useState();
   const [open, setOpen] = React.useState(false);
 
   const handleClick = () => {
@@ -48,6 +49,11 @@ export default function NavMobile() {
   const childOpen = (I) => (event) => {
     setOpenChild(event.currentTarget);
     setOpenElem(I);
+  };
+
+  const handleClose = () => {
+    setOpenChild(null);
+    setOpenElem(null);
   };
 
   return (
@@ -79,11 +85,19 @@ export default function NavMobile() {
                           {item.page}
                         </Link>
                       </Grid>
-                      <Grid item onClick={childOpen(item)}>
-                        <StyledListButton theme={Theme}>
-                          <ExpandMoreIcon />
-                        </StyledListButton>
-                      </Grid>
+                      {openElem === item ? (
+                        <Grid item onClick={handleClose}>
+                          <StyledListButton theme={Theme}>
+                            <ExpandLessIcon />
+                          </StyledListButton>
+                        </Grid>
+                      ) : (
+                        <Grid item onClick={childOpen(item)}>
+                          <StyledListButton theme={Theme}>
+                            <ExpandMoreIcon />
+                          </StyledListButton>
+                        </Grid>
+                      )}
                     </Grid>
                   </StyledListButton>
                   <Collapse in={openElem === item} timeout="auto" unmountOnExit style={{ color: '#f7b716' }}>
@@ -98,17 +112,15 @@ export default function NavMobile() {
                                 </Link>
                               </Grid>
                               <Grid item onClick={handleClick}>
-                                <StyledListButton theme={Theme}>
-                                  <ExpandMoreIcon />
-                                </StyledListButton>
+                                <StyledListButton theme={Theme}>{open ? <ExpandLessIcon /> : <ExpandMoreIcon />}</StyledListButton>
                               </Grid>
                             </Grid>
                           </ListItemButton>
                           <Collapse in={open} timeout="auto" unmountOnExit>
                             <List component="div" disablePadding>
                               {child.childNested.map((nChild, index) => (
-                                <ListItemButton sx={{ pl: 4 }} key={index}>
-                                  <Link underline="none" variant="h5" href={nChild.link} style={{ textAlign: 'center', width: '100%', color: '#f7b716', marginLeft: '1' }}>
+                                <ListItemButton sx={{ pl: 6 }} key={index}>
+                                  <Link underline="none" variant="h5" href={nChild.link} style={{ width: '100%', color: '#f7b716', marginLeft: '1' }}>
                                     {nChild.page}
                                   </Link>
                                 </ListItemButton>
@@ -127,7 +139,6 @@ export default function NavMobile() {
                       )
                     )}
                   </Collapse>
-                  <Divider sx={{ background: '#f7b716' }} />
                 </Box>
               ) : (
                 <Box>
@@ -140,7 +151,6 @@ export default function NavMobile() {
                       </Grid>
                     </Grid>
                   </StyledListButton>
-                  <Divider sx={{ background: '#f7b716' }} />
                 </Box>
               )
             )}
