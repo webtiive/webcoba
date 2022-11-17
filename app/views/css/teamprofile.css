@@ -1,0 +1,88 @@
+#splash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.952);
+    z-index: 200;
+    color: #fff;
+    text-align: center;
+    line-height: 90vh;
+    transition: all 3s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+#fade {
+    opacity: 0;
+    animation: fadeIn 1.2s ease-in forwards;
+    font-size: 32px;
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.teamprofile {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.teamprofile .left {
+    width: 50%;
+    background: linear-gradient(to right, #353737, #3a3b3b);
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+}
+
+.teamprofile .left img {
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 280px;
+}
+
+.teamprofile .left h4 {
+    font-size: 1.4em;
+    letter-spacing: 1px;
+    color: #f7b716c4;
+    margin-bottom: 4px;
+}
+
+.teamprofile .left h6 {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: 550;
+    letter-spacing: 1px;
+    color: #f7b716c4;
+}
+
+.teamprofile .right {
+    width: 100%;
+    height: 10%;
+    padding: 10px 5px;
+    margin-left: 10%;
+}
+
+.teamprofile .quotes {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.teamprofile .quotes h3 {
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #a82323;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #f7b716c4;
+    font-size: 1.8rem;
+}
