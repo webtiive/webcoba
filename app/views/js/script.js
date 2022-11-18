@@ -2,13 +2,13 @@ let htmlcssArrow = document.querySelector('.htmlcss-arrow');
 htmlcssArrow.onclick = function () {
   navLinks.classList.toggle('show1');
 };
-let moreArrow = document.querySelector(".more-arrow");
-moreArrow.onclick = function() {
-    navLinks.classList.toggle("show2");
+let moreArrow = document.querySelector('.more-arrow');
+moreArrow.onclick = function () {
+  navLinks.classList.toggle('show2');
 };
-let jsArrow = document.querySelector(".js-arrow");
-jsArrow.onclick = function() {
-    navLinks.classList.toggle("show3");
+let jsArrow = document.querySelector('.js-arrow');
+jsArrow.onclick = function () {
+  navLinks.classList.toggle('show3');
 };
 
 // hamburger Menu
@@ -58,13 +58,4 @@ const myfunc = () => {
   const navLink = document.querySelector('.nav-links');
   const menuToggle = document.querySelector('#menu-toggle');
   const logoName = document.querySelector('.logo-name');
-
-  if (!menuToggle.checked) {
-    navLink.style.display = 'block';
-    logoName.style.display = 'block';
-  } else {
-    navLink.style.display = 'none';
-    logoName.style.display = 'none';
-  }
 };
-
