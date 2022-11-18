@@ -1,3 +1,7 @@
+/* ===== Google Fonts ===== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
 #splash {
     position: fixed;
     top: 0;
@@ -26,7 +30,9 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.teamprofile {
+/* owner section */
+
+.owner-profile {
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -36,28 +42,29 @@
     margin-bottom: 20px;
 }
 
-.teamprofile .left {
+.owner-profile .left {
     width: 50%;
-    background: linear-gradient(to right, #353737, #3a3b3b);
-    border-radius: 5px;
+    background: linear-gradient(to bottom right, #181919, #0e0e0e);
+    border-radius: 7px;
     text-align: center;
     color: #fff;
 }
 
-.teamprofile .left img {
+.owner-profile .left img {
     border-radius: 5px;
     margin-bottom: 10px;
     width: 280px;
+    filter: brightness(100%);
 }
 
-.teamprofile .left h4 {
-    font-size: 1.4em;
+.owner-profile .left h4 {
+    font-size: 1.3em;
     letter-spacing: 1px;
     color: #f7b716c4;
     margin-bottom: 4px;
 }
 
-.teamprofile .left h6 {
+.owner-profile .left h6 {
     font-size: 1.5em;
     text-transform: uppercase;
     font-weight: 550;
@@ -65,19 +72,28 @@
     color: #f7b716c4;
 }
 
-.teamprofile .right {
+.owner-profile .right {
     width: 100%;
     height: 10%;
     padding: 10px 5px;
     margin-left: 10%;
 }
 
-.teamprofile .quotes {
-    margin-bottom: 25px;
+.owner-profile .quotes {
+    margin-bottom: 2px;
     text-align: center;
 }
 
-.teamprofile .quotes h3 {
+.owner-profile .text-banner {
+    text-align: center;
+    font-size: 22px;
+    color: #a04d19;
+    letter-spacing: .3px;
+
+}
+
+
+.owner-profile .quotes h3 {
     margin-bottom: 15px;
     padding-bottom: 5px;
     border-bottom: 1px solid #a82323;
@@ -85,4 +101,106 @@
     letter-spacing: 5px;
     color: #f7b716c4;
     font-size: 1.8rem;
+}
+
+#jarak {
+    margin-top: 50px;
+}
+
+.judul-jarak {
+    position: relative;
+    padding: 20px;
+    margin-top: 25px;
+    background: #101010;
+    margin-bottom: 15px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 34%;
+    background-image: linear-gradient(135deg, rgba(7, 1, 2, 1) 0%, rgba(28, 27, 25, 1) 21%, rgba(45, 45, 41, 1) 50%, rgb(68, 36, 12) 78%, rgba(10, 5, 5, 1) 100%);
+}
+
+.judul-jarak h1{
+    color: #f7b716c4;
+    letter-spacing: 3px;
+    font-size: 32px;
+    text-align: center;
+}
+
+/* team section */
+
+.teamprofile {
+    min-height: 100vh;
+    /* padding: 15px 15px 30px; */
+    width: 100%;
+}
+
+.container {
+    max-width: 1214px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.teamprofile .team-items {
+
+    flex-basis: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.teamprofile .team-items .item {
+    flex-basis: calc(27% - 40px);
+    max-width: calc(40% - 50px);
+    transition: all .5s ease;
+    margin-bottom: 40px;
+}
+
+.teamprofile .team-items .item img {
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.teamprofile .team-items .item .inner {
+    position: relative;
+    z-index: 11;
+    padding: 0 15px;
+}
+
+.teamprofile .team-items .item .inner .info {
+    background-color: #171717;
+    text-align: center;
+    padding: 20px 15px;
+    border-radius: 8px;
+    transition: all .5s ease;
+    margin-top: -40px;
+}
+
+.teamprofile .team-items .item:hover .info {
+    transform: translateY(-20px);
+}
+
+.teamprofile .team-items .item:hover {
+    transform: translateY(-10px);
+}
+
+.teamprofile .team-items .item .inner .info h5 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #f7b716c4;
+    letter-spacing: 1px;
+}
+
+.teamprofile .team-items .item .inner .info p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #a04d19;
+    margin: 10px 0 0;
+    letter-spacing: 1px;
 }

@@ -341,8 +341,9 @@ header nav .navbar .links li .arrow {
   display: flex;
   flex-wrap: wrap;
   padding: 10px;
+  margin-top: 50px;
   border-radius: 10px;
-  background: #363636;
+  /* background: #363636; */
   box-shadow: 0px 0px 10px 0px #666;
   justify-content: center;
 }
@@ -510,7 +511,7 @@ header nav .navbar .links li .arrow {
   flex-wrap: wrap;
   padding: 10px;
   border-radius: 10px;
-  background: #363636;
+  /* background: #363636; */
   box-shadow: 0px 0px 10px 0px #666;
   justify-content: center;
   margin-bottom: 50px;
@@ -820,7 +821,7 @@ header nav .navbar .links li .arrow {
   flex-wrap: wrap;
   padding: 10px;
   border-radius: 10px;
-  background: #363636;
+  /* background: #363636; */
   box-shadow: 0px 0px 10px 0px #666;
   justify-content: center;
   margin-bottom: 50px;
