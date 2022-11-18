@@ -249,7 +249,28 @@
     <script src="https://kit.fontawesome.com/6b15f87bf3.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="../js/main.js"></script>
+    <script>
+      $.ajax({
+        type: 'GET',
+        url: 'http://localhost:3000/projects',
+        data: {},
+        success: function (result) {
+          result.forEach((e) => {
+            const ada = $('.swiper-wrapper').append(`
+      <div class="card swiper-slide">
+            <input type="hidden" name="trigger loop" value="${e}" />
+            <img src="../../${e.gambar_project}"  />
+            <div class="card-body">
+              <h5 class="title-card">${e.judul_project}</h5>
+              <hr />
+              <p class="text-card">${e.desc_project}</p>
+            </div>
+          </div>
+      `);
+          });
+        },
+      });
+    </script>
     <script src="../js/script.js"></script>
   </body>
 </html>
