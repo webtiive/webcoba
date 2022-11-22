@@ -2,13 +2,13 @@ let htmlcssArrow = document.querySelector('.htmlcss-arrow');
 htmlcssArrow.onclick = function () {
   navLinks.classList.toggle('show1');
 };
-let moreArrow = document.querySelector(".more-arrow");
-moreArrow.onclick = function() {
-    navLinks.classList.toggle("show2");
+let moreArrow = document.querySelector('.more-arrow');
+moreArrow.onclick = function () {
+  navLinks.classList.toggle('show2');
 };
-let jsArrow = document.querySelector(".js-arrow");
-jsArrow.onclick = function() {
-    navLinks.classList.toggle("show3");
+let jsArrow = document.querySelector('.js-arrow');
+jsArrow.onclick = function () {
+  navLinks.classList.toggle('show3');
 };
 
 // hamburger Menu
@@ -53,18 +53,15 @@ window.addEventListener('scroll', () => {
 });
 
 // Hamburger menu
-const myfunc = () => {
-  const hamburgerMenu = document.querySelector('.hamburger-menu');
-  const navLink = document.querySelector('.nav-links');
-  const menuToggle = document.querySelector('#menu-toggle');
-  const logoName = document.querySelector('.logo-name');
+const showMenu = (toggleId, navId) => {
+  const toggle = document.getElementById(toggleId),
+    nav = document.getElementById(navId);
 
-  if (!menuToggle.checked) {
-    navLink.style.display = 'block';
-    logoName.style.display = 'block';
-  } else {
-    navLink.style.display = 'none';
-    logoName.style.display = 'none';
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('show');
+      nav.classList.toggle('bx-x');
+    });
   }
 };
-
+showMenu('hamburger-menu', 'navId');

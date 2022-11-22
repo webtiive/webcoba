@@ -12,7 +12,7 @@
   background-attachment: fixed;
 }
 
-.img-anucara img{
+.img-anucara img {
   z-index: 1000;
   display: flex;
   float: right;
@@ -90,8 +90,8 @@ hr {
   margin-left: -20px;
 }
 
-main .swiper-button-next,
-main .swiper-button-prev {
+.container-swiper .swiper-button-next,
+.container-swiper .swiper-button-prev {
   display: none;
 }
 
@@ -99,8 +99,8 @@ main .swiper-button-prev {
   .card-body h5 {
     font-size: 3.2rem;
   }
-  main .swiper-button-next,
-  main .swiper-button-prev {
+  .container-swiper .swiper-button-next,
+  .container-swiper .swiper-button-prev {
     color: white;
     display: block;
   }

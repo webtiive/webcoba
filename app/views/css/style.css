@@ -42,6 +42,10 @@ body {
   overflow-y: scroll;
 }
 
+.nav__mobile {
+  display: none;
+}
+
 a {
   text-decoration: none;
 }
@@ -801,10 +805,11 @@ header nav .navbar .links li .arrow {
   align-items: center;
   width: auto;
   overflow: hidden;
+  padding: 0px 10px 0px 10px;
 }
 
 .legal-img img {
-  width: min-content;
+  width: 80vw;
   border-radius: 10px;
   filter: brightness(78%);
 }
@@ -1173,6 +1178,11 @@ header nav .navbar .links li .arrow {
 }
 
 /* Media Queries Footer */
+@media (max-width: 1410px) {
+  .footer .content .link-boxes .box {
+    word-break: break-all;
+  }
+}
 
 @media (max-width: 900px) {
   .footer .content .link-boxes {
@@ -1186,9 +1196,18 @@ header nav .navbar .links li .arrow {
 }
 
 @media (max-width: 880px) {
+  .column {
+    flex-direction: column;
+  }
+
+  header nav .navbar img {
+    margin: auto;
+  }
+
   .hamburger-menu .bar {
     display: block;
     margin-right: 20px;
+    z-index: 9999;
   }
 
   .logo-name {
@@ -1201,31 +1220,84 @@ header nav .navbar .links li .arrow {
 
   header nav .navbar .nav-links {
     display: none;
-    position: absolute;
-    margin: 0;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    background-color: black;
   }
 
-  .navbar .nav-links .links {
-    display: flex;
-    margin-right: 50px;
+  ul {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
+
+  .nav__mobile {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -1000%;
+    background-color: #000;
     width: 100vw;
     height: 100vh;
-    flex-direction: column;
-    align-items: flex-start;
+    padding: 2rem 0;
+    z-index: 2;
+    transition: 0.5s;
   }
 
-  .navbar .links .sub-menu {
-    left: 50px;
+  .nav__menu {
+    margin-top: 50px;
   }
 
-  header nav .navbar img {
-    width: 50vw;
+  .nav__item {
     margin-left: 10px;
+    margin-bottom: 2rem;
+    font-size: large;
+    color: var(--font-color3);
   }
+
+  .nav__item i {
+    padding-left: 5px;
+  }
+
+  .nav__link {
+    color: var(--font-color3);
+    padding: 0 1.3rem;
+    border-radius: 99px;
+  }
+
+  .nav__link:hover,
+  .nav__link.actives {
+    background-color: #fff;
+  }
+
+  .show {
+    left: 0;
+  }
+
+  .dropdown__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .dropdown__icon {
+    font-size: 1.3rem;
+    transition: 0.5s;
+  }
+
+  .dropdown__menu {
+    margin: 1rem 0 0 1rem;
+    display: none;
+  }
+
+  .dropdown:hover > .dropdown__menu {
+    display: block;
+  }
+
+  .dropdown:hover > .dropdown__icon {
+    transform: rotate(180deg);
+    padding-left: 20px;
+  }
+
+  /* akhir humberger menu */
 
   .home .contentbody .boxtext {
     width: 90vw;
