@@ -143,7 +143,6 @@ app.post('/project/edit', async (req, res) => {
   } else {
     const image = req.file.path;
     const editProject = await client.query('update project set judul_project=$2,gambar_project=$3, desc_project=$4 where id_project=$1', [id, title, image, desc]);
-    // res.send(image);
   }
   req.flash('msg', 'Project berhasil diubah');
   res.redirect('/project');
