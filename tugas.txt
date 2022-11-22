@@ -16,3 +16,5 @@ buat logo {
 3. CSR ---- corporate social responsibility
 
 not testimony but testimonial
+
+rab file 
