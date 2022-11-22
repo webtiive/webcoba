@@ -53,9 +53,15 @@ window.addEventListener('scroll', () => {
 });
 
 // Hamburger menu
-const myfunc = () => {
-  const hamburgerMenu = document.querySelector('.hamburger-menu');
-  const navLink = document.querySelector('.nav-links');
-  const menuToggle = document.querySelector('#menu-toggle');
-  const logoName = document.querySelector('.logo-name');
+const showMenu = (toggleId, navId) => {
+  const toggle = document.getElementById(toggleId),
+    nav = document.getElementById(navId);
+
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('show');
+      nav.classList.toggle('bx-x');
+    });
+  }
 };
+showMenu('hamburger-menu', 'navId');

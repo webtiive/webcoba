@@ -62,4 +62,24 @@ var swiper = new Swiper('.mySwiper', {
   // },
 });
 
+// hamburger Menu
+const hamburger_menu = document.querySelector('.hamburger-menu');
+const container = document.querySelector('.navbar');
+
+hamburger_menu.addEventListener('click', () => {
+  container.classList.toggle('active');
+});
+
 const prevSlide = document.querySelector('.swiper-slide-prev');
+const showMenu = (toggleId, navId) => {
+  const toggle = document.getElementById(toggleId),
+    nav = document.getElementById(navId);
+
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('show');
+      nav.classList.toggle('bx-x');
+    });
+  }
+};
+showMenu('hamburger-menu', 'navId');
