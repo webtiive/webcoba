@@ -18,13 +18,18 @@
 
       <div class="card col-md-4" style="width: 18rem; margin: 10px">
         <div class="card-body">
-          <img src="<%= p.gambar_project %> " class="card-img-top" />
+          <img src="<%= p.gambar_project[0].path %>" class="card-img-top" />
+          <% p.gambar_project.forEach(v => { %>
+          <!-- <img src="<%= v.path %>" class="card-img-top" /> -->
+          <% }) %>
           <h5 class="card-title"><%= p.judul_project %></h5>
           <p class="card-text" style="width: 50%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis"><%= p.desc_project %></p>
           <div class="tombol">
             <a href="/project/<%= p.id_project %>" class="btn btn-primary">Ubah</a>
             <form action="/delete/<%= p.id_project %>" method="post" class="d-inline">
-              <input type="hidden" name="image" value="<%= p.gambar_project %>" />
+              <% p.gambar_project.forEach(v => { %>
+              <input type="hidden" name="image" value="<%= v.path %>" />
+              <% }) %>
               <button type="submit" class="btn btn-danger" onclick="return confirm('yakin?')">Hapus</button>
             </form>
             <!-- <a href="/delete/<%= p.id_project %>" class="btn btn-danger" onclick="return confirm('yakin?')">delete</a> -->

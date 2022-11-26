@@ -8,18 +8,18 @@
     <title>Document</title>
   </head>
   <body>
-    <form action="http://localhost:3000/project" method="post" enctype="multipart/form-data" style="margin: 1.2rem">
+    <form action="http://localhost:8080/project" method="post" enctype="multipart/form-data" style="margin: 1.2rem">
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="title">Title</label>
         <input type="text" class="form-control titleForCard" id="exampleFormControlInput1" name="title" />
       </div>
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="title">Image</label>
-        <input type="file" class="form-control titleForCard" id="exampleFormControlInput1" name="image" />
+        <input type="file" class="form-control titleForCard" id="exampleFormControlInput1" name="image" multiple />
       </div>
       <div class="mb-3">
         <label for="exampleFormControlTextarea1" class="desc">Description</label>
-        <textarea class="form-control descForCard" id="exampleFormControlTextarea1" name="desc" rows="3" maxlength="255"></textarea>
+        <textarea class="form-control descForCard" id="exampleFormControlTextarea1" name="desc" rows="3" maxlength="1500"></textarea>
       </div>
       <input type="submit" class="btn btn-primary" value="Submit" />
       <a href="/project">Kembali</a>
