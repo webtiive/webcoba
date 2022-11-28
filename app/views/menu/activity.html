@@ -82,31 +82,14 @@
                             <a href="contact.html" class="boxa">Contact</a>
                         </li>
                     </ul>
-                  </li>
-                  <li>
-                    <a href="#">Building Construction</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#portofolio" class="boxa">Portofolio</a>
-                <i class="bx bx-chevron-down arrow htmlcss-arrow"></i>
-                <ul class="htmlCss-sub-menu sub-menu menu3">
-                  <li>
-                    <a href="allportofolio.html">All Portofolio</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="contact.html" class="boxa">Contact</a>
-              </li>
-            </ul>
-          </div>
-          <label for="menu-toggle">
-            <div class="hamburger-menu" id="hamburger-menu">
-              <h2 class="logo-name">Menu</h2>
-              <div class="bar"></div>
-
+                </div>
+                <label for="menu-toggle">
+                    <div class="hamburger-menu" onclick="myfunc()">
+                        <h2 class="logo-name">Menu</h2>
+                        <div class="bar"></div>
+                    </div>
+                </label>
+                <input type="checkbox" name="menu-toggle" id="menu-toggle" style="display: none" />
             </div>
         </nav>
     </header>
@@ -117,7 +100,6 @@
     </div>
 
     <div class="gallery-wrapper">
-
         <div class="image-wrapper">
             <a href="#lightbox-image-1">
                 <img src="../img/owner.jpg" alt="">
@@ -154,7 +136,6 @@
     
 
     <div class="gallery-lightboxes">
-
         <div class="image-lightbox" id="lightbox-image-1">
             <div class="image-lightbox-wrapper">
                 <a href="#lightbox-image-3" class="arrow-left"></a>
