@@ -14,13 +14,19 @@
 }
 
 .gallery-wrapper {
-    width: 88%;
+    width: 90vw;
     margin-left: auto;
     margin-right: auto;
     padding: 0 1em;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.image-wrapper{
+    margin-bottom: 10px;
 }
 
 .gallery-wrapper .image-wrapper a {
@@ -40,7 +46,8 @@
 }
 
 .gallery-wrapper .image-wrapper a img {
-    width: 100%;
+    width: 300px;
+    height: auto;
     border-radius: 5px;
 }
 
@@ -94,8 +101,8 @@
     border-radius: 50%;
     box-shadow: 0 0 0 2px white inset, 0 0 5px rgba(0, 0, 0, 0.5);
     position: absolute;
-    right: -1em;
-    top: -1em;
+    right: 10px;
+    top: -300px;
 }
 
 .gallery-lightboxes .image-lightbox .image-lightbox-wrapper .close:before {
@@ -174,7 +181,27 @@
     transform: rotate(45deg) translateY(-50%);
 }
 
+.gallery-lightboxes .image-lightbox .image-lightbox-wrapper{
+    width: auto;
+}
+
 .gallery-lightboxes .image-lightbox .image-lightbox-wrapper img {
     margin: 0 auto;
+    width: 100%;
     max-height: 70vh;
+}
+
+@media (max-width: 800px) {
+    .gallery-wrapper {
+        justify-content: center;
+    }
+    .gallery-wrapper .image-wrapper a:hover {
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    }
+    
+    .gallery-wrapper .image-wrapper a img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
 }
