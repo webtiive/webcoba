@@ -35,9 +35,6 @@
             <% p.gambar_project.forEach(v => { %>
             <div class="swiper-slide">
               <div class="card">
-                <% if (v.path === `images/${v.filename}`) { %>
-                <h1>test</h1>
-                <% } %>
                 <img src="../<%= v.path %>" class="card-img-top" alt="..." height="500" />
                 <input type="hidden" name="image" value="<%= v.path %>" />
                 <div class="card-body">

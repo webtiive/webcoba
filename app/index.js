@@ -14,6 +14,8 @@ const PORT = 8080;
 
 //using ejs
 app.set('view engine', 'ejs');
+// static file ejs
+app.use(express.static('views'));
 /**
  * Middle Ware
  */
@@ -68,11 +70,34 @@ const removeImage = (filePath) => {
  * Client Routes
  */
 
+//home
 app.get('/', (req, res) => {
-  res.render('index.html');
+  res.render('index');
 });
 
-app.get('/projects', async (req, res) => {
+// about us route
+app.get('/teamprofile', (req, res) => {
+  res.render('./menu/teamprofile');
+});
+
+app.get('/activity', (req, res) => {
+  res.render('./menu/activity');
+});
+
+app.get('/testimony', (req, res) => {
+  res.render('./menu/testimony');
+});
+
+// our service route
+
+// portfolio route
+
+app.get('/allportofolio', async (req, res) => {
+  const AllProject = await client.query('SELECT * FROM project');
+  res.render('./menu/allportofolio', { AllProject: AllProject.rows, AllProjectCount: AllProject.rowCount });
+});
+
+app.get('/portfolio', async (req, res) => {
   try {
     const AllProject = await client.query('SELECT * FROM project');
     // res.json(AllProject.rows);
@@ -82,16 +107,22 @@ app.get('/projects', async (req, res) => {
   }
 });
 
-// app.get('/projects/:id', async (req, res) => {
-//   const { id } = req.params;
-//   try {
-//     const project = await client.query('SELECT * FROM project WHERE id_project=$1', [id]);
-//     // res.send(project.rows);
-//     res.render('detailProject', { project: project.rows });
-//   } catch (e) {
-//     console.error(e.message);
-//   }
-// });
+app.get('/projects/:id', async (req, res) => {
+  const { id } = req.params;
+  try {
+    const project = await client.query('SELECT * FROM project WHERE id_project=$1', [id]);
+    // res.send(project.rows);
+    res.render('detailProject', { project: project.rows });
+  } catch (e) {
+    console.error(e.message);
+  }
+});
+
+// contact us route
+
+app.get('/contact', (req, res) => {
+  res.render('./menu/contact');
+});
 
 /*
   Admin Routes
@@ -138,7 +169,7 @@ app.post('/project', async (req, res) => {
 */
 app.post('/project/edit', async (req, res) => {
   // res.send(req.body);
-  const { id, title, imageDefault, desc } = req.body;
+  const { id, title, desc } = req.body;
   if (req.files === undefined) {
     const editProject = await client.query('update project set judul_project=$2, desc_project=$3 where id_project=$1', [id, title, desc]);
 
@@ -146,10 +177,10 @@ app.post('/project/edit', async (req, res) => {
   } else {
     const image = req.files;
     const editProject = await client.query('update project set judul_project=$2,gambar_project=$3, desc_project=$4 where id_project=$1', [id, title, image, desc]);
-    res.send(image);
+    // res.send(image);
   }
   req.flash('msg', 'Project berhasil diubah');
-  // res.redirect('/project');
+  res.redirect('/project');
 });
 
 /*
