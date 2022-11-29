@@ -100,19 +100,21 @@ hr {
 .container-cards {
   display: grid;
   padding: 0 1.5rem 0 1.5rem;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   margin-bottom: 100px;
   height: max-content;
+  justify-items: center;
 }
 
 .card-portfolio {
   width: max-content;
   height: max-content;
+  margin-bottom: 50px;
 }
 
 .card-portfolio img {
-  width: 30vw;
-  height: 100%;
+  width: 350px;
+  height: 300px;
 }
 
 .card-bodys {
@@ -146,10 +148,25 @@ hr {
     transition: all 0.5s;
     width: 110%;
   }
+
+  .card-portfolio {
+    min-height: 30vh;
+  }
+
+  .card-portfolio img {
+    width: 450px;
+  }
+
   .card:hover .card-body {
     transform: translateZ(20px) scaleY(1);
   }
 
+  .container-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (min-width: 1400px) {
   .container-cards {
     grid-template-columns: repeat(3, 1fr);
   }

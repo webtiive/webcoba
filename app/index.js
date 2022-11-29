@@ -93,15 +93,10 @@ app.get('/testimony', (req, res) => {
 // portfolio route
 
 app.get('/allportofolio', async (req, res) => {
-  const AllProject = await client.query('SELECT * FROM project');
-  res.render('./menu/allportofolio', { AllProject: AllProject.rows, AllProjectCount: AllProject.rowCount });
-});
-
-app.get('/portfolio', async (req, res) => {
   try {
     const AllProject = await client.query('SELECT * FROM project');
     // res.json(AllProject.rows);
-    res.send(AllProject.rows);
+    res.render('./menu/allportofolio', { AllProject: AllProject.rows });
   } catch (e) {
     console.error(e.message);
   }
@@ -152,11 +147,12 @@ app.get('/project/:id', async (req, res) => {
 
 app.post('/project', async (req, res) => {
   try {
-    const { title, desc } = req.body;
+    const { title, desc, select } = req.body;
     const image = req.files;
-    const newProject = await client.query(`INSERT INTO project (judul_project,desc_project,gambar_project ) VALUES ($1,$2 , $3) RETURNING *`, [title, desc, image]);
+    const newProject = await client.query(`INSERT INTO project (judul_project,desc_project,gambar_project, select_project ) VALUES ($1,$2 , $3, $4) `, [title, desc, image, select]);
     req.flash('msg', 'Project berhasil ditambahkan');
     res.redirect('/project');
+    // res.send(req.body.select);
   } catch (e) {
     console.error(e.message);
   }
@@ -169,18 +165,24 @@ app.post('/project', async (req, res) => {
 */
 app.post('/project/edit', async (req, res) => {
   // res.send(req.body);
-  const { id, title, desc } = req.body;
-  if (req.files === undefined) {
-    const editProject = await client.query('update project set judul_project=$2, desc_project=$3 where id_project=$1', [id, title, desc]);
+  const { id, title, desc, select } = req.body;
+  try {
+    if (req.files.length === 0) {
+      const editProject = await client.query('update project set judul_project=$2, desc_project=$3,select_project=$4 where id_project=$1', [id, title, desc, select]);
 
-    // res.send(req.body);
-  } else {
-    const image = req.files;
-    const editProject = await client.query('update project set judul_project=$2,gambar_project=$3, desc_project=$4 where id_project=$1', [id, title, image, desc]);
-    // res.send(image);
+      // res.send(req.body);
+    } else {
+      const image = req.files;
+      const editProject = await client.query('update project set judul_project=$2,gambar_project=$3, desc_project=$4 ,select_project=$5 where id_project=$1', [id, title, image, desc, select]);
+      // res.send(image);
+    }
+    req.flash('msg', 'Project berhasil diubah');
+    res.redirect('/project');
+  } catch (e) {
+    console.error(e.message);
   }
-  req.flash('msg', 'Project berhasil diubah');
-  res.redirect('/project');
+  // res.redirect('/project');
+  // res.send(req.body);
 });
 
 /*

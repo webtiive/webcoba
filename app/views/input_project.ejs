@@ -15,11 +15,18 @@
       </div>
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="title">Image</label>
-        <input type="file" class="form-control titleForCard" id="exampleFormControlInput1" name="image" multiple />
+        <input type="file" class="form-control titleForCard" id="exampleFormControlInput1" name="image" multiple required />
       </div>
       <div class="mb-3">
         <label for="exampleFormControlTextarea1" class="desc">Description</label>
         <textarea class="form-control descForCard" id="exampleFormControlTextarea1" name="desc" rows="3" maxlength="1500"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="select">Select Tag</label>
+        <select name="select" id="select">
+          <option value="villa">Villa</option>
+          <option value="rumah">Rumah</option>
+        </select>
       </div>
       <input type="submit" class="btn btn-primary" value="Submit" />
       <a href="/project">Kembali</a>
