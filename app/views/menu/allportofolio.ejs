@@ -147,7 +147,8 @@
     <div class="jarak"></div>
 
     <div class="container-swiper">
-      <h1>PROJECTS</h1>
+      <h1>TOP PROJECTS</h1>
+
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
           <!-- loop -->
@@ -167,16 +168,19 @@
     </div>
 
     <div class="container-cards">
-      <% if (condition) { %> <% } %>
+      <% if (AllProject.length !== 0 ) { %> <% AllProject.forEach(p => { %>
       <div class="card-portfolio">
         <input type="hidden" name="trigger loop" value="${e}" />
-        <img src="../img/img2.png" />
+        <img src="../../<%= p.gambar_project[0].path %> " />
         <div class="card-bodys">
-          <h5 class="title-card">test</h5>
+          <h5 class="title-card"><%= p.judul_project %></h5>
           <hr />
-          <p class="text-card">test</p>
+          <p class="text-card"><%= p.desc_project %></p>
         </div>
       </div>
+      <% }) %> <% } else { %>
+      <h1 style="text-align: center; color: white">404 Tidak ada Data</h1>
+      <% } %>
     </div>
 
     <div class="consult">
