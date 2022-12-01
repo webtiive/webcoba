@@ -110,6 +110,13 @@ hr {
 
 /* card */
 
+.cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: center;
+  justify-items: center;
+}
+
 .container-cards {
   display: grid;
   padding: 0 1.5rem 0 1.5rem;
@@ -154,6 +161,10 @@ hr {
 }
 
 @media only screen and (min-width: 992px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .card-body h5 {
     font-size: 2.2rem;
   }
@@ -190,6 +201,9 @@ hr {
 }
 
 @media only screen and (min-width: 1400px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
   .container-cards {
     grid-template-columns: repeat(3, 1fr);
   }
