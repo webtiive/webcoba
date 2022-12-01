@@ -19,7 +19,7 @@
       <% project.forEach(p => { %>
       <input type="hidden" name="id" value="<%= p.id_project %>" />
       <div class="mb-3">
-        <label for="Title" class="form-label">Titile</label>
+        <label for="Title" class="form-label">Title</label>
         <input type="text" class="form-control" id="Title" name="title" value="<%= p.judul_project %>" />
       </div>
       <div class="mb-3">
@@ -53,6 +53,14 @@
       <div class="mb-3">
         <label for="Deskripsi" class="form-label">Description</label>
         <textarea class="form-control" id="Deskripsi" name="desc" rows="3" maxlength="1500"><%= p.desc_project %></textarea>
+      </div>
+      <div class="mb-3">
+        <p>Tag : <%= p.select_project %></p>
+        <label for="select">Select Tag :</label>
+        <select name="select" id="select">
+          <option value="villa">Villa</option>
+          <option value="rumah">Rumah</option>
+        </select>
       </div>
       <!-- <input type="submit" class="btn btn-primary" value="Ubah" /> -->
       <button type="submit" class="btn btn-primary">Ubah</button>

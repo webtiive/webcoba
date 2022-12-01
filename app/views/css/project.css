@@ -55,7 +55,8 @@
   height: 80vh;
 }
 
-.container-swiper h1 {
+.container-swiper h1,
+.card-section h1 {
   letter-spacing: 3px;
   color: #f7b716c4;
   font-size: 2rem;
@@ -68,10 +69,11 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 105%;
+  width: 100%;
   height: 50vh;
   margin-top: 150px;
   color: white;
+  padding: 0 5px 0 0;
   background: linear-gradient(rgba(0, 0, 0, 0.37), rgba(0, 0, 0, 0.244));
 }
 
@@ -87,7 +89,7 @@ hr {
 
 .card-body p {
   margin-top: 20px;
-  margin-left: -20px;
+  margin-left: 0px;
 }
 
 .container-swiper .swiper-button-next,
@@ -95,24 +97,37 @@ hr {
   display: none;
 }
 
+.swiper-scrollbar.swiper-scrollbar-horizontal .swiper-scrollbar-drag {
+  background: white;
+}
+.swiper-pagination .swiper-pagination-bullet-active {
+  background: white;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  background-color: #f7b716c4;
+}
+
 /* card */
 
 .container-cards {
   display: grid;
   padding: 0 1.5rem 0 1.5rem;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   margin-bottom: 100px;
   height: max-content;
+  justify-items: center;
 }
 
 .card-portfolio {
   width: max-content;
   height: max-content;
+  margin-bottom: 50px;
 }
 
 .card-portfolio img {
-  width: 30vw;
-  height: 100%;
+  width: 350px;
+  height: 300px;
 }
 
 .card-bodys {
@@ -131,25 +146,50 @@ hr {
   float: right;
 }
 
+.text-card {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 330px;
+}
+
 @media only screen and (min-width: 992px) {
   .card-body h5 {
-    font-size: 3.2rem;
+    font-size: 2.2rem;
   }
   .container-swiper .swiper-button-next,
   .container-swiper .swiper-button-prev {
     color: white;
     display: block;
   }
+  .swiper-scrollbar.swiper-scrollbar-horizontal .swiper-scrollbar-drag {
+    display: none;
+  }
 
   .card-body {
     transform: translateZ(20px) scaleY(0);
     transition: all 0.5s;
-    width: 110%;
+    width: 103%;
   }
+
+  .card-portfolio {
+    min-height: 30vh;
+  }
+
+  .card-portfolio img {
+    width: 450px;
+  }
+
   .card:hover .card-body {
     transform: translateZ(20px) scaleY(1);
   }
 
+  .container-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (min-width: 1400px) {
   .container-cards {
     grid-template-columns: repeat(3, 1fr);
   }

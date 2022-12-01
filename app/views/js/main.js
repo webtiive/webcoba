@@ -40,9 +40,8 @@ window.onload = function () {
 var swiper = new Swiper('.mySwiper', {
   effect: 'coverflow',
   grabCursor: true,
-  loop: true,
   centeredSlides: true,
-  slidesPerView: 2,
+  slidesPerView: 1,
   coverflowEffect: {
     rotate: 50,
     stretch: 0,
@@ -50,16 +49,23 @@ var swiper = new Swiper('.mySwiper', {
     modifier: 1,
     slideShadows: true,
   },
+  pagination: {
+    el: '.swiper-pagination',
+  },
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  // breakpoints: {
-  //   900: {
-  //     slidesPerView: 3,
-  //     spaceBetween: 40,
-  //   },
-  // },
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+  breakpoints: {
+    900: {
+      slidesPerView: 2,
+      spaceBetween: 40,
+      loop: true,
+    },
+  },
 });
 
 // hamburger Menu
