@@ -9,17 +9,17 @@
 
     <!-- ===== Style CSS ===== -->
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/project.css" />
     <link rel="stylesheet" href="../css/contact.css" />
-    <link rel="stylesheet" href="../css/activity.css" />
-
-    <!-- ===== Fontawesome ===== -->
-    <script src="https://kit.fontawesome.com/6b15f87bf3.js" crossorigin="anonymous"></script>
 
     <!-- ===== Boxicons CSS===== -->
     <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
 
     <!-- ===== AOS ===== -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   </head>
 
   <body>
@@ -31,25 +31,25 @@
           <div class="nav-links active">
             <ul class="links">
               <li>
-                <a href="../index.html#home" class="boxa">Home</a>
+                <a href="/#home" class="boxa">Home</a>
               </li>
               <li>
-                <a href="../index.html#aboutus" class="boxa">About Us</a>
+                <a href="/#aboutus" class="boxa">About Us</a>
                 <i class="bx bx-chevron-down arrow htmlcss-arrow"></i>
                 <ul class="htmlCss-sub-menu sub-menu">
                   <li>
-                    <a href="teamprofile.html">Team Profile</a>
+                    <a href="/teamprofile">Team Profile</a>
                   </li>
                   <li>
                     <a href="activity.html">Activity</a>
                   </li>
                   <li>
-                    <a href="#">Testimony</a>
+                    <a href="/testimony">Testimony</a>
                   </li>
                 </ul>
               </li>
               <li>
-                <a href="../index.html#ourservice" class="boxa">Our Service</a>
+                <a href="/#ourservice" class="boxa">Our Service</a>
                 <i class="bx bx-chevron-down arrow js-arrow"></i>
                 <ul class="js-sub-menu sub-menu boxaa">
                   <li class="more">
@@ -73,12 +73,12 @@
                 <i class="bx bx-chevron-down arrow htmlcss-arrow"></i>
                 <ul class="htmlCss-sub-menu sub-menu menu3">
                   <li>
-                    <a href="allportofolio.html">All Portofolio</a>
+                    <a href="/allportofolio">All Portofolio</a>
                   </li>
                 </ul>
               </li>
               <li>
-                <a href="contact.html" class="boxa">Contact</a>
+                <a href="/contact" class="boxa">Contact</a>
               </li>
             </ul>
           </div>
@@ -86,7 +86,6 @@
             <div class="hamburger-menu" id="hamburger-menu">
               <h2 class="logo-name">Menu</h2>
               <div class="bar"></div>
-
             </div>
           </label>
           <div class="nav__mobile" id="navId">
@@ -94,22 +93,22 @@
               <ul class="nav__list">
                 <li class="nav__item"><a href="/" class="nav__link">Home</a></li>
                 <li class="nav__item dropdown">
-                  <a href="/#aboutus" class="nav__link ">About </a>
+                  <a href="/#aboutus" class="nav__link">About </a>
                   <i class="fa-solid fa-caret-down dropdown__link dropdown__icon"></i>
                   <ul class="dropdown__menu">
                     <li class="dropdown__item"><a href="/teamprofile" class="nav__link">Team Profile</a></li>
-                    <li class="dropdown__item"><a href="/activity" class="nav__link">Activity</a></li>
+                    <li class="dropdown__item"><a href="../menu/activity.html" class="nav__link">Activity</a></li>
                     <li class="dropdown__item"><a href="/testimony" class="nav__link">Testimony</a></li>
                   </ul>
                 </li>
                 <li class="nav__item dropdown">
-                  <a href="/#ourservice" class="nav__link ">Our Service </i></a>
+                  <a href="../index.html#ourservice" class="nav__link">Our Service </a>
                   <i class="fa-solid fa-caret-down dropdown__link dropdown__icon"></i>
                   <ul class="dropdown__menu">
                     <li class="dropdown__item dropdown">
                       <a class="nav__link">Project Management Plan</a>
                       <i class="fa-solid fa-caret-down dropdown__link dropdown__icon"></i>
-                      <ul class="dropdown__menu" style="margin-bottom: 10px;">
+                      <ul class="dropdown__menu" style="margin-bottom: 10px">
                         <li class="dropdown__item"><a href="" class="nav__link">2D Layout</a></li>
                         <li class="dropdown__item"><a href="" class="nav__link">3D Layout</a></li>
                         <li class="dropdown__item"><a href="" class="nav__link">Industrial Gallery</a></li>
@@ -120,7 +119,7 @@
                   </ul>
                 </li>
                 <li class="nav__item dropdown">
-                  <a  class="nav__link ">Portofolio </i></a>
+                  <a class="nav__link">Portofolio </a>
                   <i class="fa-solid fa-caret-down dropdown__link dropdown__icon"></i>
                   <ul class="dropdown__menu">
                     <li class="dropdown__item"><a href="/allportofolio" class="nav__link">All Portofolio</a></li>
@@ -128,142 +127,55 @@
                 </li>
 
                 <li class="nav__item"><a href="/contact" class="nav__link">Contact Us</a></li>
-
               </ul>
-            </li>
-            
-          </ul>
-        </div>
-        </div>
+            </div>
+          </div>
           <input type="checkbox" name="menu-toggle" id="menu-toggle" style="display: none" />
         </div>
       </nav>
     </header>
     <!-- End Header -->
 
-    <div class="header-rab">
-      <h1>Activity</h1>
-    </div>
-
-    <div class="gallery-wrapper">
-
-        <div class="image-wrapper">
-            <a href="#lightbox-image-1">
-                <img src="../img/owner.jpg" alt="">
-                <div class="image-title">
-                    Lorem ipsum dolor sit amet.
-                </div>
-            </a>
-        </div>
-        <div class="image-wrapper">
-            <a href="#lightbox-image-1">
-                <img src="../img/owner.jpg" alt="">
-                <div class="image-title">
-                    Lorem ipsum dolor sit amet.
-                </div>
-            </a>
-        </div>
-        <div class="image-wrapper">
-            <a href="#lightbox-image-2">
-                <img src="../img/owner.jpg" alt="">
-                <div class="image-title">
-                    Lorem ipsum dolor sit amet.
-                </div>
-            </a>
-        </div>
-        <div class="image-wrapper">
-            <a href="#lightbox-image-3">
-                <img src="../img/owner.jpg" alt="">
-                <div class="image-title">
-                    Lorem ipsum dolor sit amet.
-                </div>
-            </a>
-        </div>
-    </div>
-
-    <div class="gallery-lightboxes">
-
-        <div class="image-lightbox" id="lightbox-image-1">
-            <div class="image-lightbox-wrapper">
-                <a href="#lightbox-image-4" class="arrow-left"></a>
-                <a href="#lightbox-image-2" class="arrow-right"></a>
-
-                <img src="../img/img1.png" alt="">
-            </div>
-        </div>
-
-        <div class="image-lightbox" id="lightbox-image-2">
-            <div class="image-lightbox-wrapper">
-                <a href="#lightbox-image-1" class="arrow-left"></a>
-                <a href="#lightbox-image-3" class="arrow-right"></a>
-                <img src="../img/img2.png" alt="">
-            </div>
-            <div class="image-lightbox-wrapper test">
-                <a href="#" class="close"></a>
-                <div class="image-title">Cat staring at me</div>
-            </div>
-        </div>
-
-        <div class="image-lightbox" id="lightbox-image-3">
-            <div class="image-lightbox-wrapper">
-                <a href="#lightbox-image-2" class="arrow-left"></a>
-                <a href="#lightbox-image-4" class="arrow-right"></a>
-                <img src="../img/img3.png" alt="">
-            </div>
-            <div class="image-lightbox-wrapper test">
-                <a href="#" class="close"></a>
-                <div class="image-title">Cat staring at me</div>
-            </div>
-        </div>
-
-        <div class="image-lightbox" id="lightbox-image-4">
-            <div class="image-lightbox-wrapper">
-                <a href="#lightbox-image-3" class="arrow-left"></a>
-                <a href="#lightbox-image-1" class="arrow-right"></a>
-                <img src="../img/img4.png" alt="">
-            </div>
-            <div class="image-lightbox-wrapper test">
-                <a href="#" class="close"></a>
-                <div class="image-title">Cat staring at me</div>
-            </div>
-        </div>
+    <div class="card-section" style="margin-top: 100px;">
+      <div class="head-card">
+        <h1>Building Construction</h1>
       </div>
-      <div class="image-lightbox-wrapper test">
-        <a href="#" class="close"></a>
-        <div class="image-title">Cat staring at me</div>
+      <br />
+      <div class="cards" >
+        <div class="container-cards">
+            <div  class="card-portfolio " >
+              <img src="../img/img2.png " />
+              <div class="card-bodys">
+                <h5 class="title-card">23 Maret 2021</h5>
+                <hr />
+                <p class="text-card">Jalan Padang Galak</p>
+              </div>
+            </div>
+          </div>
+          <div class="container-cards">
+            <div  class="card-portfolio " >
+              <img src="../img/img2.png " />
+              <div class="card-bodys">
+                <h5 class="title-card">23 Maret 2021</h5>
+                <hr />
+                <p class="text-card">Jalan Padang Galak</p>
+              </div>
+            </div>
+          </div>
+          <div class="container-cards">
+            <div  class="card-portfolio " >
+              <img src="../img/img2.png " />
+              <div class="card-bodys">
+                <h5 class="title-card">23 Maret 2021</h5>
+                <hr />
+                <p class="text-card">Jalan Padang Galak</p>
+              </div>
+            </div>
+          </div>
       </div>
-    </div>
-    <div class="image-lightbox" id="lightbox-image-2">
-      <div class="image-lightbox-wrapper">
-        <a href="#lightbox-image-1" class="arrow-left"></a>
-        <a href="#lightbox-image-3" class="arrow-right"></a>
-      </div>
-      <div class="image-lightbox-wrapper test">
-        <a href="#" class="close"></a>
-        <div class="image-title">Cat staring at me</div>
-      </div>
-    </div>
-    <div class="image-lightbox-wrapper test">
-      <a href="#" class="close"></a>
-      <div class="image-title">Cat staring at me</div>
+      
     </div>
 
-    <div class="image-lightbox" id="lightbox-image-3">
-      <div class="image-lightbox-wrapper">
-        <a href="#lightbox-image-2" class="arrow-left"></a>
-        <a href="#lightbox-image-1" class="arrow-right"></a>
-      </div>
-      <div class="image-lightbox-wrapper test">
-        <a href="#" class="close"></a>
-        <div class="image-title">Cat staring at me</div>
-      </div>
-    </div>
-    <div class="image-lightbox-wrapper test">
-      <a href="#" class="close"></a>
-      <div class="image-title">Cat staring at me</div>
-    </div>
-
-    <!-- consult popup -->
     <div class="consult">
       <div id="consultPopup" class="consult-popup">
         <h3>Consult & Order</h3>
@@ -316,7 +228,6 @@
       </main>
     </section>
 
-    <!-- Footer -->
     <section class="footer">
       <div class="content">
         <div class="top">
@@ -383,8 +294,15 @@
         </div>
       </div>
     </section>
+
     <!-- End Footer -->
 
+    <!-- ===== Fontawesome ===== -->
+    <script src="https://kit.fontawesome.com/6b15f87bf3.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    </script>
+    <script src="../js/main.js"></script>
     <script src="../js/script.js"></script>
   </body>
 </html>
