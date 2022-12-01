@@ -160,27 +160,55 @@
               <p class="text-card">tetete</p>
             </div>
           </div>
+          <div class="card swiper-slide">
+            <img src="../img/img2.png" class="image-card" />
+            <div class="card-body">
+              <h5 class="title-card">test</h5>
+              <hr />
+              <p class="text-card">tetete</p>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <img src="../img/img2.png" class="image-card" />
+            <div class="card-body">
+              <h5 class="title-card">test</h5>
+              <hr />
+              <p class="text-card">tetete</p>
+            </div>
+          </div>
           <!-- akhir loop -->
         </div>
+        <div class="swiper-pagination"></div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
       </div>
     </div>
 
-    <div class="container-cards">
-      <% if (AllProject.length !== 0 ) { %> <% AllProject.forEach(p => { %>
-      <div class="card-portfolio">
-        <input type="hidden" name="trigger loop" value="${e}" />
-        <img src="../../<%= p.gambar_project[0].path %> " />
-        <div class="card-bodys">
-          <h5 class="title-card"><%= p.judul_project %></h5>
-          <hr />
-          <p class="text-card"><%= p.desc_project %></p>
-        </div>
+    <div class="card-section">
+      <div class="head-card">
+        <h1>OTHER PROJECTS</h1>
+        <select name="select" id="select" style="margin-left: 1rem; background-color: black; color: white; border: 2px solid #f7b716; border-radius: 5px">
+          <option value="all">All</option>
+          <option value="villa">Villa</option>
+          <option value="rumah">Rumah</option>
+        </select>
       </div>
-      <% }) %> <% } else { %>
-      <h1 style="text-align: center; color: white">404 Tidak ada Data</h1>
-      <% } %>
+      <br />
+      <div class="container-cards">
+        <% if (AllProject.length !== 0 ) { %> <% AllProject.forEach(p => { %>
+        <a href="/portofolio/<%= p.id_project %>" class="card-portfolio <%= p.select_project %>" id="<%= p.select_project %>">
+          <img src="../../<%= p.gambar_project[0].path %> " />
+          <div class="card-bodys">
+            <h5 class="title-card"><%= p.judul_project %></h5>
+            <hr />
+            <span class="badge" style="background-color: blue; border-radius: 5px; padding: 0 1rem 0 1rem"><%= p.select_project %></span>
+            <p class="text-card"><%= p.desc_project %></p>
+          </div>
+        </a>
+        <% }) %> <% } else { %>
+        <h1 style="text-align: center; color: white">404 Tidak ada Data</h1>
+        <% } %>
+      </div>
     </div>
 
     <div class="consult">
@@ -309,6 +337,26 @@
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
+    <script>
+      $(document).ready(function () {
+        $('#select')
+          .on('change', function () {
+            const value = $(this).val();
+            // alert(value);
+            if (value == 'all') {
+              $('.card-portfolio').show('1000');
+            } else {
+              $('.card-portfolio')
+                .not('.' + value)
+                .hide(1000);
+              $('.card-portfolio')
+                .filter('.' + value)
+                .show(1000);
+            }
+          })
+          .change();
+      });
+    </script>
     <script src="../js/main.js"></script>
     <script src="../js/script.js"></script>
   </body>

@@ -10,7 +10,7 @@ const fs = require('fs');
 
 const client = require('./db');
 const app = express();
-const PORT = 8080;
+const PORT = process.env.Port || 8080;
 
 //using ejs
 app.set('view engine', 'ejs');
@@ -90,6 +90,10 @@ app.get('/testimony', (req, res) => {
 
 // our service route
 
+app.get('/buildingconstruction', (req, res) => {
+  res.render('./menu/building');
+});
+
 // portfolio route
 
 app.get('/allportofolio', async (req, res) => {
@@ -102,12 +106,12 @@ app.get('/allportofolio', async (req, res) => {
   }
 });
 
-app.get('/projects/:id', async (req, res) => {
+app.get('/portofolio/:id', async (req, res) => {
   const { id } = req.params;
   try {
     const project = await client.query('SELECT * FROM project WHERE id_project=$1', [id]);
     // res.send(project.rows);
-    res.render('detailProject', { project: project.rows });
+    res.render('./menu/portofolio', { project: project.rows });
   } catch (e) {
     console.error(e.message);
   }
