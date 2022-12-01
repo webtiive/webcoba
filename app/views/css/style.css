@@ -515,7 +515,6 @@ header nav .navbar .links li .arrow {
   flex-wrap: wrap;
   padding: 10px;
   border-radius: 10px;
-  /* background: #363636; */
   box-shadow: 0px 0px 10px 0px #666;
   justify-content: center;
   margin-bottom: 50px;
@@ -565,12 +564,12 @@ header nav .navbar .links li .arrow {
 }
 
 .card-column:hover {
-  transform: translateY(-30px);
+  transform: translateY(-12px);
 }
 
 .card-text {
   grid-area: text;
-  margin: 25px;
+  margin-left: 10px;
 }
 
 .card-text {
@@ -593,6 +592,39 @@ header nav .navbar .links li .arrow {
 .card-image.card2 {
   background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%), url('../img/steelimg.png');
   background-size: cover;
+}
+
+/* btn */
+
+.bungkus {
+  display: flex;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  text-decoration: none;
+  margin: 4px;
+  position: relative;
+  font-size: 15px;
+  cursor: pointer;
+  height: 28px;
+  color: #000;
+  border: solid 2px #000;
+  box-shadow: 4px 4px #313131;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #878787;
+}
+
+.btn-content {
+  width: 120px;
 }
 
 /* consult popup */
