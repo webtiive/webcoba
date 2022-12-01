@@ -88,11 +88,37 @@ app.get('/testimony', (req, res) => {
   res.render('./menu/testimony');
 });
 
-// our service route
+/* 
 
+our service route 
+
+*/
+
+// our service
+app.get('/2Dlayout', (req, res) => {
+  res.render('./menu/2dlayout');
+});
+
+app.get('/3Drendering', (req, res) => {
+  res.render('./menu/3drendering');
+});
+
+app.get('/industrialgallery', (req, res) => {
+  res.render('./menu/industrialgal');
+});
+
+app.get('/budgetingplan', (req, res) => {
+  res.render('./menu/budgetingplan');
+});
+
+// building construction
 app.get('/buildingconstruction', (req, res) => {
   res.render('./menu/building');
 });
+
+/**
+ * end our service route
+ */
 
 // portfolio route
 

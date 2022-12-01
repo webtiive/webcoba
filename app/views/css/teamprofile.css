@@ -113,7 +113,8 @@
   margin-bottom: 15px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
-  width: 34%;
+  min-width: 34%;
+  width: max-content;
   background-image: linear-gradient(135deg, rgba(7, 1, 2, 1) 0%, rgba(28, 27, 25, 1) 21%, rgba(45, 45, 41, 1) 50%, rgb(68, 36, 12) 78%, rgba(10, 5, 5, 1) 100%);
 }
 
