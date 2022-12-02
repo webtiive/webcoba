@@ -486,10 +486,23 @@ header nav .navbar .links li .arrow {
   padding: 2rem;
 }
 
+.bg-img-1 {
+  background-image: url(../img/img1.png);
+  background-size: cover;
+  filter: brightness(76%);
+}
+
+.bg-img-2 {
+  background-image: url(../img/img2.png);
+  background-size: cover;
+  filter: brightness(76%);
+}
+
 .icons-container .icons-con i {
   font-size: 4.5rem;
   color: var(--font-color3);
   padding-bottom: 0.7rem;
+  text-shadow: var(--text-shadow);
 }
 
 .icons-container .icons-con h3 {
@@ -503,6 +516,7 @@ header nav .navbar .links li .arrow {
   font-size: 1.7rem;
   color: var(--text-color);
   font-weight: 500;
+  text-shadow: 2px 2px #383838;
 }
 
 /* Section Our Service */
@@ -621,10 +635,12 @@ header nav .navbar .links li .arrow {
   box-shadow: 4px 4px #313131;
   border-radius: 5px;
   cursor: pointer;
+  font-weight: 500;
 }
 
 .btn:hover {
   background: #878787;
+  color: #f1f1f1;
 }
 
 .btn-content {
@@ -691,8 +707,8 @@ header nav .navbar .links li .arrow {
 
 .consult .consult-popup .admin-list .admin img {
   background-color: rgb(152, 160, 160);
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   border: 1px solid var(--black);
   transition: none;
@@ -1164,6 +1180,7 @@ header nav .navbar .links li .arrow {
   ul {
     list-style: none;
   }
+
   a {
     text-decoration: none;
   }
@@ -1227,11 +1244,11 @@ header nav .navbar .links li .arrow {
     display: none;
   }
 
-  .dropdown:hover > .dropdown__menu {
+  .dropdown:hover>.dropdown__menu {
     display: block;
   }
 
-  .dropdown:hover > .dropdown__icon {
+  .dropdown:hover>.dropdown__icon {
     transform: rotate(180deg);
     padding-left: 20px;
   }

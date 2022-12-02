@@ -17,4 +17,19 @@ buat logo {
 
 not testimony but testimonial
 
+new 
+
 rab file 
+
+3D render
+
+CSR Activity
+
+Legal in about us
+
+client testimony top
+
+
+    <div class="pdf-compro">
+      <embed src= "file/COMPANY PROFILE (2).pdf" width= "500" height= "375">
+    </div>
