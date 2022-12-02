@@ -99,7 +99,7 @@ app.get('/2Dlayout', (req, res) => {
   res.render('./menu/2dlayout');
 });
 
-app.get('/3Drendering', (req, res) => {
+app.get('/3Drender', (req, res) => {
   res.render('./menu/3drendering');
 });
 
