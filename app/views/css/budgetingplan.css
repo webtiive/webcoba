@@ -36,11 +36,12 @@
   width: 80%;
   height: max-content;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   justify-content: space-between;
   margin-left: auto;
   margin-right: auto;
   margin-top: 15px;
+  width: max-content;
   margin-bottom: 50px;
   flex-wrap: wrap;
 }
@@ -54,6 +55,7 @@
   cursor: pointer;
   box-shadow: 3px 3px 3px 3px rgb(0, 0, 0);
   margin-bottom: 10px;
+  margin-left: 10px;
 }
 
 .budgeting-plan-container .img-project-1 img {
@@ -80,6 +82,7 @@
   position: relative;
   text-align: center;
   min-height: 360px;
+  margin-left: 10px;
 }
 
 .budgeting-plan-container .img-rab-1::before {
@@ -108,4 +111,11 @@
   max-width: 710px;
   height: 510px;
   width: 100%;
+}
+
+@media (max-width: 1200px) {
+  .budgeting-plan-container {
+    width: auto;
+    flex-wrap: wrap;
+  }
 }

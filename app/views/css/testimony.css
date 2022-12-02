@@ -26,6 +26,10 @@
   margin-bottom: 10px;
 }
 
+.testim .dots {
+  z-index: 2 !important;
+}
+
 .testim .arrow {
   display: block;
   position: absolute;
@@ -34,7 +38,7 @@
   font-size: 2em;
   top: 50%;
   padding: 5px;
-  z-index: 22222222;
+  z-index: 22;
 }
 
 .testim .arrow:before {
