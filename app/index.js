@@ -107,7 +107,7 @@ app.get('/industrialgallery', (req, res) => {
   res.render('./menu/industrialgal');
 });
 
-app.get('/budgetingplan', (req, res) => {
+app.get('/budgeting', (req, res) => {
   res.render('./menu/budgetingplan');
 });
 
@@ -122,7 +122,7 @@ app.get('/buildingconstruction', (req, res) => {
 
 // portfolio route
 
-app.get('/allportofolio', async (req, res) => {
+app.get('/2022', async (req, res) => {
   try {
     const AllProject = await client.query('SELECT * FROM project');
     // res.json(AllProject.rows);
