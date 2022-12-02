@@ -291,9 +291,9 @@ header nav .navbar .links li .arrow {
   left: 20px;
   right: 20px;
   bottom: 20px;
-  background: url(../img/img1.png);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
   background-attachment: fixed;
-  filter: blur(4px);
 }
 
 .home .contentbody h1 {
@@ -347,7 +347,6 @@ header nav .navbar .links li .arrow {
   padding: 10px;
   margin-top: 50px;
   border-radius: 10px;
-  /* background: #363636; */
   box-shadow: 0px 0px 10px 0px #666;
   justify-content: center;
 }
@@ -556,7 +555,7 @@ header nav .navbar .links li .arrow {
 
 .card-column {
   display: grid;
-  grid-template-columns: 300px;
+  grid-template-columns: 380px;
   grid-template-rows: 210px 250px 20px;
   grid-template-areas: 'image''text';
   border-radius: 18px;
@@ -840,20 +839,17 @@ header nav .navbar .links li .arrow {
   width: min-content;
   margin: auto;
   border-radius: 10px;
-  padding: 1px;
-  background: #363636;
-  box-shadow: 0px 0px 10px 0px rgb(147, 147, 147);
+  padding: 1px 5px 2px 5px;
+  box-shadow: 0px 0px 5px 0px rgb(147, 147, 147);
   justify-content: center;
   margin-bottom: 50px;
 }
 
 .legal-img {
   display: flex;
-  flex-direction: column;
   align-items: center;
   width: auto;
   overflow: hidden;
-  padding: 2px 5px 2px 5px;
 }
 
 .legal-img img {
@@ -861,6 +857,7 @@ header nav .navbar .links li .arrow {
   border-radius: 10px;
   filter: brightness(78%);
   height: 50vw;
+  padding: 5px;
 }
 
 /* Location */
@@ -874,7 +871,6 @@ header nav .navbar .links li .arrow {
   flex-wrap: wrap;
   padding: 10px;
   border-radius: 10px;
-  /* background: #363636; */
   box-shadow: 0px 0px 10px 0px #666;
   justify-content: center;
   margin-bottom: 50px;
@@ -1293,6 +1289,14 @@ header nav .navbar .links li .arrow {
 
   .aboutus {
     width: 90vw;
+  }
+
+  .legal-anucara-container .legal-img{
+    flex-direction: column;
+  }
+  .legal-anucara-container .legal-img img{
+    width: 300px;
+    height: auto;
   }
 
   .footer::before {
