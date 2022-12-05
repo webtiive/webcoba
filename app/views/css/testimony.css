@@ -221,7 +221,7 @@
   overflow: hidden;
 }
 
-.testim .cont>div {
+.testim .cont > div {
   text-align: center;
   position: absolute;
   top: 0;
@@ -230,11 +230,11 @@
   opacity: 0;
 }
 
-.testim .cont>div.inactive {
+.testim .cont > div.inactive {
   opacity: 1;
 }
 
-.testim .cont>div.active {
+.testim .cont > div.active {
   position: relative;
   opacity: 1;
 }
@@ -709,7 +709,7 @@
 }
 
 @media (max-width: 1200px) {
-  .budgeting-plan-container {
+  .client-testimony-container {
     width: auto;
     flex-wrap: wrap;
   }

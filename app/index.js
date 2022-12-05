@@ -88,6 +88,10 @@ app.get('/testimony', (req, res) => {
   res.render('./menu/testimony');
 });
 
+app.get('/compro', (req, res) => {
+  res.render('./menu/compro');
+});
+
 /* 
 
 our service route 
