@@ -21,8 +21,9 @@
     <!-- ===== AOS ===== -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-    <!-- ===== swiper ====== -->
-    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <!-- ===== owl carousel ====== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   
   </head>
 
@@ -159,8 +160,14 @@
         <div class="img-project-1">
           <img src="../img/img1.png" alt="project" />
         </div>
-        <div class="img-rab-1">
-          <img src="../img/img3.png" alt="rab1" />
+        <div class="img-rab-1 " >
+          <div class="owl-carousel owl-theme" >
+              <img src="../img/img1.png"  class="item" alt="project" />
+              <img src="../img/img1.png"  class="item" alt="project" />
+              <!-- <div class="item"> Your Content </div>
+              <div class="item"> Your Content </div>
+              <div class="item"> Your Content </div> -->
+          </div>
         </div>
       </div>
 
@@ -172,13 +179,13 @@
         <div class="img-project-1">
           <img src="../img/img1.png" alt="project" />
         </div>
-        <div class="img-rab-1">
-          <div class="swiper">
-            <div class="swiper-wrapper">
-              <img src="../img/img1.png" class="swiper-slide" alt="project" />
-            </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+        <div class="img-rab-1 " >
+          <div class="owl-carousel owl-theme" >
+              <img src="../img/img1.png"  class="item" alt="project" />
+              <img src="../img/img1.png"  class="item" alt="project" />
+              <!-- <div class="item"> Your Content </div>
+              <div class="item"> Your Content </div>
+              <div class="item"> Your Content </div> -->
           </div>
         </div>
       </div>
@@ -308,18 +315,18 @@
     </section>
     <!-- End Footer -->
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    var swiper = new Swiper('.swiper', {
-      grabCursor: true,
-      direction: 'vertical',
-      loop:true,  
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      }
-    });
+
+      $('.owl-carousel').owlCarousel({
+        animateOut: 'slideOutDown',
+        animateIn: 'flipInX',
+        items:1,
+        margin:30,
+        stagePadding:30,
+        smartSpeed:450
+        })
     </script>
     <script src="../js/script.js"></script>
     <script src="../js/budgeting.js"></script>

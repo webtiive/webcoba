@@ -65,7 +65,29 @@
   height: max-content;
 }
 
+.budgeting-plan-container .slider-container {
+  width: 200px;
+  background-color: #ffffffed;
+  border: solid 2vmin #eee;
+  border-bottom-color: #a04d19;
+  border-left-color: #a04d19;
+  border-radius: 2px;
+  border-right-color: #a04d19;
+  border-top-color: #a04d19;
+  -webkit-box-shadow: 3px 3px 3px 0px rgb(85 85 85 / 60%);
+  -moz-box-shadow: 3px 3px 3px 0px rgba(85, 85, 85, 0.6);
+  box-shadow: 3px 3px 3px 3px rgb(0, 0, 0);
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 5px 5px 0px 5px;
+  position: relative;
+  text-align: center;
+  min-height: 360px;
+  margin-left: 10px;
+}
+
 .budgeting-plan-container .img-rab-1 {
+  width: 700px;
   background-color: #ffffffed;
   border: solid 2vmin #eee;
   border-bottom-color: #a04d19;
@@ -110,6 +132,12 @@
 .budgeting-plan-container .img-rab-1 img {
   max-width: 710px;
   height: 510px;
+  width: 100%;
+}
+
+.budgeting-plan-container .img-rab-1 {
+  max-width: 710px;
+  height: max-content;
   width: 100%;
 }
 
