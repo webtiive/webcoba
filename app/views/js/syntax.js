@@ -3,7 +3,7 @@ const splash = document.querySelector('.splash');
 document.addEventListener('DOMContentLoaded', (e) => {
     setTimeout(() => {
         document.getElementById('splash').style.opacity = 0;
-    }, 3000);
+    }, 2500);
     setTimeout(() => {
         document.getElementById('splash').style.display = 'none';
     }, 5000);

@@ -13,7 +13,7 @@
   color: #fff;
   text-align: center;
   line-height: 90vh;
-  transition: all 3s;
+  transition: all 2s;
 }
 
 @keyframes fadeIn {
@@ -24,10 +24,10 @@
 
 #fade {
   opacity: 0;
-  animation: fadeIn 1.2s ease-in forwards;
+  animation: fadeIn 1s ease-in forwards;
   font-size: 32px;
   font-weight: 500;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: cursive;
 }
 
 /* owner section */

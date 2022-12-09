@@ -2,6 +2,7 @@
 .header-testimony {
   padding: 16px;
   background: rgba(36, 36, 36, 0.897);
+  margin-top: 80px;
 }
 
 .header-testimony h1 {
@@ -16,7 +17,7 @@
 .text-judul-testi {
   margin-top: 10px;
   text-align: center;
-  width: 80%;
+  width: 84.4%;
   margin-left: auto;
   margin-right: auto;
   padding: 12px;
@@ -125,7 +126,7 @@
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-bottom: 12px;
+  margin-bottom: 18px;
 }
 
 .text-header h2 {
