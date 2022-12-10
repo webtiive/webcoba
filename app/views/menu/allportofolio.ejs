@@ -1,363 +1,376 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Anucara</title>
-    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
 
-    <!-- ===== Style CSS ===== -->
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/project.css" />
-    <link rel="stylesheet" href="../css/contact.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anucara</title>
+  <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
 
-    <!-- ===== Boxicons CSS===== -->
-    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
+  <!-- ===== Style CSS ===== -->
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/project.css" />
+  <link rel="stylesheet" href="../css/contact.css" />
 
-    <!-- swiper -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-  </head>
+  <!-- ===== Boxicons CSS===== -->
+  <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
 
-  <body>
-    <!-- Header -->
-    <header>
-      <nav>
-        <div class="navbar">
-          <img class="image" src="img/logo anucarapt.png" alt="logo anucara" />
-          <div class="nav-links active">
-            <ul class="links">
-              <li>
-                <a href="/" class="boxa">Home</a>
-              </li>
-              <li>
-                <a href="/#aboutus" class="boxa">About Us</a>
-                <i class="bx bx-chevron-down arrow htmlcss-arrow"></i>
-                <ul class="htmlCss-sub-menu sub-menu">
-                  <li>
-                    <a href="/testimony">Client Testimony</a>
-                  </li>
-                  <li>
-                    <a href="/teamprofile">Team Profile</a>
-                  </li>
-                  <li>
-                    <a href="/activity">CSR Activity</a>
-                  </li>
-                  <li>
-                    <a href="/compro">Legal & Company Profile</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#ourservice" class="boxa">Our Service</a>
-                <i class="bx bx-chevron-down arrow js-arrow"></i>
-                <ul class="js-sub-menu sub-menu boxaa">
-                  <li class="more">
-                    <a href="#">Project Management</a>
-                    <br />
-                    <i class="bx bx-chevron-right arrow more-arrow"></i>
-                    <ul class="more-sub-menu sub-menu">
-                      <li><a href="/2Dlayout">2D Layout</a></li>
-                      <li><a href="/3Drender">3D Render</a></li>
-                      <li><a href="/budgeting">Budgeting</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="/buildingconstruction">Building Construction</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#" class="is-active">Portofolio</a>
-                <i class="bx bx-chevron-down arrow htmlcss-arrow"></i>
-                <ul class="htmlCss-sub-menu sub-menu menu3">
-                  <li>
-                    <a href="/2022">2022</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="/contact" class="boxa">Contact</a>
-              </li>
-            </ul>
-          </div>
-          <label for="menu-toggle">
-            <div class="hamburger-menu" id="hamburger-menu">
-              <h2 class="logo-name">Menu</h2>
-              <div class="bar"></div>
-            </div>
-          </label>
-          <div class="nav__mobile" id="navId">
-            <div class="nav__menu">
-              <ul class="nav__list">
-                <li class="nav__item"><a href="/" class="nav__link">Home</a></li>
-                <li class="nav__item dropdown">
-                  <a href="/#aboutus" class="nav__link ">About </a>
-                  <i class="fa-solid fa-caret-down dropdown__link dropdown__icon"></i>
-                  <ul class="dropdown__menu">
-                    <li class="dropdown__item"><a href="/testimony" class="nav__link">Client Testimony</a></li>
-                    <li class="dropdown__item"><a href="/teamprofile" class="nav__link">Team Profile</a></li>
-                    <li class="dropdown__item"><a href="/activity" class="nav__link"> CSR Activity</a></li>
-                    <li class="dropdown__item"><a href="/compro" class="nav__link">Legal & Company Profile</a></li>
-                  </ul>
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="navbar">
+        <img class="image" src="img/logo anucarapt.png" alt="logo anucara" />
+        <div class="nav-links active">
+          <ul class="links">
+            <li>
+              <a href="/" class="boxa">Home</a>
+            </li>
+            <li>
+              <a href="/#aboutus" class="boxa">About Us</a>
+              <i class="bx bx-chevron-down arrow htmlcss-arrow"></i>
+              <ul class="htmlCss-sub-menu sub-menu">
+                <li>
+                  <a href="/testimony">Client Testimony</a>
                 </li>
-                <li class="nav__item dropdown">
-                  <a href="/#ourservice" class="nav__link ">Our Service </i></a>
-                  <i class="fa-solid fa-caret-down dropdown__link dropdown__icon"></i>
-                  <ul class="dropdown__menu">
-                    <li class="dropdown__item dropdown">
-                      <a class="nav__link">Project Management</a>
-                      <i class="fa-solid fa-caret-down dropdown__link dropdown__icon"></i>
-                      <ul class="dropdown__menu" style="margin-bottom: 10px;">
-                        <li class="dropdown__item"><a href="/2Dlayout" class="nav__link">2D Layout</a></li>
-                        <li class="dropdown__item"><a href="/3Drender" class="nav__link">3D Render</a></li>
-                        <li class="dropdown__item"><a href="/budgeting" class="nav__link">Budgeting</a></li>
-                      </ul>
-                    </li>
-                    <li class="dropdown__item"><a href="/buildingconstruction" class="nav__link">Building Construction</a></li>
-                  </ul>
+                <li>
+                  <a href="/teamprofile">Team Profile</a>
                 </li>
-                <li class="nav__item dropdown">
-                  <a  class="nav__link ">Portofolio </i></a>
-                  <i class="fa-solid fa-caret-down dropdown__link dropdown__icon"></i>
-                  <ul class="dropdown__menu">
-                    <li class="dropdown__item"><a href="/2022" class="nav__link">2022</a></li>
-                  </ul>
+                <li>
+                  <a href="/activity">CSR Activity</a>
                 </li>
-
-                <li class="nav__item"><a href="/contact" class="nav__link">Contact Us</a></li>
-
+                <li>
+                  <a href="/compro">Legal & Company Profile</a>
+                </li>
               </ul>
             </li>
-            
+            <li>
+              <a href="#ourservice" class="boxa">Our Service</a>
+              <i class="bx bx-chevron-down arrow js-arrow"></i>
+              <ul class="js-sub-menu sub-menu boxaa">
+                <li class="more">
+                  <a href="#">Management Plan</a>
+                  <br />
+                  <i class="bx bx-chevron-right arrow more-arrow"></i>
+                  <ul class="more-sub-menu sub-menu">
+                    <li><a href="#">S.M & Supervision</a></li>
+                    <li><a href="#">Workers Support</a></li>
+                    <li class="more-sub">
+                      <a href="#">Master Plan</a>
+                      <i class="bx bx-chevron-right arrow more-more-arrow"></i>
+                      <ul class="more-sub-menu-inside sub-menu-inside">
+                        <li><a href="/2Dlayout">2D Layout</a></li>
+                        <li><a href="/3Drender">3D Render</a></li>
+                        <li><a href="/budgeting">Budgeting</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="/buildingconstruction">Building Construction</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="is-active">Portofolio</a>
+              <i class="bx bx-chevron-down arrow htmlcss-arrow"></i>
+              <ul class="htmlCss-sub-menu sub-menu menu3">
+                <li>
+                  <a href="/2022">2022</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="/contact" class="boxa">Contact</a>
+            </li>
           </ul>
         </div>
-        </div>
-      </nav>
-    </header>
-    <!-- End Header -->
+        <label for="menu-toggle">
+          <div class="hamburger-menu" id="hamburger-menu">
+            <h2 class="logo-name">Menu</h2>
+            <div class="bar"></div>
+          </div>
+        </label>
+        <div class="nav__mobile" id="navId">
+          <div class="nav__menu">
+            <ul class="nav__list">
+              <li class="nav__item"><a href="/" class="nav__link">Home</a></li>
+              <li class="nav__item dropdown">
+                <a href="/#aboutus" class="nav__link ">About </a>
+                <i class="fa-solid fa-caret-down dropdown__link dropdown__icon"></i>
+                <ul class="dropdown__menu">
+                  <li class="dropdown__item"><a href="/testimony" class="nav__link">Client Testimony</a></li>
+                  <li class="dropdown__item"><a href="/teamprofile" class="nav__link">Team Profile</a></li>
+                  <li class="dropdown__item"><a href="/activity" class="nav__link"> CSR Activity</a></li>
+                  <li class="dropdown__item"><a href="/compro" class="nav__link">Legal & Company Profile</a></li>
+                </ul>
+              </li>
+              <li class="nav__item dropdown">
+                <a href="/#ourservice" class="nav__link ">Our Service </i></a>
+                <i class="fa-solid fa-caret-down dropdown__link dropdown__icon"></i>
+                <ul class="dropdown__menu">
+                  <li class="dropdown__item dropdown">
+                    <a class="nav__link">Project Management</a>
+                    <i class="fa-solid fa-caret-down dropdown__link dropdown__icon"></i>
+                    <ul class="dropdown__menu" style="margin-bottom: 10px;">
+                      <li class="dropdown__item"><a href="/2Dlayout" class="nav__link">2D Layout</a></li>
+                      <li class="dropdown__item"><a href="/3Drender" class="nav__link">3D Render</a></li>
+                      <li class="dropdown__item"><a href="/budgeting" class="nav__link">Budgeting</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown__item"><a href="/buildingconstruction" class="nav__link">Building Construction</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__item dropdown">
+                <a class="nav__link ">Portofolio </i></a>
+                <i class="fa-solid fa-caret-down dropdown__link dropdown__icon"></i>
+                <ul class="dropdown__menu">
+                  <li class="dropdown__item"><a href="/2022" class="nav__link">2022</a></li>
+                </ul>
+              </li>
 
-    <div class="container-porto">
-      <div class="img-change">
-        <div class="img-anucara">
-          <img src="../img/logo anucarapt.png" class="porto-anucara-img" />
+              <li class="nav__item"><a href="/contact" class="nav__link">Contact Us</a></li>
+
+            </ul>
+            </li>
+
+            </ul>
+          </div>
         </div>
+    </nav>
+  </header>
+  <!-- End Header -->
+
+  <div class="container-porto">
+    <div class="img-change">
+      <div class="img-anucara">
+        <img src="../img/logo anucarapt.png" class="porto-anucara-img" />
       </div>
     </div>
+  </div>
 
-    <div class="jarak"></div>
+  <div class="jarak"></div>
 
-    <div class="container-swiper">
-      <h1>TOP PROJECTS</h1>
+  <div class="container-swiper">
+    <h1>TOP PROJECTS</h1>
 
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <!-- loop -->
-          <div class="card swiper-slide">
-            <img src="../img/img2.png" class="image-card" />
-            <div class="card-body">
-              <h5 class="title-card">test</h5>
-              <hr />
-              <p class="text-card">tetete</p>
-            </div>
-          </div>
-          <div class="card swiper-slide">
-            <img src="../img/img2.png" class="image-card" />
-            <div class="card-body">
-              <h5 class="title-card">test</h5>
-              <hr />
-              <p class="text-card">tetete</p>
-            </div>
-          </div>
-          <div class="card swiper-slide">
-            <img src="../img/img2.png" class="image-card" />
-            <div class="card-body">
-              <h5 class="title-card">test</h5>
-              <hr />
-              <p class="text-card">tetete</p>
-            </div>
-          </div>
-          <!-- akhir loop -->
-        </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-      </div>
-    </div>
-
-    <div class="card-section">
-      <div class="head-card">
-        <h1>OTHER PROJECTS</h1>
-        <select name="select" id="select" style="margin-left: 1rem; background-color: black; color: white; border: 2px solid #f7b716; border-radius: 5px">
-          <option value="all">All</option>
-          <option value="villa">Villa</option>
-          <option value="rumah">Rumah</option>
-        </select>
-      </div>
-      <br />
-      <div class="container-cards">
-        <% if (AllProject.length !== 0 ) { %> <% AllProject.forEach(p => { %>
-        <a href="/portofolio/<%= p.id_project %>" class="card-portfolio <%= p.select_project %>" id="<%= p.select_project %>">
-          <img src="../../<%= p.gambar_project[0].path %> " />
-          <div class="card-bodys">
-            <h5 class="title-card"><%= p.judul_project %></h5>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <!-- loop -->
+        <div class="card swiper-slide">
+          <img src="../img/img2.png" class="image-card" />
+          <div class="card-body">
+            <h5 class="title-card">test</h5>
             <hr />
-            <span class="badge" style="background-color: blue; border-radius: 5px; padding: 0 1rem 0 1rem"><%= p.select_project %></span>
-            <p class="text-card"><%= p.desc_project %></p>
-          </div>
-        </a>
-        <% }) %> <% } else { %>
-        <h1 style="text-align: center; color: white">404 Tidak ada Data</h1>
-        <% } %>
-      </div>
-    </div>
-
-    <div class="consult">
-      <div id="consultPopup" class="consult-popup">
-        <h3>Consult & Order</h3>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <div class="admin-list">
-          <div class="admin">
-            <img src="" />
-            <span>Jordan</span>
+            <p class="text-card">tetete</p>
           </div>
         </div>
-        <a id="wa" href="https://wa.me/6282126815627"><i class="fab fa-whatsapp"></i> Chat Via WhatsApp</a>
-        <a id="now" href=""><i class="far fa-envelope"></i> Order Now</a>
-        <div class="qr-code">
-          <p>WhatsApp QR Code:</p>
+        <div class="card swiper-slide">
+          <img src="../img/img2.png" class="image-card" />
+          <div class="card-body">
+            <h5 class="title-card">test</h5>
+            <hr />
+            <p class="text-card">tetete</p>
+          </div>
+        </div>
+        <div class="card swiper-slide">
+          <img src="../img/img2.png" class="image-card" />
+          <div class="card-body">
+            <h5 class="title-card">test</h5>
+            <hr />
+            <p class="text-card">tetete</p>
+          </div>
+        </div>
+        <!-- akhir loop -->
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+
+  <div class="card-section">
+    <div class="head-card">
+      <h1>OTHER PROJECTS</h1>
+      <select name="select" id="select"
+        style="margin-left: 1rem; background-color: black; color: white; border: 2px solid #f7b716; border-radius: 5px">
+        <option value="all">All</option>
+        <option value="villa">Villa</option>
+        <option value="rumah">Rumah</option>
+      </select>
+    </div>
+    <br />
+    <div class="container-cards">
+      <% if (AllProject.length !== 0 ) { %> <% AllProject.forEach(p => { %>
+      <a href="/portofolio/<%= p.id_project %>" class="card-portfolio <%= p.select_project %>"
+        id="<%= p.select_project %>">
+        <img src="../../<%= p.gambar_project[0].path %> " />
+        <div class="card-bodys">
+          <h5 class="title-card"><%= p.judul_project %></h5>
+          <hr />
+          <span class="badge"
+            style="background-color: blue; border-radius: 5px; padding: 0 1rem 0 1rem"><%= p.select_project %></span>
+          <p class="text-card"><%= p.desc_project %></p>
+        </div>
+      </a>
+      <% }) %> <% } else { %>
+      <h1 style="text-align: center; color: white">404 Tidak ada Data</h1>
+      <% } %>
+    </div>
+  </div>
+
+  <div class="consult">
+    <div id="consultPopup" class="consult-popup">
+      <h3>Consult & Order</h3>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <div class="admin-list">
+        <div class="admin">
           <img src="" />
+          <span>Jordan</span>
         </div>
-        <button id="close"><i class="fas fa-times"></i></button>
       </div>
-      <a class="gotopbtn" href="#"> <i class="fas fa-arrow-up"></i> </a>
-      <div id="consultBtn" class="consult-btn">
-        <i class="fab fa-whatsapp"></i>
-        <p>ASK ME !</p>
+      <a id="wa" href="https://wa.me/6282126815627"><i class="fab fa-whatsapp"></i> Chat Via WhatsApp</a>
+      <a id="now" href=""><i class="far fa-envelope"></i> Order Now</a>
+      <div class="qr-code">
+        <p>WhatsApp QR Code:</p>
+        <img src="" />
+      </div>
+      <button id="close"><i class="fas fa-times"></i></button>
+    </div>
+    <a class="gotopbtn" href="#"> <i class="fas fa-arrow-up"></i> </a>
+    <div id="consultBtn" class="consult-btn">
+      <i class="fab fa-whatsapp"></i>
+      <p>ASK ME !</p>
+    </div>
+  </div>
+
+  <div class="jarak-cons"></div>
+
+  <section class="consult-footer">
+    <h1 class="judul">CONSULTATION WITH OUR CS</h1>
+    <main>
+      <div class="contact">
+        <ul class="contact-icon">
+          <li>
+            <a href="https://wa.me/6282126815627?&text=Hallo%20"><i class="fab fa-whatsapp"> <span>+62
+                  821-2681-5627</span></i></a>
+          </li>
+          <li>
+            <a href="mailto:anucaradesignandbuild@gmail.com"><i class="fas fa-envelope">
+                <span>anucaradesignandbuild@gmail.com</span></i></a>
+          </li>
+        </ul>
+        <div class="email-container">
+          <div class="section-email">
+            <p>Fast Respon via WA</p>
+            <p>Work Time : Monday - Friday 09.00 - 17.00 WIB, Saturday & Sunday 09.00 - 20.00 WIB</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </section>
+
+  <section class="footer">
+    <div class="content">
+      <div class="top">
+        <div class="logo-details"></div>
+        <div class="media-icons">
+          <a href="https://www.facebook.com/profile.php?id=100086564315471 ">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="# "><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/anucara.designandbuild/?igshid=YmMyMTA2M2Y%3D ">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/anucara-design-and-build-3a9982252">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="# "><i class="fab fa-youtube"></i> </a>
+          <a href="https://www.tiktok.com/@anucara.design.and.build"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="link-boxes">
+        <ul class="box">
+          <li class="link_name">Anucara</li>
+          <li><a href="/#home">Home</a></li>
+          <li><a href="/#aboutus">About us</a></li>
+          <li><a href="/#ourservice ">Our Service</a></li>
+          <li><a href="#">Portofolio</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">About Us</li>
+          <li><a href="/testimony">Client Testimony</a></li>
+          <li><a href="/teamprofile">Team Profile</a></li>
+          <li><a href="/activity">CSR Activity</a></li>
+          <li><a href="/compro">Legal & Company Profile</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">Our Service</li>
+          <li><a href="/2Dlayout">2D Layout</a></li>
+          <li><a href="/3Drender">3D Render</a></li>
+          <li><a href="/budgeting">Budgeting</a></li>
+          <li><a href="/buildingconstruction">Building Construction</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">Portofolio</li>
+          <li><a href="/2022">2022</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">Contact</li>
+          <li class="fas fa-envelope"><a
+              href="mailto:anucaradesignandbuild@gmail.com ">anucaradesignandbuild@gmail.com</a></li>
+          <li class="fab fa-whatsapp"><a href="https://wa.me/6282126815627?&text=Hallo%20">+62 821-2681-5627</a></li>
+        </ul>
       </div>
     </div>
-
-    <div class="jarak-cons"></div>
-
-    <section class="consult-footer">
-      <h1 class="judul">CONSULTATION WITH OUR CS</h1>
-      <main>
-        <div class="contact">
-          <ul class="contact-icon">
-            <li>
-              <a href="https://wa.me/6282126815627?&text=Hallo%20"
-                ><i class="fab fa-whatsapp"> <span>+62 821-2681-5627</span></i></a
-              >
-            </li>
-            <li>
-              <a href="mailto:anucaradesignandbuild@gmail.com"
-                ><i class="fas fa-envelope"> <span>anucaradesignandbuild@gmail.com</span></i></a
-              >
-            </li>
-          </ul>
-          <div class="email-container">
-            <div class="section-email">
-              <p>Fast Respon via WA</p>
-              <p>Work Time : Monday - Friday 09.00 - 17.00 WIB, Saturday & Sunday 09.00 - 20.00 WIB</p>
-            </div>
-          </div>
-        </div>
-      </main>
-    </section>
-
-    <section class="footer">
-      <div class="content">
-        <div class="top">
-          <div class="logo-details"></div>
-          <div class="media-icons">
-            <a href="https://www.facebook.com/profile.php?id=100086564315471 ">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="# "><i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com/anucara.designandbuild/?igshid=YmMyMTA2M2Y%3D ">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/anucara-design-and-build-3a9982252">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="# "><i class="fab fa-youtube"></i> </a>
-            <a href="https://www.tiktok.com/@anucara.design.and.build"><i class="fab fa-tiktok"></i></a>
-          </div>
-        </div>
-        <div class="link-boxes">
-          <ul class="box">
-            <li class="link_name">Anucara</li>
-            <li><a href="/#home">Home</a></li>
-            <li><a href="/#aboutus">About us</a></li>
-            <li><a href="/#ourservice ">Our Service</a></li>
-            <li><a href="#">Portofolio</a></li>
-            <li><a href="/contact">Contact</a></li>
-          </ul>
-          <ul class="box">
-            <li class="link_name">About Us</li>
-            <li><a href="/testimony">Client Testimony</a></li>
-            <li><a href="/teamprofile">Team Profile</a></li>
-            <li><a href="/activity">CSR Activity</a></li>
-            <li><a href="/compro">Legal & Company Profile</a></li>
-          </ul>
-          <ul class="box">
-            <li class="link_name">Our Service</li>
-            <li><a href="/2Dlayout">2D Layout</a></li>
-            <li><a href="/3Drender">3D Render</a></li>
-            <li><a href="/budgeting">Budgeting</a></li>
-            <li><a href="/buildingconstruction">Building Construction</a></li>
-          </ul>
-          <ul class="box">
-            <li class="link_name">Portofolio</li>
-            <li><a href="/2022">2022</a></li>
-          </ul>
-          <ul class="box">
-            <li class="link_name">Contact</li>
-            <li class="fas fa-envelope"><a href="mailto:anucaradesignandbuild@gmail.com ">anucaradesignandbuild@gmail.com</a></li>
-            <li class="fab fa-whatsapp"><a href="https://wa.me/6282126815627?&text=Hallo%20">+62 821-2681-5627</a></li>
-          </ul>
-        </div>
+    <div class="bottom-details">
+      <div class="bottom_text">
+        <span class="copyright_text">Copyright &copy;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          <span> Anucara</span></span>
       </div>
-      <div class="bottom-details">
-        <div class="bottom_text">
-          <span class="copyright_text"
-            >Copyright &copy;
-            <script>
-              document.write(new Date().getFullYear());
-            </script>
-            <span> Anucara</span></span>
-        </div>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- End Footer -->
+  <!-- End Footer -->
 
-    <!-- ===== Fontawesome ===== -->
-    <script src="https://kit.fontawesome.com/6b15f87bf3.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <!-- ===== Fontawesome ===== -->
+  <script src="https://kit.fontawesome.com/6b15f87bf3.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
-    <script>
-      $(document).ready(function () {
-        $('#select')
-          .on('change', function () {
-            const value = $(this).val();
-            // alert(value);
-            if (value == 'all') {
-              $('.card-portfolio').show('1000');
-            } else {
-              $('.card-portfolio')
-                .not('.' + value)
-                .hide(1000);
-              $('.card-portfolio')
-                .filter('.' + value)
-                .show(1000);
-            }
-          })
-          .change();
-      });
-    </script>
-    <script src="../js/main.js"></script>
-    <script src="../js/script.js"></script>
-  </body>
+  <script>
+    $(document).ready(function () {
+      $('#select')
+        .on('change', function () {
+          const value = $(this).val();
+          // alert(value);
+          if (value == 'all') {
+            $('.card-portfolio').show('1000');
+          } else {
+            $('.card-portfolio')
+              .not('.' + value)
+              .hide(1000);
+            $('.card-portfolio')
+              .filter('.' + value)
+              .show(1000);
+          }
+        })
+        .change();
+    });
+  </script>
+  <script src="../js/main.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+
 </html>

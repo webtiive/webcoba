@@ -1,43 +1,16 @@
-buat logo {
-    width: 30vw; margin-left: 5px
-}
+New Task
 
-/ ==== tugas ===== /
-1. Project management Plan => Gambar 2D layout
-                           => Gambar 3D rendering interior & exterior
-                           => Gambar kerja :
-                                            *Struktur
-                                            *Arsitektur
-                                            *MEP
-                           => budgeding Plan
+Our service 
+      |--------> Management Plan a---> S.M & Supervision
+      |                          b---> Workers Support
+      |                          c---> Master Plan 
+      |                                     |-------------> 2D layout
+      |                                     |-------------> 3D Render
+      |                                     |-------------> Budgeting/Timeline
+      |--------> Building Construction
 
-2.Build Construction => Bep ,Mep, renovation ,new building
-
-3. CSR ---- corporate social responsibility
-
-not testimony but testimonial
-
-new 
-
-rab file 
-
-3D render
-
-CSR Activity
-
-Legal in about us
-
-client testimony top
-
-
-    <div class="pdf-compro">
-      <embed src= "file/COMPANY PROFILE (2).pdf" width= "500" height= "375">
-    </div>
-
-ig promosi daging babi potong
-
-ngajeng babi 
-
-supplier daging babi
-
-n +28%
+a == foto-foto jasa anucara 
+b == foto-foto pekerja/tukang
+c == --> 2D > Foto/pdf
+     --> 3D > Foto
+     --> Budget > RAB > PDF
