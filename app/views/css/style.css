@@ -215,7 +215,7 @@ header nav .navbar .links li .arrow {
   border-radius: 4px 12px 12px 12px;
   display: none;
   margin-left: 2px;
-  background-color: rgb(0, 0, 0, 0.5);
+  background-color: rgb(0, 0, 0, 0.6);
 }
 
 .navbar .links .more-sub:hover .more-sub-menu-inside {
@@ -229,7 +229,7 @@ header nav .navbar .links li .arrow {
   left: -6px;
   height: 12px;
   width: 12px;
-  background: rgb(0, 0, 0, 0.5);
+  background: rgb(0, 0, 0, 0.6);
   transform: rotate(45deg);
   z-index: -1;
 }

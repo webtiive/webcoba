@@ -1,0 +1,154 @@
+.header-supervision {
+    padding: 16px;
+    background: rgba(36, 36, 36, 0.897);
+}
+
+.header-supervision h1 {
+    color: #f7b716c4;
+    font-size: 28px;
+    letter-spacing: 0.8px;
+    font-family: 'poppins', sans-serif;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+/* text welcome */
+.text-header-supervision {
+    background-image: linear-gradient(135deg, rgba(7, 1, 2, 1) 0%, rgba(28, 27, 25, 1) 21%, rgba(45, 45, 41, 1) 50%, rgb(68, 36, 12) 78%, rgba(10, 5, 5, 1) 100%);
+    padding: 2em;
+    color: #f3f3f3;
+    box-shadow: 4px 4px #000000;
+    margin-top: 10px;
+    font-size: 18.4px;
+    text-align: justify;
+}
+
+/* Supervision */
+
+.supervision {
+    min-height: 100vh;
+    width: 100%;
+}
+
+.container {
+    max-width: 1214px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.judul-jarak {
+    position: relative;
+    padding: 20px;
+    margin-top: 14px;
+    background: #101010;
+    margin-bottom: 15px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    min-width: 34%;
+    width: max-content;
+    background-image: linear-gradient(135deg, rgba(7, 1, 2, 1) 0%, rgba(28, 27, 25, 1) 21%, rgba(45, 45, 41, 1) 50%, rgb(68, 36, 12) 78%, rgba(10, 5, 5, 1) 100%);
+    box-shadow: 4px 4px #000000;
+}
+
+.judul-jarak h1 {
+    color: #f7b716c4;
+    letter-spacing: 3px;
+    font-size: 32px;
+    text-align: center;
+    text-shadow: 2px 2px #000000;
+}
+
+.supervision .team-items {
+    flex-basis: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#justify-class {
+    justify-content: space-between;
+}
+
+.supervision .team-items .item {
+    flex-basis: calc(27% - 40px);
+    max-width: calc(40% - 50px);
+    transition: all 1s ease;
+    margin-bottom: 15px;
+}
+
+#jarak-class {
+    padding: 10px;
+}
+
+.supervision .team-items .item img {
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.supervision .team-items .item .inner {
+    position: relative;
+    z-index: 11;
+    padding: 0 15px;
+}
+
+.supervision .team-items .item .inner .info {
+    background-color: #171717;
+    text-align: center;
+    padding: 20px 15px;
+    border-radius: 8px;
+    transition: all 1s ease;
+    margin-top: -15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.supervision .team-items .item:hover .info {
+    transform: translateY(-20px);
+}
+
+.supervision .team-items .item:hover {
+    transform: translateY(-10px);
+}
+
+.supervision .team-items .item .inner .info h5 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #f7b716c4;
+    letter-spacing: 1px;
+}
+
+.supervision .team-items .item .inner .info .name-job {
+    font-size: 16px;
+    color: #a04d19;
+    letter-spacing: 1px;
+    padding: 2px 5px;
+    border-radius: 5px;
+    letter-spacing: 1.2px;
+}
+
+.supervision .team-items .item .inner .info a {
+    font-size: 18px;
+    color: #fff;
+    margin: 10px 0 0;
+    letter-spacing: 1px;
+    background: #018a01;
+    border: 1px solid #fff;
+    padding: 2px 5px;
+    border-radius: 5px;
+    letter-spacing: 3px;
+    display: flex;
+    flex-direction: row;
+    width: 100px;
+}
+
+.supervision .team-items .item .inner .info a:hover {
+    color: rgba(152, 122, 82, 1);
+}
