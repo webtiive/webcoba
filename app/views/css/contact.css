@@ -16,7 +16,7 @@ main {
   display: flex;
   height: 100%;
   justify-content: center;
-  margin: 0 1.2rem 0 1.2rem;
+  margin: 1.5rem;
   align-items: center;
 }
 
@@ -90,19 +90,6 @@ ul.contact-icon li a:hover::after {
   background-color: rgba(247, 183, 22, 0.4);
   bottom: 0;
   width: 50px;
-}
-
-.email-container {
-  text-align: center;
-  color: white;
-}
-
-.email-container .section-email {
-  margin-top: 10px;
-}
-
-.email-container .section-email h5 {
-  color: #f7b716;
 }
 
 @media screen and (min-width: 769px) {

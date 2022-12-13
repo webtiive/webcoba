@@ -126,11 +126,34 @@
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-bottom: 18px;
 }
 
 .text-header h2 {
   color: #f7b716;
+}
+
+.garis h2::before {
+  content: '';
+  position: absolute;
+  width: 120px;
+  height: 3px;
+  background-color: #ffffff;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    width: 70px;
+  }
+  50% {
+    width: 140px;
+  }
+  100% {
+    width: 70px;
+  }
 }
 
 .testim .wrap {
@@ -142,6 +165,7 @@
   border: solid 0.5vmin #ea830e;
   border-radius: 5px;
   margin-bottom: 10px;
+  margin-top: 63px;
 }
 
 .testim .dots {
@@ -222,7 +246,7 @@
   overflow: hidden;
 }
 
-.testim .cont > div {
+.testim .cont>div {
   text-align: center;
   position: absolute;
   top: 0;
@@ -231,11 +255,11 @@
   opacity: 0;
 }
 
-.testim .cont > div.inactive {
+.testim .cont>div.inactive {
   opacity: 1;
 }
 
-.testim .cont > div.active {
+.testim .cont>div.active {
   position: relative;
   opacity: 1;
 }
