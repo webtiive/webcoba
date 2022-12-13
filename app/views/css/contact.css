@@ -28,7 +28,7 @@ main {
   max-width: 1000px;
   border: 2px solid #f7b716;
   border-radius: 5px;
-  min-height: 50vh;
+  min-height: max-content;
   margin-bottom: 30px;
   margin-top: 30px;
 }

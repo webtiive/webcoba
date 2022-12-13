@@ -63,7 +63,7 @@ ul.contact-icon li a {
 
 ul.contact-icon li a i,
 ul.contact-icon li span {
-  font-size: 3.5vw;
+  font-size: 1em;
   font-weight: lighter;
 }
 
@@ -107,7 +107,7 @@ ul.contact-icon li a:hover::after {
     flex-direction: row;
   }
   .contact {
-    width: 130vw;
+    width: 80vw;
   }
 
   ul.contact-icon {
