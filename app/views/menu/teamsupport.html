@@ -165,54 +165,31 @@
         <h1>OUR TEAM GALLERY</h1>
         <div class="top-content">
             <h3>Gallery</h3>
-            <label for="check1">All Gallery</label>
-            <label for="check2">Photo Gallery</label>
-            <label for="check3">Video Gallery</label>
+            <label for="check1">All</label>
+            <label for="check2">Photo</label>
+            <label for="check3">Video</label>
         </div>
 
         <div class="photo-gallery">
-            <a href="#image-light-1" class="pic Photo">
-                <img src="../img/img1.png">
+            <a  class="pic Photo" data-fslightbox="gallery" href="https://ik.imagekit.io/jahjhp23r/img/img1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1671002220214">
+                <img src="../img/img1.png" id="image1" >
+                
             </a>
-            <a href="#image-light-2" class="pic Photo">
-                <img src="../img/img2.png">
+            <a  class="pic Photo" data-fslightbox="image"  href="#image2">
+                <img src="../img/img2.png" id="image2">
             </a>
-            <a href="#image-light-3" class="pic Photo">
-                <img src="../img/img3.png">
+            <a class="pic Photo" data-fslightbox="image" href="#image3">
+                <img src="../img/img3.png" id="image3">
+            </a>
+            <a class="pic video" data-fslightbox="video" data-video-poster="../video/video1.mp4" href="#vimeo">
+                <video src="../video/video1.mp4"></video>
+                <iframe src="../video/video1.mp4" id="vimeo" frameborder="0" allowfullscreen allow="autoplay;fullscreen"  width="1920px" height="1080px"></iframe>
             </a>
             <div class="pic video">
-                <img src="../img/img4.png">
+                <video src="../video/video1.mp4"></video>
             </div>
             <div class="pic video">
-                <img src="../img/img5.png">
-            </div>
-            <div class="pic video">
-                <img src="../img/img6.png">
-            </div>
-        </div>
-    </div>
-
-    <div class="lightbox-image">
-        <div class="lightbox-1">
-            <div class="image-lightbox" id="image-light-1">
-                <div class="image-lightbox-wrapper">
-                    <a href="#" class="close"></a>
-                    <img src="../img/img1.png">
-                </div>
-            </div>
-        </div>
-
-        <div class="image-lightbox" id="image-light-2">
-            <div class="image-lightbox-wrapper">
-                <a href="#" class="close"></a>
-                <img src="../img/img2.png">
-            </div>
-        </div>
-
-        <div class="image-lightbox" id="image-light-3">
-            <div class="image-lightbox-wrapper">
-                <a href="#" class="close"></a>
-                <img src="../img/img3.png">
+                <video src="../video/video1.mp4"></video>
             </div>
         </div>
     </div>
@@ -329,7 +306,9 @@
     </section>
     <!-- End Footer -->
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.0.9/index.js" integrity="sha512-2VqLVM3WCyaqUgQb2hpoWHSus021RIN0Jq0wfrLqqLh+anm1kW/H4Yw7HVu3D5W4nbdUQmAA2mqQv2JEoy+kPA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="../js/script.js"></script>
+    <script src="../js/teamsupport.js"></script>
 </body>
 
 </html>
