@@ -25,7 +25,7 @@
   <header>
     <nav>
       <div class="navbar">
-        <img class="image" src="img/logo anucarapt.png" alt="logo anucara" />
+        <img class="image" src="../img/logo anucarapt.png" alt="logo anucara" />
         <div class="nav-links active">
           <ul class="links">
             <li>
@@ -114,14 +114,24 @@
                 <a href="/#ourservice" class="nav__link ">Our Service </i></a>
                 <i class="fa-solid fa-caret-down dropdown__link dropdown__icon"></i>
                 <ul class="dropdown__menu">
+
                   <li class="dropdown__item dropdown">
                     <a class="nav__link">Project Management</a>
                     <i class="fa-solid fa-caret-down dropdown__link dropdown__icon"></i>
                     <ul class="dropdown__menu" style="margin-bottom: 10px;">
-                      <li class="dropdown__item"><a href="/2Dlayout" class="nav__link">2D Layout</a></li>
-                      <li class="dropdown__item"><a href="/3Drender" class="nav__link">3D Render</a></li>
-                      <li class="dropdown__item"><a href="/budgeting" class="nav__link">Budgeting</a></li>
+                      <li class="dropdown__item"><a href="" class="nav__link">S.M & Supervision</a></li>
+                      <li class="dropdown__item"><a href="" class="nav__link">Workers Support</a></li>
+                      <li class="dropdown__item dropdown">
+                        <a class="nav__link ">Master Plan</a>
+                        <i class="fa-solid fa-caret-down dropdown__link dropdown__icon"></i>
+                        <ul class="dropdown__menu" style="margin-bottom: 10px;">
+                          <li class="dropdown__item"><a href="/2Dlayout" class="nav__link">2D Layout</a></li>
+                          <li class="dropdown__item"><a href="/3Drender" class="nav__link">3D Render</a></li>
+                          <li class="dropdown__item"><a href="/budgeting" class="nav__link">Budgeting</a></li>
+                        </ul>
+                      </li>
                     </ul>
+                    
                   </li>
                   <li class="dropdown__item"><a href="/buildingconstruction" class="nav__link">Building Construction</a>
                   </li>
@@ -134,7 +144,7 @@
                   <li class="dropdown__item"><a href="/2022" class="nav__link">2022</a></li>
                 </ul>
               </li>
-              <li class="nav__item"><a href="/contact" class="nav__link">Contact Us</a></li>
+              <li class="nav__item"><a href="/contact" class="nav__link">Contact</a></li>
             </ul>
             </li>
             </ul>
@@ -149,7 +159,7 @@
   <div class="container-swiper" style="height: max-content;">
 
 
-    <div class="swiper mySwiper">
+    <div class="swiper mySwiper" style="margin-bottom: 20px;">
       <% project.forEach(p => { %>
       <h1 style="text-transform:uppercase"><%= p.judul_project %></h1>
 
@@ -168,7 +178,9 @@
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
     </div>
-    <h3 style="color: #fff; margin-top:50px"><%= p.desc_project %> </h3>
+    <span class="badge"
+            style="background-color: blue; border-radius: 5px; padding: 0 1rem 0 1rem;"><%= p.select_project %></span>
+    <h3 style="color: #fff; margin-top:20px"><%= p.desc_project %> </h3>
     <% }) %>
   </div>
 

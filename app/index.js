@@ -99,6 +99,15 @@ our service route
 */
 
 // our service
+
+app.get('/supervision', (req, res) => {
+  res.render('');
+});
+
+app.get('/workersupport', (req, res) => {
+  res.render('');
+});
+
 app.get('/2Dlayout', (req, res) => {
   res.render('./menu/2dlayout');
 });
