@@ -100,12 +100,12 @@ our service route
 
 // our service
 
-app.get('/supervision', (req, res) => {
-  res.render('');
+app.get('/SiteManagement', (req, res) => {
+  res.render('./menu/supervision');
 });
 
-app.get('/workersupport', (req, res) => {
-  res.render('');
+app.get('/teamsupport', (req, res) => {
+  res.render('./menu/teamsupport');
 });
 
 app.get('/2Dlayout', (req, res) => {
