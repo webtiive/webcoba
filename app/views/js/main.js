@@ -25,11 +25,11 @@ window.addEventListener('scroll', () => {
 // Img change on reload
 let imgreload = [];
 
-imgreload[0] = '../img/img1.png';
-imgreload[1] = '../img/img2.png';
-imgreload[2] = '../img/img3.png';
-imgreload[3] = '../img/img4.png';
-imgreload[4] = '../img/img5.png';
+imgreload[0] = 'https://res.cloudinary.com/dmxp1le4a/image/upload/v1671076667/img/img1_ktbgbz.png';
+imgreload[1] = 'https://res.cloudinary.com/dmxp1le4a/image/upload/v1671076676/img/img2_trsm6e.png';
+imgreload[2] = 'https://res.cloudinary.com/dmxp1le4a/image/upload/v1671076682/img/img3_vogi9b.png';
+imgreload[3] = 'https://res.cloudinary.com/dmxp1le4a/image/upload/v1671076677/img/img4_nx6lha.png';
+imgreload[4] = 'https://res.cloudinary.com/dmxp1le4a/image/upload/v1671076682/img/img5_tomjei.png';
 
 window.onload = function () {
   const random = Math.floor(Math.random() * imgreload.length);

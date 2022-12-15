@@ -135,6 +135,10 @@
   width: 100%;
 } */
 
+.owl-carousel .owl-item img {
+  height: 70vh;
+}
+
 .budgeting-plan-container .img-rab-1 {
   max-width: 710px;
   height: max-content;

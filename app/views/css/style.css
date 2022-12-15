@@ -68,7 +68,7 @@ nav.scrolled {
 
 .boxaa.scrolled,
 .htmlCss-sub-menu.scrolled,
-.menu3.scrolled{
+.menu3.scrolled {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
@@ -513,13 +513,13 @@ header nav .navbar .links li .arrow {
 }
 
 .bg-img-1 {
-  background-image: url(../img/img1.png);
+  background-image: url(https://res.cloudinary.com/dmxp1le4a/image/upload/v1671076667/img/img1_ktbgbz.png);
   background-size: cover;
   filter: brightness(76%);
 }
 
 .bg-img-2 {
-  background-image: url(../img/img2.png);
+  background-image: url(https://res.cloudinary.com/dmxp1le4a/image/upload/v1671076676/img/img2_trsm6e.png);
   background-size: cover;
   filter: brightness(76%);
 }
@@ -584,7 +584,7 @@ header nav .navbar .links li .arrow {
   display: grid;
   grid-template-columns: 380px;
   grid-template-rows: 210px 250px 20px;
-  grid-template-areas: 'image''text';
+  grid-template-areas: 'image' 'text';
   border-radius: 18px;
   background: rgba(208, 208, 208, 0.923);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
@@ -593,12 +593,11 @@ header nav .navbar .links li .arrow {
   cursor: pointer;
   margin: 30px;
   transition: 0.5s;
-
 }
 
 .card-image {
   grid-area: image;
-  background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%), url('../img/img1.png');
+  background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%), url('https://res.cloudinary.com/dmxp1le4a/image/upload/v1671076667/img/img1_ktbgbz.png');
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   background-size: cover;
@@ -632,13 +631,13 @@ header nav .navbar .links li .arrow {
 }
 
 .card-image.card2 {
-  background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%), url('../img/steelimg.png');
+  background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%), url('https://res.cloudinary.com/dmxp1le4a/image/upload/v1671076639/img/steelimg_iouy3j.png');
   background-size: cover;
 }
 
-.bg-img {
+/* .bg-img {
   background-image: url(../img/img1.png);
-}
+} */
 
 /* btn */
 
@@ -856,7 +855,7 @@ header nav .navbar .links li .arrow {
 }
 
 /* Button Scroll To Top */
-.gotopbtn{
+.gotopbtn {
   position: fixed;
   width: 50px;
   height: 46px;
@@ -1276,11 +1275,11 @@ header nav .navbar .links li .arrow {
     display: none;
   }
 
-  .dropdown:hover>.dropdown__menu {
+  .dropdown:hover > .dropdown__menu {
     display: block;
   }
 
-  .dropdown:hover>.dropdown__icon {
+  .dropdown:hover > .dropdown__icon {
     transform: rotate(180deg);
     padding-left: 20px;
   }
@@ -1306,7 +1305,7 @@ header nav .navbar .links li .arrow {
     line-height: 35px;
   }
 
-  .card-column{
+  .card-column {
     width: 300px;
   }
 
