@@ -663,6 +663,7 @@ header nav .navbar .links li .arrow {
   border-radius: 5px;
   cursor: pointer;
   font-weight: 500;
+  width: 160px;
 }
 
 .btn:hover {
@@ -671,8 +672,9 @@ header nav .navbar .links li .arrow {
 }
 
 .btn-content {
-  width: 120px;
+  width: 135px;
 }
+
 
 /* consult popup */
 
