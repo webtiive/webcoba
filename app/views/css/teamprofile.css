@@ -149,14 +149,15 @@
   max-width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: start;
 }
 
 .teamprofile .team-items .item {
   flex-basis: calc(27% - 40px);
   max-width: calc(40% - 50px);
   transition: all 0.5s ease;
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
+  margin: 0 10px 40px 10px;
 }
 
 .teamprofile .team-items .item img {
