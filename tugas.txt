@@ -1,16 +1,1 @@
-New Task
-
-Our service 
-      |--------> Management Plan a---> S.M & Supervision
-      |                          b---> Workers Support
-      |                          c---> Master Plan 
-      |                                     |-------------> 2D layout
-      |                                     |-------------> 3D Render
-      |                                     |-------------> Budgeting/Timeline
-      |--------> Building Construction
-
-a == foto-foto jasa anucara 
-b == foto-foto pekerja/tukang
-c == --> 2D > Foto/pdf
-     --> 3D > Foto
-     --> Budget > RAB > PDF
+Gallery Proejct
