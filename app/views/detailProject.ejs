@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-    <title>Detail</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-    <style>
-      .swiper {
-        width: 50vw;
-        height: 600px;
-      }
-    </style>
-  </head>
-  <body>
-    <form action="/project/edit" method="post" enctype="multipart/form-data" style="margin: 1.2rem">
-      <% project.forEach(p => { %>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <title>Detail</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <style>
+    .swiper {
+      width: 50vw;
+      height: 600px;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="/project/edit" method="post" enctype="multipart/form-data" style="margin: 1.2rem">
+    <% project.forEach(p=> { %>
       <input type="hidden" name="id" value="<%= p.id_project %>" />
       <div class="mb-3">
         <label for="Title" class="form-label">Title</label>
@@ -24,7 +27,8 @@
       </div>
       <div class="mb-3">
         <label for="Gambar" class="form-label">Gambar</label>
-        <h5>jumlah Image : <%= p.gambar_project.length %></h5>
+        <h5>jumlah Image : <%= p.gambar_project.length %>
+        </h5>
         <input type="file" class="form-control titleForCard" id="exampleFormControlInput1" name="image" multiple />
 
         <br />
@@ -32,18 +36,18 @@
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
-            <% p.gambar_project.forEach(v => { %>
-            <div class="swiper-slide">
-              <div class="card">
-                <img src="../<%= v.path %>" class="card-img-top" alt="..." height="500" />
-                <input type="hidden" name="image" value="<%= v.path %>" />
-                <div class="card-body">
-                  <!-- <a href="/detailProject/<%= v.filename %>" class="btn btn-danger" onclick="return confirm('yakin?')"> Hapus</a> -->
+            <% p.gambar_project.forEach(v=> { %>
+              <div class="swiper-slide">
+                <div class="card">
+                  <img src="../<%= v.path %>" class="card-img-top" alt="..." height="500" />
+                  <input type="hidden" name="image" value="<%= v.path %>" />
+                  <div class="card-body">
+                    <!-- <a href="/detailProject/<%= v.filename %>" class="btn btn-danger" onclick="return confirm('yakin?')"> Hapus</a> -->
+                  </div>
                 </div>
               </div>
-            </div>
-            <% }) %>
-            <!-- slider -->
+              <% }) %>
+                <!-- slider -->
           </div>
           <!-- If we need navigation buttons -->
           <div class="swiper-button-prev"></div>
@@ -52,10 +56,13 @@
       </div>
       <div class="mb-3">
         <label for="Deskripsi" class="form-label">Description</label>
-        <textarea class="form-control" id="Deskripsi" name="desc" rows="3" maxlength="1500"><%= p.desc_project %></textarea>
+        <textarea class="form-control" id="Deskripsi" name="desc" rows="3" maxlength="1500">
+          <%= p.desc_project %>
+        </textarea>
       </div>
       <div class="mb-3">
-        <p>Tag : <%= p.select_project %></p>
+        <p>Tag : <%= p.select_project %>
+        </p>
         <label for="select">Select Tag :</label>
         <select name="select" id="select">
           <option value="villa">Villa</option>
@@ -67,22 +74,25 @@
 
       <a href="/project">Kembali</a>
       <% }) %>
-    </form>
+  </form>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script>
-      const swiper = new Swiper('.swiper', {
-        // Optional parameters
-        direction: 'horizontal',
-        loop: true,
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
 
-        // Navigation arrows
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-      });
-    </script>
-  </body>
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</body>
+
 </html>
