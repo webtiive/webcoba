@@ -70,6 +70,8 @@ const removeImage = (filePath) => {
  * Client Routes
  */
 
+
+
 //home
 app.get('/', (req, res) => {
   res.render('index');
