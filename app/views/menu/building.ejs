@@ -10,13 +10,14 @@
 
   <!-- ===== Style CSS ===== -->
   <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../css/contactPage.css" />
-
-  <!-- ===== Fontawesome ===== -->
-  <script src="https://kit.fontawesome.com/6b15f87bf3.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css/project.css" />
+  <link rel="stylesheet" href="../css/contact.css" />
 
   <!-- ===== Boxicons CSS===== -->
   <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
+
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -139,43 +140,68 @@
     </nav>
   </header>
   <!-- End Header -->
+  <div class="card-section" style="margin-top: 100px;">
+    <div class="head-card">
+      <h1>Building Construction</h1>
+      <select name="select" id="select"
+        style="margin-left: 1rem; background-color: black; color: white; border: 2px solid #f7b716; border-radius: 5px">
+        <option value="all">All</option>
+        <option value="bep">BEP</option>
+        <option value="mep">MEP</option>
+        <option value="renovation">Renovation</option>
+        <option value="newBuilding">New Building</option>
+      </select>
+    </div>
 
-  <div class="jarak"></div>
-
-  <h1 class="judul">Contact Us</h1>
-  <main>
-    <div class="contact">
-      <ul class="contact-icon">
-        <li>
-          <a href="https://wa.me/6282126815627"><i class="fab fa-whatsapp"></i></a>
-        </li>
-        <li>
-          <a href="https://www.facebook.com/profile.php?id=100086564315471"><i class="fab fa-facebook"></i></a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/anucara.designandbuild/?igshid=YmMyMTA2M2Y%3D "><i
-              class="fab fa-instagram"></i></a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/anucara-design-and-build-3a9982252"><i
-              class="fab fa-linkedin-in"></i></a>
-        </li>
-        <li>
-          <a href="https://www.tiktok.com/@anucara.design.and.build"><i class="fab fa-tiktok"></i></a>
-        </li>
-      </ul>
-      <div class="email-container">
-        <h1 class="email">Email:</h1>
-        <div class="section-email">
-          <p>Consultation:</p>
-          <a href="mailto:anucaradesignandbuild@gmail.com">
-            <h4>anucaradesignandbuild@gmail.com</h4>
-          </a>
+    <br />
+    <div class="container-cards">
+      <div class="card-portfolio renovation">
+        <img
+          src="https://res.cloudinary.com/dmxp1le4a/image/upload/v1671074462/PROJECT%20RUMAH/FB_IMG_1670911917744_xa6me5.jpg" />
+        <div class="card-bodys">
+          <h5 class="title-card">14 November 2022</h5>
+          <hr />
+          <span class="badge"
+            style="background-color: blue; border-radius: 5px; padding: 0 1rem 0 1rem">Renovation</span>
+          <p class="text-card">Renovation House at Brawa</p>
+        </div>
+      </div>    
+      <div class="card-portfolio newBuilding">
+        <img
+          src="https://res.cloudinary.com/dmxp1le4a/image/upload/v1671016681/FOTO%20PROJECT%20BADMINTON/FB_IMG_1670914909505_cxrbmd.jpg" />
+        <div class="card-bodys">
+          <h5 class="title-card">14 November 2022</h5>
+          <hr />
+          <span class="badge" style="background-color: blue; border-radius: 5px; padding: 0 1rem 0 1rem">New
+            Building</span>
+          <p class="text-card">Jalan Padang Galak</p>
+        </div>
+      </div>
+      <div class="card-portfolio renovation">
+        <img src="../img/img2.png " />
+        <div class="card-bodys">
+          <h5 class="title-card">23 Maret 2021</h5>
+          <hr />
+          <span class="badge"
+            style="background-color: blue; border-radius: 5px; padding: 0 1rem 0 1rem">Renovation</span>
+          <p class="text-card">Jalan Padang Galak</p>
+        </div>
+      </div>
+      <div class="card-portfolio newBuilding">
+        <img src="../img/img2.png " />
+        <div class="card-bodys">
+          <h5 class="title-card">23 Maret 2021</h5>
+          <hr />
+          <span class="badge" style="background-color: blue; border-radius: 5px; padding: 0 1rem 0 1rem">New
+            Building</span>
+          <p class="text-card">Jalan Padang Galak</p>
         </div>
       </div>
     </div>
-  </main>
+  </div>
+  </div>
 
+  <!-- consult popup -->
   <div class="consult">
     <div id="consultPopup" class="consult-popup">
       <h3>Consult & Order</h3>
@@ -201,9 +227,48 @@
     </div>
   </div>
 
+  <div class="jarak-cons"></div>
+
+  <section class="consult-footer">
+    <h1 class="judul">ASK ME! ABOUT OUR SERVICE</h1>
+    <main>
+      <div class="contact">
+        <ul class="contact-icon">
+          <li>
+            <a href="https://wa.me/6282126815627?&text=Hallo%20"><i class="fab fa-whatsapp"> <span>+62
+                  821-2681-5627</span></i></a>
+          </li>
+          <li>
+            <a href="mailto:anucaradesignandbuild@gmail.com"><i class="fas fa-envelope">
+                <span>anucaradesignandbuild@gmail.com</span></i></a>
+          </li>
+        </ul>
+      </div>
+    </main>
+  </section>
+
   <!-- Footer -->
-  <section class="footer">
-    <div class="content">
+  <section class="footer ">
+    <div class="content ">
+      <div class="top ">
+        <div class="logo-details ">
+        </div>
+        <div class="media-icons ">
+          <a href="https://www.facebook.com/profile.php?id=100086564315471 ">
+            <i class="fab fa-facebook-f "></i>
+          </a>
+          <a href="# "><i class="fab fa-twitter "></i></a>
+          <a href="https://www.instagram.com/anucara.designandbuild/?igshid=YmMyMTA2M2Y%3D ">
+            <i class="fab fa-instagram "></i>
+          </a>
+          <a href="https://www.linkedin.com/in/anucara-design-and-build-3a9982252">
+            <i class="fab fa-linkedin-in "></i>
+          </a>
+          <a href="# "><i class="fab fa-youtube "></i>
+          </a>
+          <a href="https://www.tiktok.com/@anucara.design.and.build"><i class="fab fa-tiktok "></i></a>
+        </div>
+      </div>
       <div class="link-boxes">
         <ul class="box">
           <li class="link_name">Anucara</li>
@@ -225,12 +290,11 @@
           <li><a href="/2Dlayout">2D Layout</a></li>
           <li><a href="/3Drender">3D Render</a></li>
           <li><a href="/budgeting">Budgeting</a></li>
-          <li><a href="/SiteManagement">Site Management</a></li>
+          <li><a href="/buildingconstruction">Building Construction</a></li>
         </ul>
         <ul class="box">
           <li class="link_name">Portofolio</li>
           <li><a href="/2022">2022</a></li>
-          <li><a href="/teamsupport">Gallery Team</a></li>
         </ul>
         <ul class="box">
           <li class="link_name">Contact</li>
@@ -248,9 +312,38 @@
       </div>
     </div>
   </section>
+
   <!-- End Footer -->
 
+  <!-- ===== Fontawesome ===== -->
+  <script src="https://kit.fontawesome.com/6b15f87bf3.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  </script>
+  <script>
+    $(document).ready(function () {
+      $('#select')
+        .on('change', function () {
+          const value = $(this).val();
+          // alert(value);
+          if (value == 'all') {
+            $('.card-portfolio').show('1000');
+          } else {
+            $('.card-portfolio')
+              .not('.' + value)
+              .hide(1000);
+            $('.card-portfolio')
+              .filter('.' + value)
+              .show(1000);
+          }
+        })
+        .change();
+    });
+  </script>
+  <script src="../js/main.js"></script>
   <script src="../js/script.js"></script>
+  <script src="../js/building.js"></script>
 </body>
 
 </html>
