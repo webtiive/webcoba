@@ -1093,6 +1093,7 @@ header nav .navbar .links li .arrow {
   text-decoration: none;
   opacity: 0.8;
   transition: all 0.4s ease;
+  margin-left: 5px;
 }
 
 .fa-envelope {
