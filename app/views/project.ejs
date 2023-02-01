@@ -22,6 +22,7 @@
           <h5 class="card-title"><%= p.judul_project %></h5>
           <p class="card-text" style="width: 50%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis"><%= p.desc_project %></p>
           <p class="select">Tag: <%= p.select_project %></p>
+          <p class="tahun">Tahun: <%= p.tahun %></p>
           <div class="tombol">
             <a href="/project/<%= p.id_project %>" class="btn btn-primary">Ubah</a>
             <form action="/delete/<%= p.id_project %>" method="post" class="d-inline">
