@@ -70,8 +70,6 @@ const removeImage = (filePath) => {
  * Client Routes
  */
 
-
-
 //home
 app.get('/', (req, res) => {
   res.render('index');
@@ -192,9 +190,9 @@ app.get('/project/:id', async (req, res) => {
 
 app.post('/project', async (req, res) => {
   try {
-    const { title, desc, select } = req.body;
+    const { title, desc, select, tahun } = req.body;
     const image = req.files;
-    const newProject = await client.query(`INSERT INTO project (judul_project,desc_project,gambar_project, select_project ) VALUES ($1,$2 , $3, $4) `, [title, desc, image, select]);
+    const newProject = await client.query(`INSERT INTO project (judul_project,desc_project,gambar_project, select_project, tahun ) VALUES ($1,$2 , $3, $4,$5) `, [title, desc, image, select, tahun]);
     req.flash('msg', 'Project berhasil ditambahkan');
     res.redirect('/project');
     // res.send(req.body.select);
@@ -210,15 +208,15 @@ app.post('/project', async (req, res) => {
 */
 app.post('/project/edit', async (req, res) => {
   // res.send(req.body);
-  const { id, title, desc, select } = req.body;
+  const { id, title, desc, select, tahun } = req.body;
   try {
     if (req.files.length === 0) {
-      const editProject = await client.query('update project set judul_project=$2, desc_project=$3,select_project=$4 where id_project=$1', [id, title, desc, select]);
+      const editProject = await client.query('update project set judul_project=$2, desc_project=$3,select_project=$4,tahun=$5 where id_project=$1', [id, title, desc, select, tahun]);
 
       // res.send(req.body);
     } else {
       const image = req.files;
-      const editProject = await client.query('update project set judul_project=$2,gambar_project=$3, desc_project=$4 ,select_project=$5 where id_project=$1', [id, title, image, desc, select]);
+      const editProject = await client.query('update project set judul_project=$2,gambar_project=$3, desc_project=$4 ,select_project=$5,tahun=$6 where id_project=$1', [id, title, image, desc, select, tahun]);
       // res.send(image);
     }
     req.flash('msg', 'Project berhasil diubah');
